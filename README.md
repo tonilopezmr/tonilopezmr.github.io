@@ -1,2 +1,3 @@
-# tonilopezmr.github.io
-My web portfolio.
+# README #
+
+ponerle a alguna seccion este color de fondo #f6f6f6;
