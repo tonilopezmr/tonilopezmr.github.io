@@ -7,7 +7,7 @@ gems:
 # Site settings
 title: "Antonio López Marín"
 description: > # this means to ignore newlines until "email:"
-	Student of Computer Science in Polytechnic University of Valencia
+    Student of Computer Science in Polytechnic University of Valencia
 
 email: tonilopezmr@gmail.com
 #blog logo
