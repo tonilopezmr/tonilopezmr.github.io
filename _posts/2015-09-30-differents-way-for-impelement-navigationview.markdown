@@ -4,7 +4,7 @@ title:  "Android Design Library: Diferentes formas de implementar NavigationView
 date:   2015-09-30 17:34:25
 categories: andorid material design navigationview
 tags: android
-image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.jpg
+image: /assets/article_images/2015-09-30-differents-way-for-impelement-navigationview/desktop.jpg
 ---
 
 Ahora que lleva ya un tiempo la Android Design Library, he decidido actualizar algunos de mis proyectos con esta librería y en uno de los proyectos el NavigationView tenia unos items que podían variar (añadir o quitar) y otros como pie de página en la parte inferior del NavigationView como podían ser: compartir, valorar la aplicación, etc… Y en otros el DrawerLayout estaba por debajo del Toolbar.
