@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Antonio López Marín</title>
+    <description>Student of Computer Science in Polytechnic University of Valencia
+</description>
+    <link>http://tonilopezmr.github.io/</link>
+    <atom:link href="http://tonilopezmr.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 15 Oct 2015 23:02:57 +0200</pubDate>
+    <lastBuildDate>Thu, 15 Oct 2015 23:02:57 +0200</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Android Design Library: Diferentes formas de implementar NavigationView y DrawableLayout</title>
+        <description>&lt;p&gt;Ahora que lleva ya un tiempo la &lt;a href=&quot;http://android-developers.blogspot.com.es/2015/05/android-design-support-library.html&quot;&gt;Android Design Support Library&lt;/a&gt;, he decidido actualizar algunos de mis proyectos con esta librería y en uno de los proyectos el NavigationView tenia unos items que podían variar (añadir o quitar) y otros como pie de página en la parte inferior del NavigationView como podían ser: compartir, valorar la aplicación, etc… Y en otros el DrawerLayout estaba por debajo del Toolbar.&lt;/p&gt;
+
+&lt;h2&gt;Standard&lt;/h2&gt;
+
+&lt;p&gt;Según pone en el articulo de &lt;a href=&quot;http://android-developers.blogspot.com.es/2015/05/android-design-support-library.html&quot;&gt;Android Design Support Library&lt;/a&gt; sin modificar nada se haría así:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.v4.widget.DrawerLayout&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;xmlns:app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res-auto&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;xmlns:tools=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/tools&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/drawer_layout&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:fitsSystemWindows=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;tools:openDrawer=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;start&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Content here --&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.design.widget.NavigationView&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/nav_view&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;start&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:fitsSystemWindows=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;app:headerLayout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@layout/nav_header_main&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;app:menu=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@menu/activity_main_drawer&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/android.support.v4.widget.DrawerLayout&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*mgbxAxAV_FRTzcFouk7j-g.gif&quot; alt=&quot;Implementando NavigationView standard.&quot;&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Con pie de página&lt;/h2&gt;
+
+&lt;p&gt;Si quieres que los items de pie de página estén visibles en todo momento, aunque haya muchos items encima, esta es una posible forma de implementarlo:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.v4.widget.DrawerLayout&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;xmlns:app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res-auto&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/drawer_layout&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:fitsSystemWindows=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Content here --&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.design.widget.NavigationView&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/navigation_drawer_container&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;start&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;RelativeLayout&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.design.widget.NavigationView&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/navigation_view_body&amp;quot;&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;top&amp;quot;&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;app:headerLayout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@layout/nav_header_main&amp;quot;&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;app:menu=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@menu/body_nav&amp;quot;&lt;/span&gt;
+                   &lt;span class=&quot;na&quot;&gt;android:layout_above=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/navigation_view_bottom&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.design.widget.NavigationView&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/navigation_view_bottom&amp;quot;&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;android:layout_alignParentBottom=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;app:headerLayout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@layout/bottom_nav_header&amp;quot;&lt;/span&gt;
+                    &lt;span class=&quot;na&quot;&gt;app:menu=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@menu/footer_nav&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/RelativeLayout&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/android.support.design.widget.NavigationView&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/android.support.v4.widget.DrawerLayout&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Body&lt;/strong&gt; — NavigationView de la parte superior que contendrá el header y los items principales.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Footer&lt;/strong&gt; — NavigationView en la parte de abajo que siempre se mostrará.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container&lt;/strong&gt; — El NavigationView que contiene a los dos anteriores (es opcional).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para que aparezca una linea separadora entre las dos listas (divider), hay que añadir el atributo headerLayout en el navigation&lt;em&gt;view&lt;/em&gt;button con el siguiente layout:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;bottom_nav_header.xml&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;    &lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;LinearLayout&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:orientation=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;vertical&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;View&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1dp&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:background=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#d5d5d5&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;  
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;El NavigationView que funciona como contenedor se puede quitar y dejar tan solo el RelativeLayout, pero lo mantengo por si necesito usar alguna utilidad del NavigationView como, por ejemplo, poner el header y dejarlo fijo (que no se pueda hacer scroll).&lt;/p&gt;
+
+&lt;p&gt;Al tener dos NavigationViews diferentes puedes controlar las acciones sobre los items de diferente listas de una manera más “limpia”, como por ejemplo en los items de la lista principal, al pulsar que muestren diferentes fragments, y los items del footer que simplemente lancen acciones, como podría ser abrir una aplicación externa.
+Este sería el resultado final.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*G52oJ8FMY_YuNEl7n4PkIg.gif&quot; alt=&quot;NavigationView con pie de página fijo.&quot;&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;NavigationView por debajo del Toolbar&lt;/h2&gt;
+
+&lt;p&gt;Si se desea que el NavigationView este por debajo del Toolbar, lo normal es que no tenga headerLayout ya que el espacio de la lista será más reducido:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;    &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.design.widget.CoordinatorLayout&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;xmlns:app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/apk/res-auto&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;xmlns:tools=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;http://schemas.android.com/tools&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;android:fitsSystemWindows=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;tools:context=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;.MainActivity&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.design.widget.AppBarLayout&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:theme=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@style/AppTheme.AppBarOverlay&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.v7.widget.Toolbar&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/toolbar&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;?attr/actionBarSize&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:background=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;?attr/colorPrimary&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:theme=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@style/AppTheme.AppBarOverlay&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;app:popupTheme=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@style/AppTheme.PopupOverlay&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/android.support.design.widget.AppBarLayout&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.v4.widget.DrawerLayout&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/drawer_layout&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;android:fitsSystemWindows=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;tools:openDrawer=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;start&amp;quot;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;app:layout_behavior=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@string/appbar_scrolling_view_behavior&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+            &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Content here --&amp;gt;&lt;/span&gt;
+
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;android.support.design.widget.NavigationView&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;@+id/navigation_view_container&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:fitsSystemWindows=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;android:layout_gravity=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;start&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+               &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- ... --&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/android.support.v4.widget.DrawerLayout&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/android.support.design.widget.CoordinatorLayout&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ahora el DrawerLayout ya no es el contenedor de la actividad sino que pasa a ser el CoordinatorLayout (o cualquier otro) y lo importante es que el Toolbar se está por encima de DrawerLayout, todo lo demás es una implementación normal del NavigationView.&lt;/p&gt;
+
+&lt;p&gt;Esta forma de implementar el NavigationView no es usual ya que renuncias a muchas cosas buenas que tiene Appbar y Toolbar, como podría ser Parallax o efectos similares en el que Toolbar es en algún momento más grande de lo normal ya que NavigationView estaría debajo en todo momento.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*_ySVKSkuQaenJ7QT4X5ZJw.gif&quot; alt=&quot;NavigationView por debajo de toolbar.&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Todo el código esta incluido en Android-Examples en el directorio navigationview.&lt;/p&gt;
+
+&lt;hr&gt;
+</description>
+        <pubDate>Wed, 30 Sep 2015 19:34:25 +0200</pubDate>
+        <link>http://tonilopezmr.github.io/navigationview/2015/09/30/differents-way-for-impelement-navigationview.html</link>
+        <guid isPermaLink="true">http://tonilopezmr.github.io/navigationview/2015/09/30/differents-way-for-impelement-navigationview.html</guid>
+        
+        <category>android</category>
+        
+        
+        <category>navigationview</category>
+        
+      </item>
+    
+  </channel>
+</rss>

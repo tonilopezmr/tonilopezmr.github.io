@@ -15,6 +15,7 @@ Standard
 
 Según pone en el articulo de [Android Design Support Library](http://android-developers.blogspot.com.es/2015/05/android-design-support-library.html) sin modificar nada se haría así:
 
+
 ```xml
     <android.support.v4.widget.DrawerLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,6 +49,7 @@ Con pie de página
 -----------------
 
 Si quieres que los items de pie de página estén visibles en todo momento, aunque haya muchos items encima, esta es una posible forma de implementarlo:
+
 ```xml
     <android.support.v4.widget.DrawerLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -92,13 +94,16 @@ Si quieres que los items de pie de página estén visibles en todo momento, aunq
 
     </android.support.v4.widget.DrawerLayout>
 ```
+
+
  - **Body** — NavigationView de la parte superior que contendrá el header y los items principales.
  - **Footer** — NavigationView en la parte de abajo que siempre se mostrará.
  - **Container** — El NavigationView que contiene a los dos anteriores (es opcional).
 
 Para que aparezca una linea separadora entre las dos listas (divider), hay que añadir el atributo headerLayout en el navigation_view_button con el siguiente layout:
 
-*bottom_nav_header.xml*
+*bottom\_nav\_header.xml*
+
 ```xml
     <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -111,6 +116,8 @@ Para que aparezca una linea separadora entre las dos listas (divider), hay que a
             android:background="#d5d5d5" />  
     </LinearLayout>
 ```
+
+
 El NavigationView que funciona como contenedor se puede quitar y dejar tan solo el RelativeLayout, pero lo mantengo por si necesito usar alguna utilidad del NavigationView como, por ejemplo, poner el header y dejarlo fijo (que no se pueda hacer scroll).
 
 Al tener dos NavigationViews diferentes puedes controlar las acciones sobre los items de diferente listas de una manera más “limpia”, como por ejemplo en los items de la lista principal, al pulsar que muestren diferentes fragments, y los items del footer que simplemente lancen acciones, como podría ser abrir una aplicación externa.
@@ -124,6 +131,7 @@ NavigationView por debajo del Toolbar
 -------------------------------------
 
 Si se desea que el NavigationView este por debajo del Toolbar, lo normal es que no tenga headerLayout ya que el espacio de la lista será más reducido:
+
 ```xml
     <android.support.design.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -133,12 +141,12 @@ Si se desea que el NavigationView este por debajo del Toolbar, lo normal es que 
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         tools:context=".MainActivity">
-    
+
         <android.support.design.widget.AppBarLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:theme="@style/AppTheme.AppBarOverlay">
-    
+
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Android Design Library: Diferentes formas de implementar NavigationView y DrawableLayout</title>
+  <meta name="description" content="<p>Ahora que lleva ya un tiempo la <a href="http://android-developers.blogspot.com.es/2015/05/android-design-support-library.html">Android Design Support Library</a>, he decidido actualizar algunos de mis proyectos con esta librería y en uno de los proyectos el NavigationView tenia unos items que podían variar (añadir o quitar) y otros como pie de página en la parte inferior del NavigationView como podían ser: compartir, valorar la aplicación, etc… Y en otros el DrawerLayout estaba por debajo del Toolbar.</p>
+" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@tonilopezmr" />
+    <meta name="twitter:title" content="Android Design Library: Diferentes formas de implementar NavigationView y DrawableLayout" />
+    <meta name="twitter:image" content="http://tonilopezmr.github.io/assets/images/df_logo.jpg" />
+    
+    <meta name="twitter:description"  content="Ahora que lleva ya un tiempo la Android Design Support Library, he decidido actualizar algunos de mis proyectos con esta librería y en uno de los proyectos el NavigationView tenia unos items que po..." />
+    
+  
+  
+  <meta property="og:site_name" content="Antonio López Marín" />
+  <meta property="og:title" content="Android Design Library: Diferentes formas de implementar NavigationView y DrawableLayout"/>
+  
+  <meta property="og:description" content="Ahora que lleva ya un tiempo la Android Design Support Library, he decidido actualizar algunos de mis proyectos con esta librería y en uno de los proyectos el NavigationView tenia unos items que po..." />
+  
+  <meta property="og:image" content="http://tonilopezmr.github.io/assets/article_images/2015-09-30-differents-way-for-impelement-navigationview/desktop.JPG" />
+  <meta property="og:url" content="http://tonilopezmr.github.io/navigationview/2015/09/30/differents-way-for-impelement-navigationview.html" >
+  <meta property="og:type" content="blog" />
+  <meta property="article:published_time" content="2015-09-30T19:34:25+02:00">
+
+  <link rel="canonical" href="http://tonilopezmr.github.io/navigationview/2015/09/30/differents-way-for-impelement-navigationview.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://tonilopezmr.github.io" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url(/assets/article_images/2015-09-30-differents-way-for-impelement-navigationview/desktop.JPG)">
+            Article Image
+          </div>
+          <div class="post-meta">
+            <h1 class="post-title">Android Design Library: Diferentes formas de implementar NavigationView y DrawableLayout</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/df_logo.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Antonio López</h4>
+              on
+              <time datetime="2015-09-30 19:34">30 Sep 2015</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>Ahora que lleva ya un tiempo la <a href="http://android-developers.blogspot.com.es/2015/05/android-design-support-library.html">Android Design Support Library</a>, he decidido actualizar algunos de mis proyectos con esta librería y en uno de los proyectos el NavigationView tenia unos items que podían variar (añadir o quitar) y otros como pie de página en la parte inferior del NavigationView como podían ser: compartir, valorar la aplicación, etc… Y en otros el DrawerLayout estaba por debajo del Toolbar.</p>
+
+<h2>Standard</h2>
+
+<p>Según pone en el articulo de <a href="http://android-developers.blogspot.com.es/2015/05/android-design-support-library.html">Android Design Support Library</a> sin modificar nada se haría así:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;android.support.v4.widget.DrawerLayout</span>
+        <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+        <span class="na">xmlns:app=</span><span class="s">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+        <span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/drawer_layout&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+        <span class="na">android:fitsSystemWindows=</span><span class="s">&quot;true&quot;</span>
+        <span class="na">tools:openDrawer=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>
+
+        <span class="c">&lt;!-- Content here --&gt;</span>
+
+        <span class="nt">&lt;android.support.design.widget.NavigationView</span>
+            <span class="na">android:id=</span><span class="s">&quot;@+id/nav_view&quot;</span>
+            <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+            <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+            <span class="na">android:layout_gravity=</span><span class="s">&quot;start&quot;</span>
+            <span class="na">android:fitsSystemWindows=</span><span class="s">&quot;true&quot;</span>
+            <span class="na">app:headerLayout=</span><span class="s">&quot;@layout/nav_header_main&quot;</span>
+            <span class="na">app:menu=</span><span class="s">&quot;@menu/activity_main_drawer&quot;</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;/android.support.v4.widget.DrawerLayout&gt;</span>
+</code></pre></div>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*mgbxAxAV_FRTzcFouk7j-g.gif" alt="Implementando NavigationView standard."></p>
+
+<hr>
+
+<h2>Con pie de página</h2>
+
+<p>Si quieres que los items de pie de página estén visibles en todo momento, aunque haya muchos items encima, esta es una posible forma de implementarlo:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;android.support.v4.widget.DrawerLayout</span>
+        <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+        <span class="na">xmlns:app=</span><span class="s">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/drawer_layout&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+        <span class="na">android:fitsSystemWindows=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+
+        <span class="c">&lt;!-- Content here --&gt;</span>
+
+        <span class="nt">&lt;android.support.design.widget.NavigationView</span>
+            <span class="na">android:id=</span><span class="s">&quot;@+id/navigation_drawer_container&quot;</span>
+            <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+            <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+            <span class="na">android:layout_gravity=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>
+
+            <span class="nt">&lt;RelativeLayout</span>
+                <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+                <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span><span class="nt">&gt;</span>
+
+                <span class="nt">&lt;android.support.design.widget.NavigationView</span>
+                    <span class="na">android:id=</span><span class="s">&quot;@+id/navigation_view_body&quot;</span>
+                    <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+                    <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+                    <span class="na">android:layout_gravity=</span><span class="s">&quot;top&quot;</span>
+                    <span class="na">app:headerLayout=</span><span class="s">&quot;@layout/nav_header_main&quot;</span>
+                    <span class="na">app:menu=</span><span class="s">&quot;@menu/body_nav&quot;</span>
+                   <span class="na">android:layout_above=</span><span class="s">&quot;@+id/navigation_view_bottom&quot;</span><span class="nt">/&gt;</span>
+
+                <span class="nt">&lt;android.support.design.widget.NavigationView</span>
+                    <span class="na">android:id=</span><span class="s">&quot;@+id/navigation_view_bottom&quot;</span>
+                    <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+                    <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+                    <span class="na">android:layout_alignParentBottom=</span><span class="s">&quot;true&quot;</span>
+                    <span class="na">app:headerLayout=</span><span class="s">&quot;@layout/bottom_nav_header&quot;</span>
+                    <span class="na">app:menu=</span><span class="s">&quot;@menu/footer_nav&quot;</span> <span class="nt">/&gt;</span>
+
+            <span class="nt">&lt;/RelativeLayout&gt;</span>
+
+        <span class="nt">&lt;/android.support.design.widget.NavigationView&gt;</span>
+
+    <span class="nt">&lt;/android.support.v4.widget.DrawerLayout&gt;</span>
+</code></pre></div>
+<ul>
+<li><strong>Body</strong> — NavigationView de la parte superior que contendrá el header y los items principales.</li>
+<li><strong>Footer</strong> — NavigationView en la parte de abajo que siempre se mostrará.</li>
+<li><strong>Container</strong> — El NavigationView que contiene a los dos anteriores (es opcional).</li>
+</ul>
+
+<p>Para que aparezca una linea separadora entre las dos listas (divider), hay que añadir el atributo headerLayout en el navigation<em>view</em>button con el siguiente layout:</p>
+
+<p><em>bottom_nav_header.xml</em></p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+    <span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+        <span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;View</span>
+            <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+            <span class="na">android:layout_height=</span><span class="s">&quot;1dp&quot;</span>
+            <span class="na">android:background=</span><span class="s">&quot;#d5d5d5&quot;</span> <span class="nt">/&gt;</span>  
+    <span class="nt">&lt;/LinearLayout&gt;</span>
+</code></pre></div>
+<p>El NavigationView que funciona como contenedor se puede quitar y dejar tan solo el RelativeLayout, pero lo mantengo por si necesito usar alguna utilidad del NavigationView como, por ejemplo, poner el header y dejarlo fijo (que no se pueda hacer scroll).</p>
+
+<p>Al tener dos NavigationViews diferentes puedes controlar las acciones sobre los items de diferente listas de una manera más “limpia”, como por ejemplo en los items de la lista principal, al pulsar que muestren diferentes fragments, y los items del footer que simplemente lancen acciones, como podría ser abrir una aplicación externa.
+Este sería el resultado final.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*G52oJ8FMY_YuNEl7n4PkIg.gif" alt="NavigationView con pie de página fijo."></p>
+
+<hr>
+
+<h2>NavigationView por debajo del Toolbar</h2>
+
+<p>Si se desea que el NavigationView este por debajo del Toolbar, lo normal es que no tenga headerLayout ya que el espacio de la lista será más reducido:</p>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml">    <span class="nt">&lt;android.support.design.widget.CoordinatorLayout</span>
+        <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+        <span class="na">xmlns:app=</span><span class="s">&quot;http://schemas.android.com/apk/res-auto&quot;</span>
+        <span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+        <span class="na">android:fitsSystemWindows=</span><span class="s">&quot;true&quot;</span>
+        <span class="na">tools:context=</span><span class="s">&quot;.MainActivity&quot;</span><span class="nt">&gt;</span>
+
+        <span class="nt">&lt;android.support.design.widget.AppBarLayout</span>
+            <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+            <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+            <span class="na">android:theme=</span><span class="s">&quot;@style/AppTheme.AppBarOverlay&quot;</span><span class="nt">&gt;</span>
+
+            <span class="nt">&lt;android.support.v7.widget.Toolbar</span>
+                <span class="na">android:id=</span><span class="s">&quot;@+id/toolbar&quot;</span>
+                <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+                <span class="na">android:layout_height=</span><span class="s">&quot;?attr/actionBarSize&quot;</span>
+                <span class="na">android:background=</span><span class="s">&quot;?attr/colorPrimary&quot;</span>
+                <span class="na">android:theme=</span><span class="s">&quot;@style/AppTheme.AppBarOverlay&quot;</span>
+                <span class="na">app:popupTheme=</span><span class="s">&quot;@style/AppTheme.PopupOverlay&quot;</span> <span class="nt">/&gt;</span>
+
+        <span class="nt">&lt;/android.support.design.widget.AppBarLayout&gt;</span>
+
+        <span class="nt">&lt;android.support.v4.widget.DrawerLayout</span>
+            <span class="na">android:id=</span><span class="s">&quot;@+id/drawer_layout&quot;</span>
+            <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+            <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+            <span class="na">android:fitsSystemWindows=</span><span class="s">&quot;true&quot;</span>
+            <span class="na">tools:openDrawer=</span><span class="s">&quot;start&quot;</span>
+            <span class="na">app:layout_behavior=</span><span class="s">&quot;@string/appbar_scrolling_view_behavior&quot;</span><span class="nt">&gt;</span>
+
+            <span class="c">&lt;!-- Content here --&gt;</span>
+
+            <span class="nt">&lt;android.support.design.widget.NavigationView</span>
+                <span class="na">android:id=</span><span class="s">&quot;@+id/navigation_view_container&quot;</span>
+                <span class="na">android:fitsSystemWindows=</span><span class="s">&quot;true&quot;</span>
+                <span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+                <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+                <span class="na">android:layout_gravity=</span><span class="s">&quot;start&quot;</span><span class="nt">&gt;</span>
+
+               <span class="c">&lt;!-- ... --&gt;</span>
+
+        <span class="nt">&lt;/android.support.v4.widget.DrawerLayout&gt;</span>
+
+    <span class="nt">&lt;/android.support.design.widget.CoordinatorLayout&gt;</span>
+</code></pre></div>
+<p>Ahora el DrawerLayout ya no es el contenedor de la actividad sino que pasa a ser el CoordinatorLayout (o cualquier otro) y lo importante es que el Toolbar se está por encima de DrawerLayout, todo lo demás es una implementación normal del NavigationView.</p>
+
+<p>Esta forma de implementar el NavigationView no es usual ya que renuncias a muchas cosas buenas que tiene Appbar y Toolbar, como podría ser Parallax o efectos similares en el que Toolbar es en algún momento más grande de lo normal ya que NavigationView estaría debajo en todo momento.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*_ySVKSkuQaenJ7QT4X5ZJw.gif" alt="NavigationView por debajo de toolbar."></p>
+
+<p>Todo el código esta incluido en Android-Examples en el directorio navigationview.</p>
+
+<hr>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=Android+Design+Library%3A+Diferentes+formas+de+implementar+NavigationView+y+DrawableLayout&amp;url=http://tonilopezmr.github.io/navigationview/2015/09/30/differents-way-for-impelement-navigationview"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/df_logo.jpg)">Blog Logo</div>
+              <h4>Antonio López</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2015-09-30 19:34">30 Sep 2015</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content copyright <a href="/">Antonio López</a> &copy; 2015<br>All rights reserved.</section>
+              </div>
+            </footer>
+          </div>
+        </div>
+        
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">Antonio López Marín</h1>
+        <h2 class="blog-description">Student of Computer Science in Polytechnic University of Valencia
+</h2>
+        <a href="/" class="btn">Back to Overview</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+
+  </body>
+</html>
