@@ -52,6 +52,13 @@ social:
     share_title:
     share_link:
 
+  - icon:  envelope
+    url: mailto:tonilopezmr@gmail.com
+    desc:  Send me an email
+    share_url:
+    share_title:
+    share_link:
+
 #  - icon:	google-plus
 #    url:	https://google.com/???
 #    desc:	Add me on google+
