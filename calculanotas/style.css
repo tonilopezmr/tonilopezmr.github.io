@@ -1,18 +1,27 @@
-/*
-==================================================
-==================================================
-Template Name: Misha - Landing Page
-Theme URI: http://kimeravisualdesign.com/demo/misha
-Author: Kimeravisualdesign - Resetblue
-Author URI: http://kimeravisualdesign.com
-Description: Misha - HTML5 responsive Landing Page 
-Version: 1.0
-Tags: misha, html5, css3, responsive, retina,
-landing, landing page, showcase, app, app showcase,
-parallax
-==================================================
-==================================================
-*/
+
+
+.copyright {
+	position: absolute;
+    bottom: 0;
+    padding: 48px 0;
+	color: #D2D0D0;
+	font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.copyright a{
+	color: #F1F1F1;
+	font-weight: bold;	
+}
+
+.copyright a:hover, 
+.copyright a:focus, 
+.copyright a:active{
+	color: #D2D0D0;
+	font-weight: normal;	
+	text-decoration: none;
+}
 
 /* global styles
 ================================================== */
