@@ -9,10 +9,10 @@ image: /assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-in
 
 Hace poco menos de un año despues de los primeros examenes de la universidad cree [Calcula Notas][1], es una aplicación que calcula la nota de las asignaturas de la universidad poniendoles el sistema de evaluación que sigue cada una y añadiendo examenes.
 
-La idea surgió de que cada vez que quería orientarme en la asignatura como iba con las notas sacaba la calculadora miraba como funcionaba la asignatura y las calculaba, como lo hacia con cada una de las asignaturas pues se me ocurrio hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar 
-un poco los nuevos componentes de la interfaz android.
+La idea surgió de que cada vez que quería de como iba con las notas, sacaba la calculadora miraba como funcionaba la asignatura y las calculaba, como lo hacia con cada una de las asignaturas pues se me ocurrio hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.
 
 #Primeros pasos
+</br>
 
 La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura como podía ser la nota de los examenes y la nota de cada grupo de evaluación (Teoría, Practicas, etc...), y todo ello poder verlo con un pequeño vistazo.
 
@@ -25,30 +25,38 @@ Finalmente tenía:
 	* Lista de grupos de evaluación que son desplegables con examenes
 	* Dialogo para crear/modificar una asignatura, grupos de evaluación y examenes.
 
-# V1 vs V2
+####Sketching
+</br>
 
-![V1 vs V2](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1-vs-v2.jpg)
+![Primer sketch de Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/sketch1.jpg)
+
+El primer sketch que hice, que se vea bien la nota de la asignatura, los grupos y los examenes dentro de ellos, tambien el NavigationView con todas las asignaturas.
+
+![Primera versión de Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1_app.jpg)
 
 En la primera versión cuando te metias por primera vez aparecía un tutoríal que te explicaba como iba la aplicación porque puede que cuando entraras sin explicación no sabías hacer casi nada y esto más que la aplicación usaba dialogs para rellenar la información hicieron que se me ocurriera una mejor interfaz para una nueva versión al poco de crear la aplicación hace un año.
 
 <blockquote class="twitter-tweet" lang="en"><p lang="es" dir="ltr">Pensando ya en la v2.0.0 de <a href="https://twitter.com/hashtag/CalculaNotas?src=hash">#CalculaNotas</a> mas intuitiva. Para el año que viene ya. <a href="http://t.co/ga4kqglefO">pic.twitter.com/ga4kqglefO</a></p>&mdash; Antonio López Marín (@tonilopezmr) <a href="https://twitter.com/tonilopezmr/status/590631903499268097">April 21, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
--- Este es el sketch que hice más o menos de lo que tenia en la cabeza.
-
-La nueva interfaz debería de ser parecida (sin realizar un cambio demasiado brusco de repente) que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es el calcula notas pero molón.
+La nueva interfaz debería de ser parecida (sin realizar un cambio demasiado brusco de repente) que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.
 
 Ahora quitaría los horribles desplegables por simples cards y mostraría siempre los examenes (aun mejor visualización), tambien quitaría los dialogos para rellenar los datos y añadiría detalles de cada entidad, que es que por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). 
 
-//Detalles por cada entidad
+![Segunda versión Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v2_app.jpg)
+
+La nota se ve claramente de la asignatura los grupos y los 2 primeros examenes de cada grupo, si se desea ver más sobre un grupo pinchando sobre el grupo va hacia su detalle.
+
+####Detalle por cada entidad 
+</br>
+
+![Detalles de grupo y examen](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/detail_activity.jpg)
 
 Al tener cada entidad con su detalle las opciones que puedes hacer sobre cada una estan en ese mismo detalle, es decir, en la primera versión si querías modificar o borrar un examen tenias que manternerlo pulsado y aparecerían las opciones que puedes hacer sobre el, ahora las opciones no tienen que aparecer cuando lo tienes pulsado sino que aparecen cuando pinchas sobre un examen y se va a su detalle enseñandote toda la información y opciones que puedes hacer sobre el.
 
-//Rellenar los datos
-
 Ahora al tener cada detalle de cada entidad la edición y creación para rellenar datos se hará en ese mismo detalle enseñandote una pantalla entera para poder rellenar sus datos verificarlos y guardarlos.
 
-//Flujo de la aplicación
+####Flujo de la aplicación
 
 Como ya he dicho en la primera versión solo había una pantalla donde lo tenias todo, y para poder interactuar con los elementos había que mantenerlos pulsados durante unos segundos.
 
@@ -64,11 +72,18 @@ El flujo es el siguiente:
 
 Aun si del paso 2 no pasas al paso 3 sino que vuelves a la asignatura no importa porque desde la asignatura que tendra el grupo creado, dentro de este grupo te sugerirá que crees un examen para ese grupo, todo mucho más logico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.
 
-//mostra imagen o sketch explicando asignatura -> grupo -> examen
+![Flujo de la Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/flujo_app.jpg)
 
-//logitipo
+#### Icono
 
-El cambio en el logotipo tambíen ha sido importante ya que pase de el primer logo creado con un amigo a hacerlo totalmente material(poner aqui el link: https://www.google.com/design/spec/style/icons.html), en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuensta: https://plus.google.com/111286730211804417846/posts/dS2JRxX7Mj9 , gano brutalmente y decidi ponerla redonda.
+![V1 vs V2](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1-vs-v2.jpg)
+
+El cambio en el logotipo tambíen ha sido importante ya que pase de el primer logo creado con un amigo a hacerlo totalmente material(poner aqui el link: https://www.google.com/design/spec/style/icons.html), en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuensta: , gano brutalmente y decidi ponerla redonda.
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js" async defer>
+</script>
+<div class="g-post" data-href="https://plus.google.com/+AntonioL%C3%B3pezMar%C3%ADn/posts/dS2JRxX7Mj9"></div>
+
 
 //animaciones
 
@@ -92,11 +107,7 @@ En una versión intermedia voy a permitir identificarte en la aplicación para q
 Para la version 3 haré que se puedan compartir las asignaturas con los porcentajes de los grupos y asignaturas, es decir poder pasar las estructura que sigue cada asignatura a tus amigos y no tener que ir mano a mano creando grupos que toda una clase tiene igual o incluso un curso entero.
 
 
-#####Sketching
 
-![Primera visión de Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/sketch1.jpg)
-
-La idea se me ocurrio mientras estudiaba y como me venian las ideas de como quería que se viera las apuntaba en una hoja en la que estaba estudiando y cuando estudio suelo dibujar muchos monigotes ¯(°_o)/¯
 
 
 //Poniendo cosas locas y luego organizar //

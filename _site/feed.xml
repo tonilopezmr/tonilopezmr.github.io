@@ -6,9 +6,210 @@
 </description>
     <link>http://tonilopezmr.github.io/</link>
     <atom:link href="http://tonilopezmr.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 18 Oct 2015 20:35:37 +0200</pubDate>
-    <lastBuildDate>Sun, 18 Oct 2015 20:35:37 +0200</lastBuildDate>
+    <pubDate>Sun, 08 Nov 2015 00:39:28 +0100</pubDate>
+    <lastBuildDate>Sun, 08 Nov 2015 00:39:28 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>FACEMASH UPV</title>
+        <description>&lt;h2&gt;¿Por qué?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;Porque puedo&lt;/del&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ya que estoy en &lt;strong&gt;segundo curso de informática&lt;/strong&gt;, &lt;del&gt;y quería promocionar la aplicación de Calcula Notas&lt;/del&gt; , me pareció divertido hacerle un pequeño homenaje al colega &lt;a href=&quot;https://en.wikipedia.org/wiki/Mark_Zuckerberg&quot;&gt;Mark&lt;/a&gt; que hizo lo mismo pero con imágenes robadas de perfiles privados, &lt;strong&gt;yo no hice eso luego lo explicare&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Quería hacerlo lo más parecido al de la peli de &lt;a href=&quot;http://www.filmaffinity.com/en/film577699.html&quot;&gt;La red social&lt;/a&gt; que tanto ponen en las jornadas de acogida:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://dublindigital.ie/wp-content/uploads/2011/02/facemash.jpg&quot; alt=&quot;La red social&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/about/facemash-image.png&quot; alt=&quot;FACEMASH UPV&quot;&gt;&lt;/p&gt;
+
+&lt;h2&gt;¿Como?&lt;/h2&gt;
+
+&lt;p&gt;Bueno pues fue &lt;strong&gt;muy fácil&lt;/strong&gt; ya sabía que se podían ver todas las fotos de la universidad en el &lt;strong&gt;primer año&lt;/strong&gt; cuando entré pero ha sido en este segundo curso cuando le vi utilidad.&lt;/p&gt;
+
+&lt;p&gt;Bueno si quieres un resumen de &lt;strong&gt;como lo hice&lt;/strong&gt; aquí puedes ver la versión divertida:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=f8AuB5hPiCk&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/f8AuB5hPiCk/0.jpg&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora en &lt;strong&gt;serio&lt;/strong&gt;, pues coges tu foto de perfil miras que la URL es &lt;a href=&quot;https://intranet.upv.es/foto/get/52873099.gif&quot;&gt;http://intranet.upv...../numeritos.gif&lt;/a&gt; y vas cambiando los números y &lt;strong&gt;¡EUREKA!&lt;/strong&gt;, &lt;strong&gt;las imágenes en la upv las puede ver cualquiera&lt;/strong&gt; y &lt;strong&gt;no pasa nada&lt;/strong&gt; porque puedes ver la de tus compañeros de clase en la intranet (orlas) etc...&lt;/p&gt;
+
+&lt;p&gt;Ahora solo hay que &lt;strong&gt;automatizarlo&lt;/strong&gt; y hacer una página html que vaya cambiando las URL&amp;#39;s, para hacerlo lo más sencillo posible y que la página sea muy rápida en cargar las fotos como solo hay que cambiar los numeritos, &lt;strong&gt;desarrollé&lt;/strong&gt; un programa que vaya aumentando los números y los guarde en un &lt;strong&gt;fichero&lt;/strong&gt;, y no tener que encontrar una imagen cada vez que quiera cambiarla, etc...&lt;/p&gt;
+
+&lt;p&gt;El problema es que el número es muuuuy &lt;strong&gt;grande&lt;/strong&gt; y en la mayoría de combinaciones &lt;strong&gt;no hay imagen&lt;/strong&gt; y te sale una gris fea :(.
+&lt;strong&gt;Problema solucionado&lt;/strong&gt;, cuando no encuentra una imagen de perfil aparece una imagen que siempre es la misma y encima más pequeña con lo que siempre pesa lo mismo (bytes) que más concretamente eran &lt;strong&gt;5372 bytes&lt;/strong&gt;, todas las imágenes que fueran distintas de la imagen sin cara pues no lo añado al fichero y ya está.&lt;/p&gt;
+
+&lt;p&gt;Total que lo deje un ratito y cuando tenía &lt;strong&gt;5141 números diferentes&lt;/strong&gt; lo deje porque sino hay demasiadas caras y la gente no se encuentra! &lt;/p&gt;
+
+&lt;p&gt;El HTML con un poco de &lt;del&gt;sorpresas&lt;/del&gt; javascript para que el cliente haga todo el trabajo y sea rapidisimo sin recargas ni nada y se acabó.&lt;/p&gt;
+
+&lt;p&gt;Aquí el código mágico:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;    &lt;span class=&quot;c1&quot;&gt;// Code for collect facebooks in a file&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;53177199&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;99999999&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;PrintWriter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;printWriter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PrintWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;faces&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urlPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;https://intranet.upv.es/foto/get/&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;.gif&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urlPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;openConnection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+            &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8192&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytesRead&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;ByteArrayOutputStream&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ByteArrayOutputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bytesRead&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bytesRead&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toByteArray&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5372&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;printWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;abc&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;printWriter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; id: &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Sat, 07 Nov 2015 14:40:25 +0100</pubDate>
+        <link>http://tonilopezmr.github.io/facemash/2015/11/07/facemash-upv.html</link>
+        <guid isPermaLink="true">http://tonilopezmr.github.io/facemash/2015/11/07/facemash-upv.html</guid>
+        
+        <category>university</category>
+        
+        <category>facebook</category>
+        
+        <category>facemash</category>
+        
+        
+        <category>facemash</category>
+        
+      </item>
+    
+      <item>
+        <title>Nueva versión de calcula notas, nueva interfaz</title>
+        <description>&lt;p&gt;Hace poco menos de un año despues de los primeros examenes de la universidad cree &lt;a href=&quot;http://tonilopezmr.com/calculanotas&quot;&gt;Calcula Notas&lt;/a&gt;, es una aplicación que calcula la nota de las asignaturas de la universidad poniendoles el sistema de evaluación que sigue cada una y añadiendo examenes.&lt;/p&gt;
+
+&lt;p&gt;La idea surgió de que cada vez que quería de como iba con las notas, sacaba la calculadora miraba como funcionaba la asignatura y las calculaba, como lo hacia con cada una de las asignaturas pues se me ocurrio hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.&lt;/p&gt;
+
+&lt;h1&gt;Primeros pasos&lt;/h1&gt;
+
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura como podía ser la nota de los examenes y la nota de cada grupo de evaluación (Teoría, Practicas, etc...), y todo ello poder verlo con un pequeño vistazo.&lt;/p&gt;
+
+&lt;p&gt;Por lo que se me ocurrió mostrar una asignatura en una pantalla con todo su contenido mediante desplegables, insertar la información mediante dialogos y editar manteniendo pulsado lo que se quería editar, de esta manera lo tenía todo a la vista.&lt;/p&gt;
+
+&lt;p&gt;Finalmente tenía:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;* Solo una pantalla principal
+* Lista de examenes con la barra lateral
+* Lista de grupos de evaluación que son desplegables con examenes
+* Dialogo para crear/modificar una asignatura, grupos de evaluación y examenes.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Sketching&lt;/h4&gt;
+
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/sketch1.jpg&quot; alt=&quot;Primer sketch de Calcula Notas&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;El primer sketch que hice, que se vea bien la nota de la asignatura, los grupos y los examenes dentro de ellos, tambien el NavigationView con todas las asignaturas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1_app.jpg&quot; alt=&quot;Primera versión de Calcula Notas&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;En la primera versión cuando te metias por primera vez aparecía un tutoríal que te explicaba como iba la aplicación porque puede que cuando entraras sin explicación no sabías hacer casi nada y esto más que la aplicación usaba dialogs para rellenar la información hicieron que se me ocurriera una mejor interfaz para una nueva versión al poco de crear la aplicación hace un año.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;es&quot; dir=&quot;ltr&quot;&gt;Pensando ya en la v2.0.0 de &lt;a href=&quot;https://twitter.com/hashtag/CalculaNotas?src=hash&quot;&gt;#CalculaNotas&lt;/a&gt; mas intuitiva. Para el año que viene ya. &lt;a href=&quot;http://t.co/ga4kqglefO&quot;&gt;pic.twitter.com/ga4kqglefO&lt;/a&gt;&lt;/p&gt;&amp;mdash; Antonio López Marín (@tonilopezmr) &lt;a href=&quot;https://twitter.com/tonilopezmr/status/590631903499268097&quot;&gt;April 21, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;La nueva interfaz debería de ser parecida (sin realizar un cambio demasiado brusco de repente) que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.&lt;/p&gt;
+
+&lt;p&gt;Ahora quitaría los horribles desplegables por simples cards y mostraría siempre los examenes (aun mejor visualización), tambien quitaría los dialogos para rellenar los datos y añadiría detalles de cada entidad, que es que por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v2_app.jpg&quot; alt=&quot;Segunda versión Calcula Notas&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;La nota se ve claramente de la asignatura los grupos y los 2 primeros examenes de cada grupo, si se desea ver más sobre un grupo pinchando sobre el grupo va hacia su detalle.&lt;/p&gt;
+
+&lt;h4&gt;Detalle por cada entidad&lt;/h4&gt;
+
+&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/detail_activity.jpg&quot; alt=&quot;Detalles de grupo y examen&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Al tener cada entidad con su detalle las opciones que puedes hacer sobre cada una estan en ese mismo detalle, es decir, en la primera versión si querías modificar o borrar un examen tenias que manternerlo pulsado y aparecerían las opciones que puedes hacer sobre el, ahora las opciones no tienen que aparecer cuando lo tienes pulsado sino que aparecen cuando pinchas sobre un examen y se va a su detalle enseñandote toda la información y opciones que puedes hacer sobre el.&lt;/p&gt;
+
+&lt;p&gt;Ahora al tener cada detalle de cada entidad la edición y creación para rellenar datos se hará en ese mismo detalle enseñandote una pantalla entera para poder rellenar sus datos verificarlos y guardarlos.&lt;/p&gt;
+
+&lt;h4&gt;Flujo de la aplicación&lt;/h4&gt;
+
+&lt;p&gt;Como ya he dicho en la primera versión solo había una pantalla donde lo tenias todo, y para poder interactuar con los elementos había que mantenerlos pulsados durante unos segundos.&lt;/p&gt;
+
+&lt;p&gt;Ahora hay un flujo entre las diferentes tres pantallas que existen pantalla principal (main), pantalla del detalle de grupo y otra para el detalle de examen.&lt;/p&gt;
+
+&lt;p&gt;El flujo es el siguiente:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;1. Creas una asignatura, esta asignatura te sugiere que crees un grupo.
+2. Creas un grupo, este grupo te sugiere que crees examenes.
+3. Creas un examen y este te invita a que rellenes su información.
+4. Vuelves a el grupo, y este te sugiere que crees otro examen si tienes más examenes en ese grupo.
+5. Vuelves a la asignatura, esta te sugiere que crees otro grupo.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Aun si del paso 2 no pasas al paso 3 sino que vuelves a la asignatura no importa porque desde la asignatura que tendra el grupo creado, dentro de este grupo te sugerirá que crees un examen para ese grupo, todo mucho más logico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/flujo_app.jpg&quot; alt=&quot;Flujo de la Calcula Notas&quot;&gt;&lt;/p&gt;
+
+&lt;h4&gt;Icono&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1-vs-v2.jpg&quot; alt=&quot;V1 vs V2&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;El cambio en el logotipo tambíen ha sido importante ya que pase de el primer logo creado con un amigo a hacerlo totalmente material(poner aqui el link: https://www.google.com/design/spec/style/icons.html), en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuensta: , gano brutalmente y decidi ponerla redonda.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot; async defer&gt;
+&lt;/script&gt;
+
+&lt;div class=&quot;g-post&quot; data-href=&quot;https://plus.google.com/+AntonioL%C3%B3pezMar%C3%ADn/posts/dS2JRxX7Mj9&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;//animaciones&lt;/p&gt;
+
+&lt;p&gt;Las animaciones que tan chulas hacen las aplicaciones en la versión 2 se dejan ver un poco, sobre todo transiciones con animación, podría haber añadido más pero por falta de tiempo y ganas puse solo animaciones al crear las entidades.&lt;/p&gt;
+
+&lt;p&gt;Transición al crear un grupo:&lt;/p&gt;
+
+&lt;p&gt;Transiciíon al crear un examen:&lt;/p&gt;
+
+&lt;p&gt;//Mejoras&lt;/p&gt;
+
+&lt;p&gt;Aun podría haberse mejorado más cosas como cuando muestra el mensaje de que has borrado una asignatura puedas hacer rollback diciendo que deseche el cambio y se restablezca todo como estaba, también se podría haber quitado el NavigationView (la barra lateral que se desliza) por pestañas (Tabslayout) ya que muchos diseñadores nombran a las 3 barras verticales del NavigationView, menu hamburgesa y a los menus de la derecha con 3 puntos verticales, menu kebab:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Don&amp;#39;t ever say you don&amp;#39;t have choices on mobile. &lt;a href=&quot;http://t.co/Atu3Ogi58j&quot;&gt;pic.twitter.com/Atu3Ogi58j&lt;/a&gt;&lt;/p&gt;&amp;mdash; Luke Wroblewski (@lukew) &lt;a href=&quot;https://twitter.com/lukew/status/591296890030915585&quot;&gt;April 23, 2015&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;//Nuevas versiones&lt;/p&gt;
+
+&lt;p&gt;En una versión intermedia voy a permitir identificarte en la aplicación para que las asignaturas se puedan quedar guardadas en la nube y no perderlas si cambias de movil, y tambien para poder hacer una versión web para aprender a hacer aplicaciones web.&lt;/p&gt;
+
+&lt;p&gt;Para la version 3 haré que se puedan compartir las asignaturas con los porcentajes de los grupos y asignaturas, es decir poder pasar las estructura que sigue cada asignatura a tus amigos y no tener que ir mano a mano creando grupos que toda una clase tiene igual o incluso un curso entero.&lt;/p&gt;
+
+&lt;p&gt;//Poniendo cosas locas y luego organizar //&lt;/p&gt;
+
+&lt;h4&gt;Calcula notas versión 2&lt;/h4&gt;
+</description>
+        <pubDate>Sun, 01 Nov 2015 18:12:25 +0100</pubDate>
+        <link>http://tonilopezmr.github.io/design/2015/11/01/nueva-version-de-calcula-notas-nueva-interfaz.html</link>
+        <guid isPermaLink="true">http://tonilopezmr.github.io/design/2015/11/01/nueva-version-de-calcula-notas-nueva-interfaz.html</guid>
+        
+        <category>android</category>
+        
+        <category>material</category>
+        
+        <category>design</category>
+        
+        
+        <category>design</category>
+        
+      </item>
     
       <item>
         <title>Android Design Library: Diferentes formas de implementar NavigationView y DrawableLayout</title>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Nueva versión de calcula notas, nueva interfaz</title>
+  <meta name="description" content="<p>Hace poco menos de un año despues de los primeros examenes de la universidad cree <a href="http://tonilopezmr.com/calculanotas">Calcula Notas</a>, es una aplicación que calcula la nota de las asignaturas de la universidad poniendoles el sistema de evaluación que sigue cada una y añadiendo examenes.</p>
+" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@tonilopezmr" />
+    <meta name="twitter:title" content="Nueva versión de calcula notas, nueva interfaz" />
+    <meta name="twitter:image" content="http://tonilopezmr.github.io/assets/images/df_logo.jpg" />
+    
+    <meta name="twitter:description"  content="Hace poco menos de un año despues de los primeros examenes de la universidad cree Calcula Notas, es una aplicación que calcula la nota de las asignaturas de la universidad poniendoles el sistema de..." />
+    
+  
+  
+  <meta property="og:site_name" content="Antonio López Marín" />
+  <meta property="og:title" content="Nueva versión de calcula notas, nueva interfaz"/>
+  
+  <meta property="og:description" content="Hace poco menos de un año despues de los primeros examenes de la universidad cree Calcula Notas, es una aplicación que calcula la nota de las asignaturas de la universidad poniendoles el sistema de..." />
+  
+  <meta property="og:image" content="http://tonilopezmr.github.io/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1.jpg" />
+  <meta property="og:url" content="http://tonilopezmr.github.io/design/2015/11/01/nueva-version-de-calcula-notas-nueva-interfaz.html" >
+  <meta property="og:type" content="blog" />
+  <meta property="article:published_time" content="2015-11-01T18:12:25+01:00">
+
+  <link rel="canonical" href="http://tonilopezmr.github.io/design/2015/11/01/nueva-version-de-calcula-notas-nueva-interfaz.html">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://tonilopezmr.github.io" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.jpg)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="article-image">
+          <div class="post-image-image" style="background-image: url(/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1.jpg)">
+            Article Image
+          </div>
+          <div class="post-meta">
+            <h1 class="post-title">Nueva versión de calcula notas, nueva interfaz</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/autor_logo.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">Antonio López</h4>
+              on
+              <time datetime="2015-11-01 18:12">01 Nov 2015</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+            <div style="text-align:center">
+              <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>Hace poco menos de un año despues de los primeros examenes de la universidad cree <a href="http://tonilopezmr.com/calculanotas">Calcula Notas</a>, es una aplicación que calcula la nota de las asignaturas de la universidad poniendoles el sistema de evaluación que sigue cada una y añadiendo examenes.</p>
+
+<p>La idea surgió de que cada vez que quería de como iba con las notas, sacaba la calculadora miraba como funcionaba la asignatura y las calculaba, como lo hacia con cada una de las asignaturas pues se me ocurrio hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.</p>
+
+<h1>Primeros pasos</h1>
+
+<p></br></p>
+
+<p>La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura como podía ser la nota de los examenes y la nota de cada grupo de evaluación (Teoría, Practicas, etc...), y todo ello poder verlo con un pequeño vistazo.</p>
+
+<p>Por lo que se me ocurrió mostrar una asignatura en una pantalla con todo su contenido mediante desplegables, insertar la información mediante dialogos y editar manteniendo pulsado lo que se quería editar, de esta manera lo tenía todo a la vista.</p>
+
+<p>Finalmente tenía:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">* Solo una pantalla principal
+* Lista de examenes con la barra lateral
+* Lista de grupos de evaluación que son desplegables con examenes
+* Dialogo para crear/modificar una asignatura, grupos de evaluación y examenes.
+</code></pre></div>
+<h4>Sketching</h4>
+
+<p></br></p>
+
+<p><img src="/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/sketch1.jpg" alt="Primer sketch de Calcula Notas"></p>
+
+<p>El primer sketch que hice, que se vea bien la nota de la asignatura, los grupos y los examenes dentro de ellos, tambien el NavigationView con todas las asignaturas.</p>
+
+<p><img src="/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1_app.jpg" alt="Primera versión de Calcula Notas"></p>
+
+<p>En la primera versión cuando te metias por primera vez aparecía un tutoríal que te explicaba como iba la aplicación porque puede que cuando entraras sin explicación no sabías hacer casi nada y esto más que la aplicación usaba dialogs para rellenar la información hicieron que se me ocurriera una mejor interfaz para una nueva versión al poco de crear la aplicación hace un año.</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="es" dir="ltr">Pensando ya en la v2.0.0 de <a href="https://twitter.com/hashtag/CalculaNotas?src=hash">#CalculaNotas</a> mas intuitiva. Para el año que viene ya. <a href="http://t.co/ga4kqglefO">pic.twitter.com/ga4kqglefO</a></p>&mdash; Antonio López Marín (@tonilopezmr) <a href="https://twitter.com/tonilopezmr/status/590631903499268097">April 21, 2015</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>La nueva interfaz debería de ser parecida (sin realizar un cambio demasiado brusco de repente) que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.</p>
+
+<p>Ahora quitaría los horribles desplegables por simples cards y mostraría siempre los examenes (aun mejor visualización), tambien quitaría los dialogos para rellenar los datos y añadiría detalles de cada entidad, que es que por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). </p>
+
+<p><img src="/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v2_app.jpg" alt="Segunda versión Calcula Notas"></p>
+
+<p>La nota se ve claramente de la asignatura los grupos y los 2 primeros examenes de cada grupo, si se desea ver más sobre un grupo pinchando sobre el grupo va hacia su detalle.</p>
+
+<h4>Detalle por cada entidad</h4>
+
+<p></br></p>
+
+<p><img src="/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/detail_activity.jpg" alt="Detalles de grupo y examen"></p>
+
+<p>Al tener cada entidad con su detalle las opciones que puedes hacer sobre cada una estan en ese mismo detalle, es decir, en la primera versión si querías modificar o borrar un examen tenias que manternerlo pulsado y aparecerían las opciones que puedes hacer sobre el, ahora las opciones no tienen que aparecer cuando lo tienes pulsado sino que aparecen cuando pinchas sobre un examen y se va a su detalle enseñandote toda la información y opciones que puedes hacer sobre el.</p>
+
+<p>Ahora al tener cada detalle de cada entidad la edición y creación para rellenar datos se hará en ese mismo detalle enseñandote una pantalla entera para poder rellenar sus datos verificarlos y guardarlos.</p>
+
+<h4>Flujo de la aplicación</h4>
+
+<p>Como ya he dicho en la primera versión solo había una pantalla donde lo tenias todo, y para poder interactuar con los elementos había que mantenerlos pulsados durante unos segundos.</p>
+
+<p>Ahora hay un flujo entre las diferentes tres pantallas que existen pantalla principal (main), pantalla del detalle de grupo y otra para el detalle de examen.</p>
+
+<p>El flujo es el siguiente:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">1. Creas una asignatura, esta asignatura te sugiere que crees un grupo.
+2. Creas un grupo, este grupo te sugiere que crees examenes.
+3. Creas un examen y este te invita a que rellenes su información.
+4. Vuelves a el grupo, y este te sugiere que crees otro examen si tienes más examenes en ese grupo.
+5. Vuelves a la asignatura, esta te sugiere que crees otro grupo.
+</code></pre></div>
+<p>Aun si del paso 2 no pasas al paso 3 sino que vuelves a la asignatura no importa porque desde la asignatura que tendra el grupo creado, dentro de este grupo te sugerirá que crees un examen para ese grupo, todo mucho más logico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.</p>
+
+<p><img src="/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/flujo_app.jpg" alt="Flujo de la Calcula Notas"></p>
+
+<h4>Icono</h4>
+
+<p><img src="/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1-vs-v2.jpg" alt="V1 vs V2"></p>
+
+<p>El cambio en el logotipo tambíen ha sido importante ya que pase de el primer logo creado con un amigo a hacerlo totalmente material(poner aqui el link: https://www.google.com/design/spec/style/icons.html), en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuensta: , gano brutalmente y decidi ponerla redonda.</p>
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js" async defer>
+</script>
+
+<div class="g-post" data-href="https://plus.google.com/+AntonioL%C3%B3pezMar%C3%ADn/posts/dS2JRxX7Mj9"></div>
+
+<p>//animaciones</p>
+
+<p>Las animaciones que tan chulas hacen las aplicaciones en la versión 2 se dejan ver un poco, sobre todo transiciones con animación, podría haber añadido más pero por falta de tiempo y ganas puse solo animaciones al crear las entidades.</p>
+
+<p>Transición al crear un grupo:</p>
+
+<p>Transiciíon al crear un examen:</p>
+
+<p>//Mejoras</p>
+
+<p>Aun podría haberse mejorado más cosas como cuando muestra el mensaje de que has borrado una asignatura puedas hacer rollback diciendo que deseche el cambio y se restablezca todo como estaba, también se podría haber quitado el NavigationView (la barra lateral que se desliza) por pestañas (Tabslayout) ya que muchos diseñadores nombran a las 3 barras verticales del NavigationView, menu hamburgesa y a los menus de la derecha con 3 puntos verticales, menu kebab:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Don&#39;t ever say you don&#39;t have choices on mobile. <a href="http://t.co/Atu3Ogi58j">pic.twitter.com/Atu3Ogi58j</a></p>&mdash; Luke Wroblewski (@lukew) <a href="https://twitter.com/lukew/status/591296890030915585">April 23, 2015</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>//Nuevas versiones</p>
+
+<p>En una versión intermedia voy a permitir identificarte en la aplicación para que las asignaturas se puedan quedar guardadas en la nube y no perderlas si cambias de movil, y tambien para poder hacer una versión web para aprender a hacer aplicaciones web.</p>
+
+<p>Para la version 3 haré que se puedan compartir las asignaturas con los porcentajes de los grupos y asignaturas, es decir poder pasar las estructura que sigue cada asignatura a tus amigos y no tener que ir mano a mano creando grupos que toda una clase tiene igual o incluso un curso entero.</p>
+
+<p>//Poniendo cosas locas y luego organizar //</p>
+
+<h4>Calcula notas versión 2</h4>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=Nueva+versi%C3%B3n+de+calcula+notas%2C+nueva+interfaz&amp;url=http://tonilopezmr.github.io/design/2015/11/01/nueva-version-de-calcula-notas-nueva-interfaz"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/autor_logo.jpg)">Blog Logo</div>
+              <h4>Antonio López</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2015-11-01 18:12">01 Nov 2015</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content copyright <a href="/">Antonio López</a> &copy; 2015<br>All rights reserved.</section>
+              </div>
+            </footer>
+          </div>
+        </div>
+        
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">Antonio López Marín</h1>
+        <h2 class="blog-description">Student of Computer Science in Polytechnic University of Valencia
+</h2>
+        <a href="/" class="btn">Back to Overview</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+
+  </body>
+</html>
