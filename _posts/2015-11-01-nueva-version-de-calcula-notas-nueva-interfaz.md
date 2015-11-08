@@ -72,7 +72,7 @@ El flujo es el siguiente:
  	4. Vuelves a el grupo, y este te sugiere que crees otro examen si tienes más exámenes en ese grupo.
  	5. Vuelves a la asignatura, esta te sugiere que crees otro grupo.
 
-Aun si del paso 2 no pasas al paso 3, sino que vuelves a la asignatura, no importa porque desde la asignatura aparecerá el grupo y dentro de este grupo te sugerirá que crees un examen, todo mucho más lógico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.
+Si del paso 2 no pasas al paso 3, sino que vuelves a la asignatura, no importa porque desde la asignatura aparecerá el grupo y dentro de este grupo te sugerirá que crees un examen, todo mucho más lógico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.
 
 #### Icono
 
