@@ -41,7 +41,7 @@ En la primera versión, cuando te metias por primera vez, aparecía un tutorial 
 
 La nueva interfaz debería de ser parecida pero sin realizar un cambio demasiado brusco de repente, que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.
 
-Ahora esto quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, que es que por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). 
+Ahora quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, esto es que, por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). 
 
 ![Segunda versión Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v2_app.jpg)
 
@@ -72,7 +72,7 @@ El flujo es el siguiente:
  	4. Vuelves a el grupo, y este te sugiere que crees otro examen si tienes más exámenes en ese grupo.
  	5. Vuelves a la asignatura, esta te sugiere que crees otro grupo.
 
-Aun si del paso 2 no pasas al paso 3 sino que vuelves a la asignatura no importa porque desde la asignatura que tendrá el grupo creado, dentro de este grupo te sugerirá que crees un examen para ese grupo, todo mucho más lógico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.
+Aun si del paso 2 no pasas al paso 3, sino que vuelves a la asignatura, no importa porque desde la asignatura aparecerá el grupo y dentro de este grupo te sugerirá que crees un examen, todo mucho más lógico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.
 
 #### Icono
 
