@@ -6,8 +6,8 @@
 </description>
     <link>http://tonilopezmr.github.io/</link>
     <atom:link href="http://tonilopezmr.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 08 Nov 2015 15:46:12 +0100</pubDate>
-    <lastBuildDate>Sun, 08 Nov 2015 15:46:12 +0100</lastBuildDate>
+    <pubDate>Sun, 08 Nov 2015 16:03:39 +0100</pubDate>
+    <lastBuildDate>Sun, 08 Nov 2015 16:03:39 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -166,7 +166,7 @@ Como ya he dicho en la primera versión solo había una pantalla donde lo tenía
 
 &lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1-vs-v2.jpg&quot; alt=&quot;V1 vs V2&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;El cambio en el logotipo también ha sido importante ya que pase de el primer logo creado con un amigo a hacerlo totalmente material siguiendo las &lt;a href=&quot;https://www.google.com/design/spec/style/icons.html#icons-product-icons&quot;&gt;Icons guidelines&lt;/a&gt;, en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuesta:&lt;/p&gt;
+&lt;p&gt;El cambio en el logotipo también ha sido importante, ya que pase del primer logo creado con un amigo, a hacerlo totalmente material siguiendo las &lt;a href=&quot;https://www.google.com/design/spec/style/icons.html#icons-product-icons&quot;&gt;Icons guidelines&lt;/a&gt;, en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuesta:&lt;/p&gt;
 
 &lt;!-- Place this tag in your head or just before your close body tag. --&gt;
 
@@ -179,7 +179,7 @@ Como ya he dicho en la primera versión solo había una pantalla donde lo tenía
 &lt;h4&gt;Animaciones&lt;/h4&gt;
 
 &lt;p&gt;&lt;/br&gt;
-Las animaciones que tan chulas convierte a las aplicaciones, en la versión 2 se dejan ver un poco, sobre todo transiciones con animación, podría haber añadido más pero por falta de tiempo y ganas puse solo animaciones al crear las entidades.&lt;/p&gt;
+Las animaciones que hacen que se vea una aplicación tan chula, en la versión 2 se dejan ver un poco, sobre todo transiciones con animación, podría haber añadido más pero por falta de tiempo y ganas puse solo animaciones al crear las entidades.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/group_animation.gif&quot; alt=&quot;Transición al crear un grupo&quot;&gt;&lt;/p&gt;
 
@@ -188,7 +188,7 @@ Las animaciones que tan chulas convierte a las aplicaciones, en la versión 2 se
 &lt;h4&gt;Mejoras&lt;/h4&gt;
 
 &lt;p&gt;&lt;/br&gt;
-Aún podría haberse mejorado más cosas como cuando muestra el mensaje de que has borrado una asignatura puedas hacer rollback diciendo que deseche el cambio y se restablezca todo cómo estaba, también se podría haber quitado el NavigationView (la barra lateral que se desliza) por pestañas (Tabslayout) ya que muchos diseñadores nombran a las 3 barras verticales del NavigationView, menú hamburguesa y a los menús de la derecha con 3 puntos verticales, menú kebab:&lt;/p&gt;
+Aún podrían haberse mejorado más cosas como cuando muestra el mensaje de que has borrado una asignatura puedas hacer rollback diciendo que deseche el cambio y se restablezca todo cómo estaba, también se podría haber quitado el NavigationView (la barra lateral que se desliza) por pestañas (Tabslayout) ya que muchos diseñadores nombran a las 3 barras verticales del NavigationView, menú hamburguesa y a los menús de la derecha con 3 puntos verticales, menú kebab:&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Don&amp;#39;t ever say you don&amp;#39;t have choices on mobile. &lt;a href=&quot;http://t.co/Atu3Ogi58j&quot;&gt;pic.twitter.com/Atu3Ogi58j&lt;/a&gt;&lt;/p&gt;&amp;mdash; Luke Wroblewski (@lukew) &lt;a href=&quot;https://twitter.com/lukew/status/591296890030915585&quot;&gt;April 23, 2015&lt;/a&gt;&lt;/blockquote&gt;
 

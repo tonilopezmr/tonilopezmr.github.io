@@ -78,7 +78,7 @@ Aun si del paso 2 no pasas al paso 3 sino que vuelves a la asignatura no importa
 
 ![V1 vs V2](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1-vs-v2.jpg)
 
-El cambio en el logotipo también ha sido importante ya que pase de el primer logo creado con un amigo a hacerlo totalmente material siguiendo las [Icons guidelines][3], en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuesta:
+El cambio en el logotipo también ha sido importante, ya que pase del primer logo creado con un amigo, a hacerlo totalmente material siguiendo las [Icons guidelines][3], en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuesta:
 
 <!-- Place this tag in your head or just before your close body tag. -->
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -89,7 +89,7 @@ Ganó brutalmente y decidí poner la redonda.
 
 #### Animaciones
 </br>
-Las animaciones que tan chulas convierte a las aplicaciones, en la versión 2 se dejan ver un poco, sobre todo transiciones con animación, podría haber añadido más pero por falta de tiempo y ganas puse solo animaciones al crear las entidades.
+Las animaciones que hacen que se vea una aplicación tan chula, en la versión 2 se dejan ver un poco, sobre todo transiciones con animación, podría haber añadido más pero por falta de tiempo y ganas puse solo animaciones al crear las entidades.
 
 ![Transición al crear un grupo](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/group_animation.gif)
 
@@ -97,7 +97,7 @@ Las animaciones que tan chulas convierte a las aplicaciones, en la versión 2 se
 
 #### Mejoras
 </br>
-Aún podría haberse mejorado más cosas como cuando muestra el mensaje de que has borrado una asignatura puedas hacer rollback diciendo que deseche el cambio y se restablezca todo cómo estaba, también se podría haber quitado el NavigationView (la barra lateral que se desliza) por pestañas (Tabslayout) ya que muchos diseñadores nombran a las 3 barras verticales del NavigationView, menú hamburguesa y a los menús de la derecha con 3 puntos verticales, menú kebab:
+Aún podrían haberse mejorado más cosas como cuando muestra el mensaje de que has borrado una asignatura puedas hacer rollback diciendo que deseche el cambio y se restablezca todo cómo estaba, también se podría haber quitado el NavigationView (la barra lateral que se desliza) por pestañas (Tabslayout) ya que muchos diseñadores nombran a las 3 barras verticales del NavigationView, menú hamburguesa y a los menús de la derecha con 3 puntos verticales, menú kebab:
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Don&#39;t ever say you don&#39;t have choices on mobile. <a href="http://t.co/Atu3Ogi58j">pic.twitter.com/Atu3Ogi58j</a></p>&mdash; Luke Wroblewski (@lukew) <a href="https://twitter.com/lukew/status/591296890030915585">April 23, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
