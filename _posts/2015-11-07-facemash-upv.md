@@ -7,6 +7,9 @@ tags: university facebook facemash
 image: http://cdn.collider.com/wp-content/uploads/the_social_network_movie_image_andrew_garfield_01.jpg
 ---
 
+######Lo acabo de publicar y se que no a todo el mundo le sentará bien pero no es ilegal, es culpa de la uni que todo el mundo lo pueda ver.
+
+
 ##¿Por qué?
 
 - <del>Porque puedo</del>.
