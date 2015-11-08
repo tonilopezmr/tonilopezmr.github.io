@@ -6,8 +6,8 @@
 </description>
     <link>http://tonilopezmr.github.io/</link>
     <atom:link href="http://tonilopezmr.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 08 Nov 2015 12:36:39 +0100</pubDate>
-    <lastBuildDate>Sun, 08 Nov 2015 12:36:39 +0100</lastBuildDate>
+    <pubDate>Sun, 08 Nov 2015 15:46:12 +0100</pubDate>
+    <lastBuildDate>Sun, 08 Nov 2015 15:46:12 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -72,7 +72,9 @@
                 &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cont&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot; id: &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
             &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;No pulses la palabra OR&lt;/h1&gt;
+</description>
         <pubDate>Sat, 07 Nov 2015 14:40:25 +0100</pubDate>
         <link>http://tonilopezmr.github.io/facemash/2015/11/07/facemash-upv.html</link>
         <guid isPermaLink="true">http://tonilopezmr.github.io/facemash/2015/11/07/facemash-upv.html</guid>
@@ -90,15 +92,15 @@
     
       <item>
         <title>Nueva versión de calcula notas, nueva interfaz</title>
-        <description>&lt;p&gt;Hace poco menos de un año después de los primeros exámenes de la universidad cree &lt;a href=&quot;http://tonilopezmr.com/calculanotas&quot;&gt;Calcula Notas&lt;/a&gt;, es una aplicación que calcula la nota de las asignaturas de la universidad poniéndoles el sistema de evaluación que sigue cada una y añadiendo exámenes.&lt;/p&gt;
+        <description>&lt;p&gt;Hace poco menos de un año, después de los primeros exámenes de la universidad, cree &lt;a href=&quot;http://tonilopezmr.com/calculanotas&quot;&gt;Calcula Notas&lt;/a&gt;. Es una aplicación que calcula la nota de las asignaturas de la universidad poniéndoles el sistema de evaluación que sigue cada una y añadiendo exámenes.&lt;/p&gt;
 
-&lt;p&gt;La idea surgió de que cada vez que quería de cómo iba con las notas, sacaba la calculadora miraba cómo funcionaba la asignatura y las calculaba, cómo lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.&lt;/p&gt;
+&lt;p&gt;La idea surgió de que cada vez que quería de cómo iba con las notas, sacaba la calculadora miraba cómo funcionaba la asignatura y las calcula, cómo lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.&lt;/p&gt;
 
 &lt;h1&gt;Primeros pasos&lt;/h1&gt;
 
 &lt;p&gt;&lt;/br&gt;&lt;/p&gt;
 
-&lt;p&gt;La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura cómo podía ser la nota de los exámenes y la nota de cada grupo de evaluación (Teoría, Prácticas, etc...), y todo ello poder verlo con un pequeño vistazo.&lt;/p&gt;
+&lt;p&gt;La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura, cómo podía ser la nota de los exámenes y la nota de cada grupo de evaluación (Teoría, Prácticas, etc...), y todo ello poder verlo con un pequeño vistazo.&lt;/p&gt;
 
 &lt;p&gt;Por lo que se me ocurrió mostrar una asignatura en una pantalla con todo su contenido mediante desplegables, insertar la información mediante diálogos y editar manteniendo pulsado lo que se quería editar, de esta manera lo tenía todo a la vista.&lt;/p&gt;
 
@@ -118,15 +120,15 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1_app.jpg&quot; alt=&quot;Primera versión de Calcula Notas&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;En la primera versión cuando te metias por primera vez aparecía un tutorial que te explicaba cómo iba la aplicación porque puede que cuando entras sin explicación no sabías hacer casi nada y esto más que la aplicación usaba dialogs para rellenar la información hicieron que se me ocurriera una mejor interfaz para una nueva versión al poco de crear la aplicación hace un año.&lt;/p&gt;
+&lt;p&gt;En la primera versión, cuando te metias por primera vez, aparecía un tutorial que te explicaba cómo iba la aplicación porque puede que, cuando entras sin explicación no sabías hacer casi nada y esto me decía que el diseño no era bueno. También usaba dialogs para rellenar la información. Por estas cosas me hicieron pensar una mejor interfaz para una nueva versión al poco de crear la aplicación, hace un año.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p lang=&quot;es&quot; dir=&quot;ltr&quot;&gt;Pensando ya en la v2.0.0 de &lt;a href=&quot;https://twitter.com/hashtag/CalculaNotas?src=hash&quot;&gt;#CalculaNotas&lt;/a&gt; más intuitiva. Para el año que viene ya. &lt;a href=&quot;http://t.co/ga4kqglefO&quot;&gt;pic.twitter.com/ga4kqglefO&lt;/a&gt;&lt;/p&gt;&amp;mdash; Antonio López Marín (@tonilopezmr) &lt;a href=&quot;https://twitter.com/tonilopezmr/status/590631903499268097&quot;&gt;April 21, 2015&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;La nueva interfaz debería de ser parecida (sin realizar un cambio demasiado brusco de repente) que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.&lt;/p&gt;
+&lt;p&gt;La nueva interfaz debería de ser parecida pero sin realizar un cambio demasiado brusco de repente, que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.&lt;/p&gt;
 
-&lt;p&gt;Ahora quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, que es que por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). &lt;/p&gt;
+&lt;p&gt;Ahora esto quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, que es que por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). &lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v2_app.jpg&quot; alt=&quot;Segunda versión Calcula Notas&quot;&gt;&lt;/p&gt;
 
@@ -140,14 +142,14 @@
 
 &lt;p&gt;Al tener cada entidad con su detalle las opciones que puedes hacer sobre cada una están en ese mismo detalle, es decir, en la primera versión si querías modificar o borrar un examen tenías que mantenerlo pulsado y aparecían las opciones que puedes hacer sobre él, ahora las opciones no tienen que aparecer cuando lo tienes pulsado sino que aparecen cuando pinchas sobre un examen y se va a su detalle enseñándote toda la información y opciones que puedes hacer sobre el.&lt;/p&gt;
 
-&lt;p&gt;Ahora al tener cada detalle de cada entidad la edición y creación para rellenar datos se hará en ese mismo detalle enseñándote una pantalla entera para poder rellenar sus datos verificarlos y guardarlos.&lt;/p&gt;
+&lt;p&gt;Ahora al tener cada detalle de cada entidad, la edición y creación para rellenar datos se hará en ese mismo detalle enseñándote una pantalla entera para poder rellenar sus datos verificarlos y guardarlos.&lt;/p&gt;
 
 &lt;h4&gt;Flujo de la aplicación&lt;/h4&gt;
 
 &lt;p&gt;&lt;/br&gt;
 Como ya he dicho en la primera versión solo había una pantalla donde lo tenías todo, y para poder interactuar con los elementos había que mantenerlos pulsados durante unos segundos.&lt;/p&gt;
 
-&lt;p&gt;Ahora hay un flujo entre las diferentes tres pantallas que existen pantalla principal (main), pantalla del detalle de grupo y otra para el detalle de examen.&lt;/p&gt;
+&lt;p&gt;Ahora hay un flujo entre las diferentes tres pantallas que existen; pantalla principal (main), pantalla del detalle de grupo y otra para el detalle de examen.&lt;/p&gt;
 
 &lt;p&gt;El flujo es el siguiente:&lt;/p&gt;
 
@@ -166,9 +168,11 @@ Como ya he dicho en la primera versión solo había una pantalla donde lo tenía
 
 &lt;p&gt;El cambio en el logotipo también ha sido importante ya que pase de el primer logo creado con un amigo a hacerlo totalmente material siguiendo las &lt;a href=&quot;https://www.google.com/design/spec/style/icons.html#icons-product-icons&quot;&gt;Icons guidelines&lt;/a&gt;, en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuesta:&lt;/p&gt;
 
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot; async defer&gt;&lt;/script&gt;
+&lt;!-- Place this tag in your head or just before your close body tag. --&gt;
 
-&lt;div class=&quot;g-post&quot; data-href=&quot;https://plus.google.com/+%C3%81ngelSantillanaS%C3%A1nchez/posts/49V4X69DZge&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
+
+&lt;div class=&quot;g-post&quot; data-href=&quot;https://plus.google.com/+AntonioL%C3%B3pezMar%C3%ADn/posts/eTfrVZ8RMLU&quot;&gt;&lt;/div&gt;
 
 &lt;p&gt;Ganó brutalmente y decidí poner la redonda.&lt;/p&gt;
 

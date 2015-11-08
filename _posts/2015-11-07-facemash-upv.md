@@ -71,6 +71,8 @@ Aquí el código mágico:
 
 ```
 
+#No pulses la palabra OR
+
 
 [1]: https://en.wikipedia.org/wiki/Mark_Zuckerberg
 [2]: http://www.filmaffinity.com/en/film577699.html

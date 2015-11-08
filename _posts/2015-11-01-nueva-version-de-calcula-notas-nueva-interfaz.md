@@ -7,14 +7,14 @@ tags: android material design
 image: /assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1.jpg
 ---
 
-Hace poco menos de un año después de los primeros exámenes de la universidad cree [Calcula Notas][1], es una aplicación que calcula la nota de las asignaturas de la universidad poniéndoles el sistema de evaluación que sigue cada una y añadiendo exámenes.
+Hace poco menos de un año, después de los primeros exámenes de la universidad, cree [Calcula Notas][1]. Es una aplicación que calcula la nota de las asignaturas de la universidad poniéndoles el sistema de evaluación que sigue cada una y añadiendo exámenes.
 
-La idea surgió de que cada vez que quería de cómo iba con las notas, sacaba la calculadora miraba cómo funcionaba la asignatura y las calculaba, cómo lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.
+La idea surgió de que cada vez que quería de cómo iba con las notas, sacaba la calculadora miraba cómo funcionaba la asignatura y las calcula, cómo lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.
 
 #Primeros pasos
 </br>
 
-La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura cómo podía ser la nota de los exámenes y la nota de cada grupo de evaluación (Teoría, Prácticas, etc...), y todo ello poder verlo con un pequeño vistazo.
+La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura, cómo podía ser la nota de los exámenes y la nota de cada grupo de evaluación (Teoría, Prácticas, etc...), y todo ello poder verlo con un pequeño vistazo.
 
 Por lo que se me ocurrió mostrar una asignatura en una pantalla con todo su contenido mediante desplegables, insertar la información mediante diálogos y editar manteniendo pulsado lo que se quería editar, de esta manera lo tenía todo a la vista.
 
@@ -34,14 +34,14 @@ El primer sketch que hice, que se vea bien la nota de la asignatura, los grupos 
 
 ![Primera versión de Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1_app.jpg)
 
-En la primera versión cuando te metias por primera vez aparecía un tutorial que te explicaba cómo iba la aplicación porque puede que cuando entras sin explicación no sabías hacer casi nada y esto más que la aplicación usaba dialogs para rellenar la información hicieron que se me ocurriera una mejor interfaz para una nueva versión al poco de crear la aplicación hace un año.
+En la primera versión, cuando te metias por primera vez, aparecía un tutorial que te explicaba cómo iba la aplicación porque puede que, cuando entras sin explicación no sabías hacer casi nada y esto me decía que el diseño no era bueno. También usaba dialogs para rellenar la información. Por estas cosas me hicieron pensar una mejor interfaz para una nueva versión al poco de crear la aplicación, hace un año.
 
 <blockquote class="twitter-tweet" lang="en"><p lang="es" dir="ltr">Pensando ya en la v2.0.0 de <a href="https://twitter.com/hashtag/CalculaNotas?src=hash">#CalculaNotas</a> más intuitiva. Para el año que viene ya. <a href="http://t.co/ga4kqglefO">pic.twitter.com/ga4kqglefO</a></p>&mdash; Antonio López Marín (@tonilopezmr) <a href="https://twitter.com/tonilopezmr/status/590631903499268097">April 21, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-La nueva interfaz debería de ser parecida (sin realizar un cambio demasiado brusco de repente) que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.
+La nueva interfaz debería de ser parecida pero sin realizar un cambio demasiado brusco de repente, que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.
 
-Ahora quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, que es que por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). 
+Ahora esto quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, que es que por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). 
 
 ![Segunda versión Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v2_app.jpg)
 
@@ -54,13 +54,13 @@ La nota se ve claramente de la asignatura los grupos y los 2 primeros exámenes 
 
 Al tener cada entidad con su detalle las opciones que puedes hacer sobre cada una están en ese mismo detalle, es decir, en la primera versión si querías modificar o borrar un examen tenías que mantenerlo pulsado y aparecían las opciones que puedes hacer sobre él, ahora las opciones no tienen que aparecer cuando lo tienes pulsado sino que aparecen cuando pinchas sobre un examen y se va a su detalle enseñándote toda la información y opciones que puedes hacer sobre el.
 
-Ahora al tener cada detalle de cada entidad la edición y creación para rellenar datos se hará en ese mismo detalle enseñándote una pantalla entera para poder rellenar sus datos verificarlos y guardarlos.
+Ahora al tener cada detalle de cada entidad, la edición y creación para rellenar datos se hará en ese mismo detalle enseñándote una pantalla entera para poder rellenar sus datos verificarlos y guardarlos.
 
 ####Flujo de la aplicación
 </br>
 Como ya he dicho en la primera versión solo había una pantalla donde lo tenías todo, y para poder interactuar con los elementos había que mantenerlos pulsados durante unos segundos.
 
-Ahora hay un flujo entre las diferentes tres pantallas que existen pantalla principal (main), pantalla del detalle de grupo y otra para el detalle de examen.
+Ahora hay un flujo entre las diferentes tres pantallas que existen; pantalla principal (main), pantalla del detalle de grupo y otra para el detalle de examen.
 
 El flujo es el siguiente:
 
@@ -80,8 +80,10 @@ Aun si del paso 2 no pasas al paso 3 sino que vuelves a la asignatura no importa
 
 El cambio en el logotipo también ha sido importante ya que pase de el primer logo creado con un amigo a hacerlo totalmente material siguiendo las [Icons guidelines][3], en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuesta:
 
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js" async defer></script>
-<div class="g-post" data-href="https://plus.google.com/+%C3%81ngelSantillanaS%C3%A1nchez/posts/49V4X69DZge"></div>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div class="g-post" data-href="https://plus.google.com/+AntonioL%C3%B3pezMar%C3%ADn/posts/eTfrVZ8RMLU"></div>
 
 Ganó brutalmente y decidí poner la redonda.
 
