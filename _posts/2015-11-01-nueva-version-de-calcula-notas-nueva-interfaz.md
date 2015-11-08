@@ -64,6 +64,8 @@ Ahora hay un flujo entre las diferentes tres pantallas que existen pantalla prin
 
 El flujo es el siguiente:
 
+![Flujo de la Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/flujo_app.jpg)
+
  	1. Creas una asignatura, esta asignatura te sugiere que crees un grupo.
  	2. Creas un grupo, este grupo te sugiere que crees examenes.
  	3. Creas un examen y este te invita a que rellenes su información.
@@ -71,8 +73,6 @@ El flujo es el siguiente:
  	5. Vuelves a la asignatura, esta te sugiere que crees otro grupo.
 
 Aun si del paso 2 no pasas al paso 3 sino que vuelves a la asignatura no importa porque desde la asignatura que tendra el grupo creado, dentro de este grupo te sugerirá que crees un examen para ese grupo, todo mucho más logico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.
-
-![Flujo de la Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/flujo_app.jpg)
 
 #### Icono
 
