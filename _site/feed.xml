@@ -6,8 +6,8 @@
 </description>
     <link>http://tonilopezmr.github.io/</link>
     <atom:link href="http://tonilopezmr.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 08 Nov 2015 16:23:12 +0100</pubDate>
-    <lastBuildDate>Sun, 08 Nov 2015 16:23:12 +0100</lastBuildDate>
+    <pubDate>Sun, 08 Nov 2015 16:56:58 +0100</pubDate>
+    <lastBuildDate>Sun, 08 Nov 2015 16:56:58 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -130,7 +130,7 @@
 
 &lt;p&gt;La nueva interfaz debería de ser parecida pero sin realizar un cambio demasiado brusco de repente, que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.&lt;/p&gt;
 
-&lt;p&gt;Ahora esto quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, que es que por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). &lt;/p&gt;
+&lt;p&gt;Ahora quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, esto es que, por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). &lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v2_app.jpg&quot; alt=&quot;Segunda versión Calcula Notas&quot;&gt;&lt;/p&gt;
 
@@ -162,7 +162,7 @@ Como ya he dicho en la primera versión solo había una pantalla donde lo tenía
 4. Vuelves a el grupo, y este te sugiere que crees otro examen si tienes más exámenes en ese grupo.
 5. Vuelves a la asignatura, esta te sugiere que crees otro grupo.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Aun si del paso 2 no pasas al paso 3 sino que vuelves a la asignatura no importa porque desde la asignatura que tendrá el grupo creado, dentro de este grupo te sugerirá que crees un examen para ese grupo, todo mucho más lógico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.&lt;/p&gt;
+&lt;p&gt;Si del paso 2 no pasas al paso 3, sino que vuelves a la asignatura, no importa porque desde la asignatura aparecerá el grupo y dentro de este grupo te sugerirá que crees un examen, todo mucho más lógico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.&lt;/p&gt;
 
 &lt;h4&gt;Icono&lt;/h4&gt;
 
@@ -174,7 +174,7 @@ Como ya he dicho en la primera versión solo había una pantalla donde lo tenía
 
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://apis.google.com/js/plusone.js&quot;&gt;&lt;/script&gt;
 
-&lt;div class=&quot;g-post&quot; data-href=&quot;https://plus.google.com/+AntonioL%C3%B3pezMar%C3%ADn/posts/eTfrVZ8RMLU&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;g-post&quot; data-href=&quot;https://plus.google.com/+AntonioLopezMarin/posts/dS2JRxX7Mj9&quot;&gt;&lt;/div&gt;
 
 &lt;p&gt;Ganó brutalmente y decidí poner la redonda.&lt;/p&gt;
 

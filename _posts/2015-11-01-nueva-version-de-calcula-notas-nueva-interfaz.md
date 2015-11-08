@@ -82,8 +82,7 @@ El cambio en el logotipo también ha sido importante, ya que pase del primer log
 
 <!-- Place this tag in your head or just before your close body tag. -->
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-
-<div class="g-post" data-href="https://plus.google.com/+AntonioL%C3%B3pezMar%C3%ADn/posts/eTfrVZ8RMLU"></div>
+<div class="g-post" data-href="https://plus.google.com/+AntonioLopezMarin/posts/dS2JRxX7Mj9"></div>
 
 Ganó brutalmente y decidí poner la redonda.
 
