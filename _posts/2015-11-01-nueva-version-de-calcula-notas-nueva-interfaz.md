@@ -9,7 +9,7 @@ image: /assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-in
 
 Hace poco menos de un año, después de los primeros exámenes de la universidad, cree [Calcula Notas][1]. Es una aplicación que calcula la nota de las asignaturas de la universidad poniéndoles el sistema de evaluación que sigue cada una y añadiendo exámenes.
 
-La idea surgió de que cada vez que quería ver como iba con las notas, sacaba la calculadora miraba como funcionaba la asignatura y las calcula, como lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.
+La idea surgió de que cada vez que quería ver como iba con las notas, sacaba la calculadora miraba como funcionaba la asignatura y las calculaba, como lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.
 
 #Primeros pasos
 </br>

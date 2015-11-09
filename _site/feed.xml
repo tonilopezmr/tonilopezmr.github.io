@@ -6,8 +6,8 @@
 </description>
     <link>http://tonilopezmr.github.io/</link>
     <atom:link href="http://tonilopezmr.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 08 Nov 2015 20:26:54 +0100</pubDate>
-    <lastBuildDate>Sun, 08 Nov 2015 20:26:54 +0100</lastBuildDate>
+    <pubDate>Mon, 09 Nov 2015 12:15:17 +0100</pubDate>
+    <lastBuildDate>Mon, 09 Nov 2015 12:15:17 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -96,7 +96,7 @@
         <title>Nueva versión de calcula notas, nueva interfaz</title>
         <description>&lt;p&gt;Hace poco menos de un año, después de los primeros exámenes de la universidad, cree &lt;a href=&quot;http://tonilopezmr.com/calculanotas&quot;&gt;Calcula Notas&lt;/a&gt;. Es una aplicación que calcula la nota de las asignaturas de la universidad poniéndoles el sistema de evaluación que sigue cada una y añadiendo exámenes.&lt;/p&gt;
 
-&lt;p&gt;La idea surgió de que cada vez que quería ver como iba con las notas, sacaba la calculadora miraba como funcionaba la asignatura y las calcula, como lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.&lt;/p&gt;
+&lt;p&gt;La idea surgió de que cada vez que quería ver como iba con las notas, sacaba la calculadora miraba como funcionaba la asignatura y las calculaba, como lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.&lt;/p&gt;
 
 &lt;h1&gt;Primeros pasos&lt;/h1&gt;
 
