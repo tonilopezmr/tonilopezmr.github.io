@@ -15,12 +15,11 @@
 	    <th align="center">
 	      	<table style="width: 20%">
 	 			 <script>
-		      		for (var i = 1; i <= 10; i++) {
+		      		for (var i = 1; i < 10; i++) {
 		      			document.write("<tr align='center'> <th>"+ (i) +"</th> <th><img id='image"+i+"' src='https://intranet.upv.es/foto/get/51548393.gif' width='112' height='164'/></th></tr> ");
 		      		};		      		
-			    </script>    
-
-
+			    </script>    				
+				<tr align='center'> <th>10</th> <th><img id='image10' src='http://vignette3.wikia.nocookie.net/mipequeoponyfanlabor/images/5/52/Doge_lel.png/revision/latest?cb=20141127212429&path-prefix=es' width='112' height='164'/></th></tr> 
 	      	</table>
 	    </th>  
 	<tr>
@@ -42,7 +41,7 @@
 			  if(xmlhttp.status == 200 && xmlhttp.readyState == 4){			    
 			    var lines = xmlhttp.responseText.split('upv');				    			    
 			    var line = Math.floor(Math.random() * lines.length-2) + 1;  			    			    		
-			    for (var i = 1; i <= 10; i++) {			    		
+			    for (var i = 1; i < 10; i++) {			    		
 		      			document.getElementById("image"+i).src = "https://intranet.upv.es/foto/get/" + lines[i] +".gif"; 
 		      	};				   			
 				console.log(id);
