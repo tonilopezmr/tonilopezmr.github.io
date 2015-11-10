@@ -37,7 +37,7 @@ Ahora solo hay que **automatizarlo** y hacer una página html que vaya cambiando
 El problema es que el número es muuuuy **grande** y en la mayoría de combinaciones **no hay imagen** y te sale una gris fea :(.
 **Problema solucionado**, cuando no encuentra una imagen de perfil aparece una imagen que siempre es la misma y encima más pequeña con lo que siempre pesa lo mismo (bytes) que más concretamente eran **5372 bytes**, todas las imágenes que fueran distintas de la imagen sin cara pues no lo añado al fichero y ya está.
 
-Total que lo deje un ratito y cuando tenía **<del>9840</del>12226 números diferentes** lo deje porque sino hay demasiadas caras y la gente no se encuentra! 
+Total que lo deje un ratito y cuando tenía **<del>9840</del>14185 números diferentes** lo deje porque sino hay demasiadas caras y la gente no se encuentra! 
 
 El HTML con un poco de <del>sorpresas</del> javascript para que el cliente haga todo el trabajo y sea rapidisimo sin recargas ni nada y se acabó.
 
