@@ -55,8 +55,7 @@
 
 	    function left(){
 	    	changeImage("image_right","who_right");	    	
-	    	rankingUp(document.getElementById("image_right").src);
-	    	document.getElementById("");
+	    	rankingUp(document.getElementById("image_right").src);	    	
 	    }
 
 	    function right(){
@@ -73,7 +72,7 @@
 			    var id = lines[line];
 				document.getElementById(image).src = "https://intranet.upv.es/foto/get/" + id +".gif"; 
 				document.getElementById(image).alt = id;
-				document.getElementById(who).href = "http://tonilopezmr.github.io/facemash/student.html?engineer="+id+";   			
+				document.getElementById(who).href = "http://tonilopezmr.github.io/facemash/student.html?engineer="+id;   			
 				console.log(id);
 			  }
 			};
