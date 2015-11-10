@@ -28,13 +28,13 @@
 	      			<th><img style="cursor: pointer" src="https://intranet.upv.es/foto/get/52873099.gif" id="image_left" onclick="left()" border="1px" width="212" height="264" alt="52873099" /></br>
 	      			<script type="text/javascript">
 						var alt = document.getElementById("image_left").alt;
-						document.write("<a href='http://tonilopezmr.github.io/facemash/student.html?engineer="+alt+"'><h3>Who's</h3></a>");
+						document.write("<a id='who_left' href='http://tonilopezmr.github.io/facemash/student.html?engineer="+alt+"'><h3>Who's</h3></a>");
 					</script></th>
 	      			<th><h3><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">OR</a></h3></th>
 	      			<th><img style="cursor: pointer" src="https://intranet.upv.es/foto/get/52898699.gif" id="image_right" onclick="right()" border="1px" width="212" height="264" alt="52898699" /></br>
 					<script type="text/javascript">
 						var alt = document.getElementById("image_right").alt;
-						document.write("<a href='http://tonilopezmr.github.io/facemash/student.html?engineer="+alt+"'><h3>Who's</h3></a>");
+						document.write("<a id='who_right' href='http://tonilopezmr.github.io/facemash/student.html?engineer="+alt+"'><h3>Who's</h3></a>");
 					</script>
 	      			</th>
 
@@ -54,16 +54,17 @@
 	<script language="javascript">
 
 	    function left(){
-	    	changeImage("image_right");
+	    	changeImage("image_right","who_right");	    	
 	    	rankingUp(document.getElementById("image_right").src);
+	    	document.getElementById("");
 	    }
 
 	    function right(){
-	    	changeImage("image_left");
-	    	rankingUp(document.getElementById("image_right").src);
+	    	changeImage("image_left","who_left");
+	    	rankingUp(document.getElementById("image_left").src);	    	
 	    }
 
-	    function changeImage(image){
+	    function changeImage(image, who){
 	    	var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function(){
 			  if(xmlhttp.status == 200 && xmlhttp.readyState == 4){			    
@@ -71,7 +72,8 @@
 			    var line = Math.floor(Math.random() * lines.length-2) + 1;  			    
 			    var id = lines[line];
 				document.getElementById(image).src = "https://intranet.upv.es/foto/get/" + id +".gif"; 
-				document.getElementById(image).alt = id;   			
+				document.getElementById(image).alt = id;
+				document.getElementById(who).href = "http://tonilopezmr.github.io/facemash/student.html?engineer="+id+";   			
 				console.log(id);
 			  }
 			};
