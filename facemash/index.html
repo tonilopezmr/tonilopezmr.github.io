@@ -25,9 +25,18 @@
 	      		<tr>
 	      			<th><a href="http://tonilopezmr.github.io/calculanotas"><img src="http://tonilopezmr.github.io/calculanotas/images/logo-app.png" width="70" height="70"/></br>What's this?</a></th>
 
-	      			<th><img style="cursor: pointer" src="https://intranet.upv.es/foto/get/52873099.gif" id="image_left" onclick="left()" border="1px" width="212" height="264"/></th>
+	      			<th><img style="cursor: pointer" src="https://intranet.upv.es/foto/get/52873099.gif" id="image_left" onclick="left()" border="1px" width="212" height="264" alt="52873099" /></br>
+	      			<script type="text/javascript">
+						var alt = document.getElementById("image_left").alt;
+						document.write("<a href='http://tonilopezmr.github.io/facemash/student.html?engineer="+alt+"'><h3>Who's</h3></a>");
+					</script></th>
 	      			<th><h3><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">OR</a></h3></th>
-	      			<th><img style="cursor: pointer" src="https://intranet.upv.es/foto/get/52898699.gif" id="image_right" onclick="right()" border="1px" width="212" height="264"/>   </th>
+	      			<th><img style="cursor: pointer" src="https://intranet.upv.es/foto/get/52898699.gif" id="image_right" onclick="right()" border="1px" width="212" height="264" alt="52898699" /></br>
+					<script type="text/javascript">
+						var alt = document.getElementById("image_right").alt;
+						document.write("<a href='http://tonilopezmr.github.io/facemash/student.html?engineer="+alt+"'><h3>Who's</h3></a>");
+					</script>
+	      			</th>
 
 	      			<th><a href="http://tonilopezmr.github.io/calculanotas"><img src="http://tonilopezmr.github.io/calculanotas/images/logo-app.png" width="70" height="70"/></br>What's this?</a></th>	
 	      		</tr>
@@ -35,7 +44,7 @@
 	    </th>   
 	  </tr>
 		<tr>
-			<th> <div style="word-spacing: 15px; margin: 100px 0px 0px 0px; width: 100%; text-align: center;"><strong> <a href="http://tonilopezmr.github.io/about">About</a> <a href="http://tonilopezmr.github.io/facemash/2015/11/07/facemash-upv.html">Why</a> <a href="http://tonilopezmr.github.io/facemash/2015/11/07/facemash-upv.html">How</a> <a href="http://tonilopezmr.github.io/facemash/ranking.html">Ranking</a> <a href="https://twitter.com/intent/tweet?text=FACEMASH%20UPV%20http://tonilopezmr.github.io/facemash%20#facemashUPV">Tweet</a> <a href="http://www.facebook.com/sharer.php?u=http://tonilopezmr.github.io/facemash">Facebook</a></strong></div> </th>
+			<th> <div style="word-spacing: 15px; margin: 100px 0px 0px 0px; width: 100%; text-align: center;"><strong> <a href="http://tonilopezmr.github.io/about">About</a> <a href="http://tonilopezmr.github.io/facemash/2015/11/07/facemash-upv.html">Why</a> <a href="http://tonilopezmr.github.io/facemash/2015/11/07/facemash-upv.html">How</a> <a href="http://tonilopezmr.github.io/facemash/ranking.html">Ranking</a> <a href="https://twitter.com/intent/tweet?text=FACEMASH%20UPV%20http://tonilopezmr.github.io/facemash%20%23facemashUPV">Tweet</a> <a href="http://www.facebook.com/sharer.php?u=http://tonilopezmr.github.io/facemash">Facebook</a></strong></div> </th>
 		</tr>
 		<tr>
 			<th><h6>This is <a href="https://en.wikipedia.org/wiki/History_of_Facebook#Facemash">FACEMASH</a> UPV recreated by using 12226 open images on <a href="http://www.upv.es/">upv.es</a>.</h6></th>
@@ -61,7 +70,8 @@
 			    var lines = xmlhttp.responseText.split('abc');				    
 			    var line = Math.floor(Math.random() * lines.length-2) + 1;  			    
 			    var id = lines[line];
-				document.getElementById(image).src = "https://intranet.upv.es/foto/get/" + id +".gif";    			
+				document.getElementById(image).src = "https://intranet.upv.es/foto/get/" + id +".gif"; 
+				document.getElementById(image).alt = id;   			
 				console.log(id);
 			  }
 			};
