@@ -67,7 +67,7 @@ Poco que decir de que clase de dispositivos han accedido a [Facemash UPV][4], la
 </br>
 ![Dispositivos](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/mobile_so.png)
 
-Algo que me interesa mucho es conocer que sistemas operativos móviles veían la página ya que [Calcula Notas][5] de momento solo está en [Android][7] pero que **pronto está para** [IOS][8].
+Algo que me interesa mucho es conocer que sistemas operativos móviles veían la página ya que [Calcula Notas][5] de momento solo está en [Android][7] pero que **pronto estará para** [IOS][8].
 
 ##SEO
 </br>
