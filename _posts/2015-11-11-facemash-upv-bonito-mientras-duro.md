@@ -8,7 +8,7 @@ image: /assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/backgr
 ---
 
 
-Bueno después de habernos lo pasado muy bien viendo las fotos de la universidad en [Facemash UPV][4], **las imágenes las han hecho privadas**, es decir, han quitado permisos y nos devuelven la 'default', que es la famosa imagen gris :(
+Bueno después de habernoslo pasado muy bien viendo las fotos de la universidad en [Facemash UPV][4], **las imágenes las han hecho privadas**, es decir, han quitado permisos y nos devuelven la 'default', que es la famosa imagen gris :(
 
 #####¿Tiene solución? ¿Podría seguir funcionando facemash?
 
