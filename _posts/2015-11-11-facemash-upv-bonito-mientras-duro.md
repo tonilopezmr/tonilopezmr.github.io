@@ -40,13 +40,13 @@ Esta captura es de ahora mismo día 11 aunque siempre los datos son de unas hora
 
 Finalmente **19546 páginas vistas** y **3930 usuarios**, lo que me sorprende es la cantidad de tiempo que la gente dedicaba a ponerse a ver las fotos de medía que es de **00:04:01 duración de sesión**.
 
-De estas 19546 páginas vistas **2353** fueron a parar a la pagina de [Calcula Notas][5].
+De estas 19546 páginas vistas **2353** fueron a parar a la página de [Calcula Notas][5].
 
 ##Países y ciudades
 </br>
 ![Derecha países, izquierda Ciudades](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/country.jpg)
 
-La página se ha visto de **29 países** los más destacados de la unión europea pero también de Vietnam, Rusia, Argentina, etc... Gente de erasmus o que ha estado por aquí supongo.
+La página se ha visto de **29 países** los más destacados de la Unión Europea pero también de Vietnam, Brasil, Argentina, etc... Gente de erasmus o que ha estado por aquí supongo.
 
 ##Sexo y edad
 </br>
@@ -65,7 +65,7 @@ Poco que decir de que clase de dispositivos han accedido a [Facemash UPV][4], la
 </br>
 ![Dispositivos](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/mobile_so.png)
 
-Algo que me interesa mucho es conocer que sistemas operativos móviles veían la pagina ya que [Calcula Notas][5] de momento solo está en [Android][7] pero que **pronto está para** [IOS][8].
+Algo que me interesa mucho es conocer que sistemas operativos móviles veían la página ya que [Calcula Notas][5] de momento solo está en [Android][7] pero que **pronto está para** [IOS][8].
 
 ##SEO
 </br>
