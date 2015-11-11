@@ -20,7 +20,7 @@ Bueno después de habernoslo pasado muy bien viendo las fotos de la universidad 
 
 La solución más rápida sería hacer algo parecido a lo que hizo nuestro amigo [Mark][1], descargarse las imágenes de toda la universidad y poner mis propios links.
 
-![Imagenes privadas descargadas de la UPV](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/faces.png)
+![Imágenes privadas descargadas de la UPV](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/faces.png)
 
 **Hay más formas**, pero no quiero problemas con la uni <del>y además ya conseguí promocionar [Calcula Notas][5]</del>.
 
