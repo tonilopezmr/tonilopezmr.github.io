@@ -24,9 +24,9 @@ La solución más rápida sería hacer algo parecido a lo que hizo nuestro amigo
 
 El caso es que después de que se publicara en el [informer de facebook][2] que existía el Facemash, hubo una avalancha de peticiones a la web, ni mucho menos como lo que pasó con el [Facemash original][3] pero aun así bastantes.
 
-Ahora que todo pasó, me pareció buena idea compartir los resultados estádisticos.
+Ahora que todo pasó, me pareció buena idea compartir los resultados estadísticos.
 
-Publiqué [Facemash UPV][4] domingo dia 8 de noviembre, recibió más de **1030 sesiones** que no es lo mismo que __1030 usuarios__ ni __1030 páginas vistas__, cada usuario puede generar varias sesiones, por lo tanto lo normal es que los usuarios sean menos, fueron **981 usuarios**.
+Publiqué [Facemash UPV][4] domingo día 8 de noviembre, recibió más de **1030 sesiones** que no es lo mismo que __1030 usuarios__ ni __1030 páginas vistas__, cada usuario puede generar varias sesiones, por lo tanto lo normal es que los usuarios sean menos, fueron **981 usuarios**.
 
 ![8 de octubre a las 23:16:21](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/active_users_23.16.21.png)
 
@@ -36,9 +36,9 @@ El día cumbre fue el lunes 9 de noviembre con **1876 usuarios**, cuando las per
 </br>
 ![Visión general hasta el momento.](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/total_est.png)
 
-Esta captura es de ahora mismo dia 11 aunque siempre los datos son de unas horas más tarde, ahora mismo sigue recibiendo visitas.
+Esta captura es de ahora mismo día 11 aunque siempre los datos son de unas horas más tarde, ahora mismo sigue recibiendo visitas.
 
-Finalmente **19546 páginas vistas** y **3930 usuarios**, lo que me sorprende es la cantidad de tiempo que la gente dedicaba a ponerse a ver las fotos de media que es de **00:04:01 duración de sesión**.
+Finalmente **19546 páginas vistas** y **3930 usuarios**, lo que me sorprende es la cantidad de tiempo que la gente dedicaba a ponerse a ver las fotos de medía que es de **00:04:01 duración de sesión**.
 
 De estas 19546 páginas vistas **2353** fueron a parar a la pagina de [Calcula Notas][5].
 
