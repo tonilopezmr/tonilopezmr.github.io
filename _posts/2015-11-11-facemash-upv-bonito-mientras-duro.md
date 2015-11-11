@@ -40,7 +40,7 @@ El día cumbre fue el lunes 9 de noviembre con **1876 usuarios**, cuando las per
 
 Esta captura es de ahora mismo día 11 aunque siempre los datos son de unas horas más tarde, ahora mismo sigue recibiendo visitas.
 
-Finalmente **19546 páginas vistas** y **3930 usuarios**, lo que me sorprende es la cantidad de tiempo que la gente dedicaba a ponerse a ver las fotos de medía que es de **00:04:01 duración de sesión**.
+Finalmente **19546 páginas vistas** y **3930 usuarios**, lo que me sorprende es la cantidad de tiempo que la gente dedicaba a ponerse a ver las fotos de medía, que es de **00:04:01 duración de sesión**.
 
 De estas 19546 páginas vistas **2353** fueron a parar a la página de [Calcula Notas][5].
 
@@ -48,7 +48,7 @@ De estas 19546 páginas vistas **2353** fueron a parar a la página de [Calcula 
 </br>
 ![Derecha países, izquierda Ciudades](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/country.jpg)
 
-La página se ha visto de **29 países** los más destacados de la Unión Europea pero también de Vietnam, Brasil, Argentina, etc... Gente de erasmus o que ha estado por aquí supongo.
+La página ha sido vista en **29 países**, los más destacados de la Unión Europea, pero también de Vietnam, Brasil, Argentina, etc... Gente de erasmus o que ha estado por aquí supongo.
 
 ##Sexo y edad
 </br>
@@ -77,7 +77,7 @@ Todo esto para ver si con visitas aunque sea una ****** de página google la pos
 
 [![Busqueda en google de Facemash UPV](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/google_facemash_upv.png)](https://www.google.es/#q=facemash+upv)
 
-Al principio solo ponía en **1º posición** el post que tiene mejor contenido sin aparecer directamente la url de tonilopezmr.github.io/facemash, pero ahora si buscas ya te sale en 2º posición ya que google **premia mucho más las visitas y la duración que están en ella**.
+Al principio, solo ponía en **1º posición** el post que tiene mejor contenido sin aparecer directamente la url de tonilopezmr.github.io/facemash, pero ahora si buscas ya te sale en 2º posición ya que google **premia mucho más las visitas y la duración que están en ella**.
 
 Yo pensaba que nunca me lo pondría tan arriba, **lo importante es que tonilopezmr.github.io ya aparece 1º** y [Calcula Notas][5] ahora en [Google Play][10] está de las **primeras posiciones**.
 
