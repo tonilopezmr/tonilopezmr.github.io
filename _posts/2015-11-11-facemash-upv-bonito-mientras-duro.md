@@ -54,7 +54,7 @@ La página ha sido vista en **29 países**, los más destacados de la Unión Eur
 </br>
 ![Sexo y edad](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/ages.png)
 
-Se metieron [más hombres][6] que mujeres, 65% entre **18-24 años** como era de esperar, nuevos usuarios rondaban más entre 25-54 años. Aunque los datos no son exactos ya que viene de una muestra del 23% del total de sesiones.
+Se metieron [más hombres][6] con un 61% que mujeres con 39%. El 65% entre **18-24 años** como era de esperar, y los nuevos usuarios rondaban más entre 25-54 años. Aunque los datos no son exactos ya que viene de una muestra del 23% del total de sesiones.
 
 
 ##Dispositivo
