@@ -46,7 +46,7 @@ De estas 19546 páginas vistas **2353** fueron a parar a la página de [Calcula 
 
 ##Países y ciudades
 </br>
-![Derecha países, izquierda Ciudades](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/country.jpg)
+![Izquierda países, derecha Ciudades](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/country.jpg)
 
 La página ha sido vista en **29 países**, los más destacados de la Unión Europea, pero también de Vietnam, Brasil, Argentina, etc... Gente de erasmus o que ha estado por aquí supongo.
 
