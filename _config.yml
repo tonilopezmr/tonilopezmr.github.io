@@ -27,7 +27,7 @@ baseurl: ""
 twitter_handle: '@tonilopezmr'
 
 #fill in disqus shortname to use disqus
-#disqus: disqus-shortname
+disqus: tonilopezmr
 
 # social icons and sharing options
 social:
