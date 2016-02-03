@@ -7,7 +7,7 @@ tags: login android
 image: /assets/article_images/2016-02-03-login-con-android/login_background.jpg
 ---
 
-Ahora que estoy implementando el Login en calcula notas, voy a explicar cómo lo hago de forma que sea fácil de implementar en otras aplicaciones futuras, **no es una librería** pero sí una forma de hacerlo para que __“funcione solo”__ más o menos.
+Ahora que estoy implementando el Login en [Calcula Notas][4], voy a explicar cómo lo hago de forma que sea fácil de implementar en otras aplicaciones futuras, **no es una librería** pero sí una forma de hacerlo para que __“funcione solo”__ más o menos.
 
 En este post **no voy a explicar como usar la API de autenticación en Twitter, Facebook o Google**, sino que voy a explicar como yo los uso.
 
@@ -44,6 +44,7 @@ __¡¡Todo queda más claro si le hechas un vistazo al codigo de ejemplo!!__
 
 ----------------
 
+[1]: https://github.com/JorgeCastilloPrz
 [2]: https://github.com/tonilopezmr/Android-Examples
 [3]: https://github.com/tonilopezmr/Android-Examples/tree/master/navigationview
-[1]: https://github.com/JorgeCastilloPrz
+[4]: http://tonilopezmr.com/calculanotas
