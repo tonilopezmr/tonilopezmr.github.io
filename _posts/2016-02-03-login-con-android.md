@@ -38,8 +38,8 @@ Es la interfaz que implementa __SignInActivity__, estos metodos en un principio 
 </br>
 **Es el modelo de usuario que voy a usar en mi aplicación**, con mis necesidades, __si necesitas más información de un usuario habría que cambiar el modelo y donde lo use__. Lo ideal sería crear un modelo de usuario para el login, común para todos los proveedores con la máxima información que podría interesar y luego transformarlo a nuestro usuario, de forma que no haya que cambiar el usuario que se obtiene en el login.
 
-__¡¡Todo queda más claro si le hechas un vistazo al codigo de ejemplo!!__
-**Todo el código esta incluido en [Android-Examples][2] en el modulo [login][3].**
+__¡¡Queda más claro si le echas un vistazo al codigo de ejemplo!!__
+**El código esta incluido en [Android-Examples][2] en el modulo [login][3].**
 
 
 ----------------
