@@ -30,9 +30,14 @@ Esto lo aprendí de [JorgeCastilloPrz][1] un repositorio que tenía llamado Mira
 **Son clases que usan la API de cada proveedor**, es la que conecta y desconecta, donde se devuelve el usuario de cada uno. 
 __Estos proveedores están fuertemente ligados a SignInActivity__, esto es una desventaja ya que deberían de ser independientes uno de otros, pero por tema de tiempo aun no los he desacoplado (se haría con una interfaz), en mi [código de ejemplo][2]. **Sería interesante que hicierais un pull request a el repositorio ;)**
 
+##SignInView
+</br>
+Es la interfaz que implementa __SignInActivity__, estos metodos en un principio estaban abstractos dentro de dicha __SignInActivity__, pero para poder desacoplarla entre los providers y la actividad, como he comentado anteriormente, he creado la interfaz SignInView **que no utiliza de momento los providers** pero que ahí esta la idea de separar la actividad de las clase __Providers__.
+
 ##UserProfile:
 </br>
 **Es el modelo de usuario que voy a usar en mi aplicación**, con mis necesidades, __si necesitas más información de un usuario habría que cambiar el modelo y donde lo use__. Lo ideal sería crear un modelo de usuario para el login, común para todos los proveedores con la máxima información que podría interesar y luego transformarlo a nuestro usuario, de forma que no haya que cambiar el usuario que se obtiene en el login.
+
 
 **Todo el código esta incluido en [Android-Examples][2] en el modulo [login][3].**
 
