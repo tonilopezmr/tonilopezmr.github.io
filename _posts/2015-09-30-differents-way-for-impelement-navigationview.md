@@ -187,6 +187,9 @@ Esta forma de implementar el NavigationView no es usual ya que renuncias a mucha
 
 ![NavigationView por debajo de toolbar.](https://cdn-images-1.medium.com/max/1600/1*_ySVKSkuQaenJ7QT4X5ZJw.gif)
 
-Todo el código esta incluido en Android-Examples en el directorio navigationview.
+Todo el código esta incluido en [Android-Examples][1] en el modulo [navigationview][2].
+
+[1]: https://github.com/tonilopezmr/Android-Examples
+[2]: https://github.com/tonilopezmr/Android-Examples/tree/master/navigationview
 
 ----------
