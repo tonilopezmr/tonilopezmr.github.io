@@ -30,6 +30,8 @@ Esto lo aprendí de [JorgeCastilloPrz][1] un repositorio que tenía llamado Mira
 **Son clases que usan la API de cada proveedor**, es la que conecta y desconecta, donde se devuelve el usuario de cada uno. 
 *Estos proveedores están fuertemente ligados a SignInActivity*, esto es una desventaja ya que deberían de ser independientes uno de otros, pero por tema de tiempo aun no los he desacoplado (se haría con una interfaz), en mi [código de ejemplo][2]. **Sería interesante que hicierais un pull request a el repositorio ;)**
 
+La ventaja de crear clases *Providers* es que si quieres añadir un nuevo provider en tu login, por ejemplo *instagram provider*, tan solo sería crear una clase que usa la API de instagram, **implementar la interfaz Provider** y integrarla en *SignInActivity y SignInManager*.
+
 ##SignInView
 </br>
 **Es la interfaz que implementa SignInActivity**, estos metodos en un principio estaban abstractos dentro de dicha *SignInActivity*, pero para poder desacoplarla entre los providers y la actividad, como he comentado anteriormente, he creado la interfaz *SignInView* **que no utiliza de momento los providers** pero que ahí esta la idea de separar la actividad de las clase *Providers*.
