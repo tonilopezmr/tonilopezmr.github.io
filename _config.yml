@@ -1,8 +1,13 @@
 # Build settings
 markdown: kramdown
 highlighter: rouge
+permalink: pretty
 gems:
   - jemoji
+  - jekyll-coffeescript
+  - jekyll-paginate  
+   
+   
   
 # Site settings
 title: "Antonio López Marín"
