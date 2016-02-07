@@ -7,7 +7,7 @@ tags: heroku spark java cloud
 image: /assets/article_images/2016-02-07-que-facil-desplegar-con-heroku-spark/heroku-inc.jpg
 ---
 
-Antes de leer el post, si no conoces los siguientes términos consultarlos antes:
+Antes de leer el post, si no conoces los siguientes productos consultarlos antes:
 
 - [Heroku][7]
 - [Spark Java Framework][6]
