@@ -100,8 +100,8 @@ You can find more information about Python modules and packages in [Python tutor
 
 Don't forget that you can see the [issue here][1]
 
-[1]: https://github.com/sergiotrujillomtz/python-poo/issues/1
+[1]: https://github.com/srgtrujillo/python-poo/issues/1
 [2]: https://docs.python.org/2.7/tutorial/classes.html#inheritance
 [3]: https://github.com/tonilopezmr
-[4]: https://twitter.com/sergiotrujimar
+[4]: https://twitter.com/srgtrujillo
 [5]: https://docs.python.org/2/tutorial/modules.html
