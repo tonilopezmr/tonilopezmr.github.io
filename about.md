@@ -9,6 +9,19 @@ I'm Antonio López
 
 I love the software engineering and develop my own projects.
 
+<a href="https://twitter.com/tonilz">
+  <img alt="Follow me on Twitter" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_black-128.png" width="60" height="60"/>
+</a>
+<a href="http://www.linkedin.com/in/tonilopezmr">
+  <img alt="Add me to Linkedin" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-128.png" width="60" height="60"/>
+</a>
+<a href="https://github.com/tonilopezmr">
+  <img alt="Follow me to Github" src="https://cdn4.iconfinder.com/data/icons/miu-social/60/github-social-media-64.png" width="60" height="60"/>
+</a>
+<a href="mailto:tonilopezmr@gmail.com">
+  <img alt="Sent email" src="https://cdn4.iconfinder.com/data/icons/e-commerce-icon-set/48/Contact_2-64.png" width="60" height="60"/>
+</a>
+
 ----------
 
 Projects:
