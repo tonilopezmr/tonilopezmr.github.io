@@ -9,18 +9,9 @@ I'm Antonio López
 
 I love the software engineering and develop my own projects.
 
-<a href="https://twitter.com/tonilz">
-  <img alt="Follow me on Twitter" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_black-128.png" width="60" height="60"/>
-</a>
-<a href="http://www.linkedin.com/in/tonilopezmr">
-  <img alt="Add me to Linkedin" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-128.png" width="60" height="60"/>
-</a>
-<a href="https://github.com/tonilopezmr">
-  <img alt="Follow me to Github" src="https://cdn4.iconfinder.com/data/icons/miu-social/60/github-social-media-64.png" width="60" height="60"/>
-</a>
-<a href="mailto:tonilopezmr@gmail.com">
-  <img alt="Sent email" src="https://cdn4.iconfinder.com/data/icons/e-commerce-icon-set/48/Contact_2-64.png" width="60" height="60"/>
-</a>
+[!(https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_black-128.png)][10]
+[!(https://cdn3.iconfinder.com/data/icons/free-social-icons/67/linkedin_circle_black-128.png)][11]
+[!(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-64.png)][12]
 
 ----------
 
@@ -68,3 +59,6 @@ Internally use [Clean Architecture][7].
 [7]: https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html
 [8]: https://en.wikipedia.org/wiki/History_of_Facebook#Facemash
 [9]: http://www.upv.es/
+[10]: https://twitter.com/tonilopezmr
+[11]: https://www.linkedin.com/in/tonilopezmr
+
