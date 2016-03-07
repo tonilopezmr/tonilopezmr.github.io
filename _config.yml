@@ -24,7 +24,7 @@ name: 'Antonio López Marín'
 author: 'Antonio López'
 author_image: "/assets/images/autor_logo.jpg"
 
-paginate:	5
+paginate:	10
 
 url: "http://tonilopezmr.github.io" # the base hostname & protocol for your site
 baseurl: ""
