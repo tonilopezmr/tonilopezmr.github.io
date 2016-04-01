@@ -18,7 +18,7 @@ Ya que estoy en **segundo curso de informática**, <del>y quería promocionar la
 
 Quería hacerlo lo más parecido al de la peli de [La red social][2] que tanto ponen en las jornadas de acogida:
 
-![La red social](http://dublindigital.ie/wp-content/uploads/2011/02/facemash.jpg)
+![La red social](http://mashupdate.com/wp-content/uploads/2015/10/facemash-700x299-1.jpg)
 
 [![FACEMASH UPV](/assets/article_images/about/facemash-image.png)](https://tonilopezmr.github.io/facemash)
 
