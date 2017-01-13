@@ -39,7 +39,7 @@ El problema es que el número es muuuuy **grande** y en la mayoría de combinaci
 
 Total que lo deje un ratito y cuando tenía **<del>9840</del>14185 números diferentes** lo deje porque sino hay demasiadas caras y la gente no se encuentra!
 
-El HTML con un poco de <del>sorpresas</del> javascript para que el cliente haga todo el trabajo y sea rapidisimo sin recargas ni nada y se acabó.
+El HTML con un poco de javascript para que el cliente haga todo el trabajo y se muestre sin cargas, muy rápido.
 
 Aquí el código mágico:
 
