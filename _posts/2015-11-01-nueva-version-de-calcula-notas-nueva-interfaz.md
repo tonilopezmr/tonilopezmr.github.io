@@ -2,8 +2,8 @@
 layout: post
 title:  "Nueva versión de calcula notas, nueva interfaz"
 date:   2015-11-01 17:12:25
-categories: design
-tags: android material design
+categories: product
+tags: android design calculanotas
 image: /assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v1.jpg
 ---
 
@@ -41,13 +41,13 @@ En la primera versión, cuando te metias por primera vez, aparecía un tutorial 
 
 La nueva interfaz debería de ser parecida pero sin realizar un cambio demasiado brusco de repente, que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.
 
-Ahora quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, esto es que, por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen). 
+Ahora quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, esto es que, por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen).
 
 ![Segunda versión Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/v2_app.jpg)
 
 La nota se ve claramente de la asignatura los grupos y los 2 primeros exámenes de cada grupo, si se desea ver más sobre un grupo pinchando sobre el grupo va hacía su detalle.
 
-####Detalle por cada entidad 
+####Detalle por cada entidad
 </br>
 
 ![Detalles de grupo y examen](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/detail_activity.jpg)

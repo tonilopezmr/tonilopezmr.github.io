@@ -2,8 +2,8 @@
 layout: post
 title:  "Facemash UPV bonito mientras duró"
 date:   2015-11-11 19:58:25
-categories: facemash
-tags: university facebook facemash upv
+categories: personal
+tags: facemash-upv
 image: /assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/background.jpg
 ---
 

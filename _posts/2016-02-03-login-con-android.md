@@ -3,7 +3,7 @@ layout: post
 title:  "Una forma de implementar Login en Android"
 date:   2016-02-03 10:36:25
 categories: android
-tags: login android
+tags: android login
 image: /assets/article_images/2016-02-03-login-con-android/login_background.jpg
 ---
 
@@ -16,7 +16,7 @@ Todo el código esta incluido en [Android-Examples][2] en el modulo [login][3].
 ##Abstract class SignInActivity
 </br>
 Es una *actividad abstracta* de la que habrá que **extender en nuestra actividad de login**, esta actividad es la encargada de inicializar los proveedores que se va a usar y la que los va a manejar. Resumiendo, lo que viene a ser todo el código que usa las API de cada proveedor y que luego no vas a ver en tu actividad de login.
- 
+
 De esta forma tu actividad de Login con los botones, etc… solo se preocupe de los componentes de la vista, mostrar ocultar cosas, etc…
 
 Esto lo aprendí de [JorgeCastilloPrz][1] un repositorio que tenía llamado Mirage.
@@ -27,7 +27,7 @@ Esto lo aprendí de [JorgeCastilloPrz][1] un repositorio que tenía llamado Mira
 
 ##Providers
 </br>
-**Son clases que usan la API de cada proveedor**, es la que conecta y desconecta, donde se devuelve el usuario de cada uno. 
+**Son clases que usan la API de cada proveedor**, es la que conecta y desconecta, donde se devuelve el usuario de cada uno.
 *Estos proveedores están fuertemente ligados a SignInActivity*, esto es una desventaja ya que deberían de ser independientes uno de otros, pero por tema de tiempo aun no los he desacoplado (se haría con una interfaz), en mi [código de ejemplo][2]. **Sería interesante que hicierais un pull request a el repositorio ;)**
 
 La ventaja de crear clases *Providers* es que si quieres añadir un nuevo provider en tu login, por ejemplo *instagram provider*, tan solo sería crear una clase que usa la API de instagram, **implementar la interfaz Provider** y integrarla en *SignInActivity y SignInManager*.

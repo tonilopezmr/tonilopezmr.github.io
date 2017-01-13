@@ -2,7 +2,7 @@
 layout: post
 title:  "Android Design Library: Diferentes formas de implementar NavigationView y DrawableLayout"
 date:   2015-09-30 17:34:25
-categories: navigationview
+categories: android
 tags: android
 image: /assets/article_images/2015-09-30-differents-way-for-impelement-navigationview/desktop.JPG
 ---
@@ -154,9 +154,9 @@ Si se desea que el NavigationView este por debajo del Toolbar, lo normal es que 
                 android:background="?attr/colorPrimary"
                 android:theme="@style/AppTheme.AppBarOverlay"
                 app:popupTheme="@style/AppTheme.PopupOverlay" />
-    
+
         </android.support.design.widget.AppBarLayout>
-    
+
         <android.support.v4.widget.DrawerLayout
             android:id="@+id/drawer_layout"
             android:layout_width="match_parent"
@@ -164,20 +164,20 @@ Si se desea que el NavigationView este por debajo del Toolbar, lo normal es que 
             android:fitsSystemWindows="true"
             tools:openDrawer="start"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
-    
+
             <!-- Content here -->
-    
+
             <android.support.design.widget.NavigationView
                 android:id="@+id/navigation_view_container"
                 android:fitsSystemWindows="true"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="start">
-    
+
                <!-- ... -->
-    
+
         </android.support.v4.widget.DrawerLayout>
-    
+
     </android.support.design.widget.CoordinatorLayout>
 ```
 

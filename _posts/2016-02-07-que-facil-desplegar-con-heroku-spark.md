@@ -24,7 +24,7 @@ Muy sencillo, porque [Spark Java][6] es un [framework][8] muy ligero para hacer 
 
 ##Openshift
 
-**Esta muy bien**, pero no era la mejor solución para lo que yo tenía creado, ya que tenía que hacer funcionar un [Jetty Java Web Server][9] y el [tutorial de Openshift estaba más que desfasado][3]. 
+**Esta muy bien**, pero no era la mejor solución para lo que yo tenía creado, ya que tenía que hacer funcionar un [Jetty Java Web Server][9] y el [tutorial de Openshift estaba más que desfasado][3].
 
 1. El link de descarga del servidor jetty de un fichero de configuración ya no existía.
 2. No conseguí cambiar la versión de java7 del servidor a java8.

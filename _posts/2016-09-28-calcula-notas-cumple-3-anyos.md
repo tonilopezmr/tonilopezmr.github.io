@@ -2,8 +2,8 @@
 layout: post
 title:  "Calcula notas cumple 3 años"
 date:   2016-09-28 17:12:25
-categories: design
-tags: android material design
+categories: product
+tags: android design calculanotas
 image: /assets/article_images/2016-09-28-calcula-notas-cumple-3-anyos/header.jpg
 ---
 
