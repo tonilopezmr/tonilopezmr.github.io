@@ -5,8 +5,8 @@ permalink: /archives/
 ---
 
 <main>
-{% for post in site.posts %}	
+{% for post in site.posts %}
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong> . {{ post.categories }} . <a href="http://tonilopezmr.github.com{{ post.url }}#disqus_thread"></a></small></p>			
-{% endfor %}	
+    <p><small>{{ post.date | date: "%B %e, %Y" }} . {{ post.categories }} . <a href="http://tonilopezmr.github.com{{ post.url }}#disqus_thread"></a></small></p>			
+{% endfor %}
 </main>

@@ -3,7 +3,7 @@ layout: post
 title:  "How to do inheritance objects in python"
 date:   2016-02-14 00:12:25
 categories: python
-tags: python inheritance objects
+tags: python
 image: /assets/article_images/2016-02-13-how-to-do-inheritance-in-python/python-programming.jpg
 ---
 

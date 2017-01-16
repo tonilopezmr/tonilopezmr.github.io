@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Tags
-permalink: /tags/
+title: Categories
+permalink: /categories/
 ---
 
 <main>
-  {% for tag in site.tags %}
+  {% for tag in site.categories %}
     {% assign t = tag | first %}
     {% assign posts = tag | last %}
 
@@ -14,14 +14,14 @@ permalink: /tags/
   {% endfor %}
 
   <ul>
-  {% for tag in site.tags %}
+  {% for tag in site.categories %}
     {% assign t = tag | first %}
     {% assign posts = tag | last %}
 
   <h2 id="{{t}}"># {{ t }}</h2></br>
 
     {% for post in posts %}
-      {% if post.tags contains t %}
+      {% if post.categories contains t %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endif %}
     {% endfor %}

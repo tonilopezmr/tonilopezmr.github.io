@@ -3,7 +3,7 @@ layout: post
 title:  "¡Qué fácil desplegar con Heroku y Spark!"
 date:   2016-02-07 19:19:25
 categories: cloud
-tags: heroku spark java
+tags: heroku java
 image: /assets/article_images/2016-02-07-que-facil-desplegar-con-heroku-spark/heroku-inc.jpg
 ---
 
