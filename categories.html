@@ -8,8 +8,15 @@ permalink: /categories/
   {% for tag in site.categories %}
     {% assign t = tag | first %}
     {% assign posts = tag | last %}
+    {% assign cont = 0 %}
 
-    <a id="tag_box" href="{{ page.url }}#{{t}}">{{t}}</a>
+    {% for post in posts %}
+      {% if post.categories contains t %}
+        {% assign cont = cont | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+
+    <a id="tag_box" href="{{ page.url }}#{{t}}">{{t}} <span id="tag_box_span">{{cont}}</span></a>
 
   {% endfor %}
 
