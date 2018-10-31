@@ -260,7 +260,7 @@ and here is closed, note that there is space for the wires.
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/closed_enclosure.png">
 
-I have learned a lot about modeling in 3D in fusion, I have made another enclosures after this one for other projects that I will show you here :D.
+I have learned a lot about modeling in 3D in fusion, I have made another enclosure after this one for other projects that I will show you here :D.
 
 ###Enclosure printing
 </br>
@@ -292,7 +292,7 @@ I have the circuit and enclosure, then I can start to assemble it to the fan. **
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/assemble_switch.jpeg">
 
-Add the circuit to the base to connect the wires, **I needed to cut a little bit the PCB to fit into the base, I did a bad measurement** just a few millimeters, I don't have an excelent tool for measurement.
+Add the circuit to the base to connect the wires, **I needed to cut a little bit the PCB to fit into the base, I did a bad measurement** just a few millimeters, I don't have an excellent tool for measurement.
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/circuit_in_base.jpeg">
 
@@ -315,15 +315,24 @@ I finished assembling the enclosure and I just need to attach it to my fan.
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/screw-down_enclosure.jpeg">
 
+**This is the final result**, I have put the Infrared receiver behind the fan then when you are looking at the front of it you don't see the sensor. I have attached the enclosure with adhesive because **it is not to be the final enclosure for the next summer then I just add adhesive**.
+
+<img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/final_result.jpeg">
+
+**Right now the microcontroller needs a 9v battery to work, I have planned to add an AC-DC converter**, I have already one, but I prefer to use in the second version of my fan.
 
 ###Conclusions
 </br>
 
-**I learned a lot from my first version to the last one.** It was an excelent experience from zero knowledge to being able of doing something like this and I will continue working on this kind of projects to more fun.
+**I learned a lot from my first version to the last one.** It was an excellent experience from zero knowledge to being able of doing something like this and I will continue working on this kind of projects to more fun.
 
-At the end I did some changes to my circuit, I used different connectors on the cold side like removing the block for the analog input, removing the infrared wires soldered direct to the circuit, I cut one hole to my enclosure for the cold side wires, I use nail polish to improve the isolation in the hot side, I added a 9v power supply using an AC-DC converter.
+At the end I did some changes to my circuit, I used different connectors on the cold side like removing the block for the analog input, removing the infrared wires soldered directly to the circuit, I cut one hole to my enclosure for the cold side wires, I use nail polish to improve the isolation in the hot side.
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/first_version.jpeg">
+First version
+
+<img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/second_version.jpeg">
+Second version
 
 [1]: https://github.com/tonilopezmr/tonilopezmr.github.io/issues/26
 [2]: https://github.com/tonilopezmr/tonilopezmr.github.io/issues/27
@@ -343,4 +352,3 @@ At the end I did some changes to my circuit, I used different connectors on the 
 [16]: https://www.autodesk.com/products/fusion-360/overview
 [17]: https://ultimaker.com/en/products/ultimaker-cura-software
 [18]: https://es.gearbest.com/3d-printers-3d-printer-kits/pp_1845898.html?wid=1433363&currency=EUR&vip=15756104&gclid=EAIaIQobChMI4-yE-baq3gIVTrftCh1KQAHdEAQYASABEgK4HPD_BwE
-
