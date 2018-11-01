@@ -12,7 +12,7 @@ Hace poco menos de un año, después de los primeros exámenes de la universidad
 La idea surgió de que cada vez que quería ver como iba con las notas, sacaba la calculadora miraba como funcionaba la asignatura y las calculaba, como lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.
 
 #Primeros pasos
-</br>
+* * *
 
 La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura, como podía ser la nota de los exámenes y la nota de cada grupo de evaluación (Teoría, Prácticas, etc...), y todo ello poder verlo con un pequeño vistazo.
 
@@ -26,7 +26,7 @@ Finalmente tenía:
 	* Diálogo para crear/modificar una asignatura, grupos de evaluación y exámenes.
 
 ####Sketching
-</br>
+* * *
 
 ![Primer sketch de Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/sketch1.jpg)
 
@@ -48,7 +48,7 @@ Ahora quitaría los horribles desplegables por simples cards y mostraría siempr
 La nota se ve claramente de la asignatura los grupos y los 2 primeros exámenes de cada grupo, si se desea ver más sobre un grupo pinchando sobre el grupo va hacía su detalle.
 
 ####Detalle por cada entidad
-</br>
+* * *
 
 ![Detalles de grupo y examen](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/detail_activity.jpg)
 
@@ -57,7 +57,7 @@ Al tener cada entidad con su detalle las opciones que puedes hacer sobre cada un
 Ahora al tener cada detalle de cada entidad, la edición y creación para rellenar datos se hará en ese mismo detalle enseñándote una pantalla entera para poder rellenar sus datos verificarlos y guardarlos.
 
 ####Flujo de la aplicación
-</br>
+* * *
 Como ya he dicho en la primera versión solo había una pantalla donde lo tenías todo, y para poder interactuar con los elementos había que mantenerlos pulsados durante unos segundos.
 
 Ahora hay un flujo entre las diferentes tres pantallas que existen; pantalla principal (main), pantalla del detalle de grupo y otra para el detalle de examen.
@@ -87,7 +87,7 @@ El cambio en el logotipo también ha sido importante, ya que pase del primer log
 Ganó brutalmente y decidí poner la redonda.
 
 #### Animaciones
-</br>
+* * *
 Las animaciones que hacen que se vea una aplicación tan chula, en la versión 2 se dejan ver un poco, sobre todo transiciones con animación, podría haber añadido más pero por falta de tiempo y ganas puse solo animaciones al crear las entidades.
 
 ![Transición al crear un grupo](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/group_animation.gif)
@@ -95,15 +95,15 @@ Las animaciones que hacen que se vea una aplicación tan chula, en la versión 2
 ![Transición al crear un examen](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/exam_animation.gif)
 
 #### Mejoras
-</br>
+* * *
 Aún podrían haberse mejorado más cosas como cuando muestra el mensaje de que has borrado una asignatura puedas hacer rollback diciendo que deseche el cambio y se restablezca todo como estaba, también se podría haber quitado el NavigationView (la barra lateral que se desliza) por pestañas (Tabslayout) ya que muchos diseñadores nombran a las 3 barras verticales del NavigationView, menú hamburguesa y a los menús de la derecha con 3 puntos verticales, menú kebab:
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Don&#39;t ever say you don&#39;t have choices on mobile. <a href="http://t.co/Atu3Ogi58j">pic.twitter.com/Atu3Ogi58j</a></p>&mdash; Luke Wroblewski (@lukew) <a href="https://twitter.com/lukew/status/591296890030915585">April 23, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-</br>
+* * *
 #### Un futuro no muy lejano
-</br>
+* * *
 En una versión intermedia voy a permitir identificarse en la aplicación para que las asignaturas se puedan quedar guardadas en la nube y no perderlas si cambias de movil, y también para poder hacer una versión web para aprender a hacer aplicaciones web.00
 
 Para la versión 3 haré que se puedan compartir las asignaturas con los porcentajes de los grupos y asignaturas, es decir poder pasar las estructura que sigue cada asignatura a tus amigos y no tener que ir mano a mano creando grupos que toda una clase tiene igual o incluso un curso entero.

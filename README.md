@@ -64,7 +64,7 @@ The Liquid template engine will magical combine the different parts to a share u
 
 ```
 http://twitter.com/share?text=post_title&amp;url=post_url
-````
+```
 
 See [_config.yml](https://github.com/dirkfabisch/mediator/blob/master/_config.yml) for more examples.
 

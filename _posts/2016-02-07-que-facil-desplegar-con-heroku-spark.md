@@ -60,7 +60,7 @@ Añadir al proyecto los siguiente ficheros tal cual:
 
 ###Actulazar Maven a 3.3
 
-```xml
+~~~
 	<!-- Maven build -->
 	<build>
         <plugins>
@@ -89,7 +89,8 @@ Añadir al proyecto los siguiente ficheros tal cual:
             </plugin>
         </plugins>
     </build>
-```
+~~~
+{: .language-xml}
 
 **Cambiar la versión Maven build en el fichero [POM.xml][21] que nos dan en el [código de ejemplo de Heroku][23] por 3.3.**
 

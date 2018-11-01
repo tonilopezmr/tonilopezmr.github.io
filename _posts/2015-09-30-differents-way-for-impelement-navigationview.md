@@ -16,7 +16,7 @@ Standard
 Según pone en el articulo de [Android Design Support Library](http://android-developers.blogspot.com.es/2015/05/android-design-support-library.html) sin modificar nada se haría así:
 
 
-```xml
+~~~ xml
     <android.support.v4.widget.DrawerLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -39,7 +39,7 @@ Según pone en el articulo de [Android Design Support Library](http://android-de
             app:menu="@menu/activity_main_drawer" />
 
     </android.support.v4.widget.DrawerLayout>
-```
+~~~
 
 ![Implementando NavigationView standard.](https://cdn-images-1.medium.com/max/1600/1*mgbxAxAV_FRTzcFouk7j-g.gif)
 
@@ -50,7 +50,7 @@ Con pie de página
 
 Si quieres que los items de pie de página estén visibles en todo momento, aunque haya muchos items encima, esta es una posible forma de implementarlo:
 
-```xml
+~~~ xml
     <android.support.v4.widget.DrawerLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -93,8 +93,7 @@ Si quieres que los items de pie de página estén visibles en todo momento, aunq
         </android.support.design.widget.NavigationView>
 
     </android.support.v4.widget.DrawerLayout>
-```
-
+~~~
 
  - **Body** — NavigationView de la parte superior que contendrá el header y los items principales.
  - **Footer** — NavigationView en la parte de abajo que siempre se mostrará.
@@ -104,7 +103,7 @@ Para que aparezca una linea separadora entre las dos listas (divider), hay que a
 
 *bottom\_nav\_header.xml*
 
-```xml
+~~~ xml
     <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
@@ -115,8 +114,7 @@ Para que aparezca una linea separadora entre las dos listas (divider), hay que a
             android:layout_height="1dp"
             android:background="#d5d5d5" />  
     </LinearLayout>
-```
-
+~~~
 
 El NavigationView que funciona como contenedor se puede quitar y dejar tan solo el RelativeLayout, pero lo mantengo por si necesito usar alguna utilidad del NavigationView como, por ejemplo, poner el header y dejarlo fijo (que no se pueda hacer scroll).
 
@@ -132,7 +130,7 @@ NavigationView por debajo del Toolbar
 
 Si se desea que el NavigationView este por debajo del Toolbar, lo normal es que no tenga headerLayout ya que el espacio de la lista será más reducido:
 
-```xml
+~~~ xml
     <android.support.design.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -179,7 +177,7 @@ Si se desea que el NavigationView este por debajo del Toolbar, lo normal es que 
         </android.support.v4.widget.DrawerLayout>
 
     </android.support.design.widget.CoordinatorLayout>
-```
+~~~
 
 Ahora el DrawerLayout ya no es el contenedor de la actividad sino que pasa a ser el CoordinatorLayout (o cualquier otro) y lo importante es que el Toolbar se está por encima de DrawerLayout, todo lo demás es una implementación normal del NavigationView.
 

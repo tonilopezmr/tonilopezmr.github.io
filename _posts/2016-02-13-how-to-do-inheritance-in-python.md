@@ -21,7 +21,7 @@ As in the Java language, all objects inherit from the Object class. However ther
 
 This is a sample for simple inheritance:
 
-```python
+~~~ python
 class InterfaceClass(object):
 
     def do_something_1(self):
@@ -56,7 +56,7 @@ class ConcreteClass(AbstractClass):
             Implementation
         """
         return 3
-```
+~~~
 
 In response to your question,
 
@@ -67,7 +67,7 @@ I have the package *utility\_module* with 2 files; *math\_functions.py* and *\__
 
 *\__init\__.py*:
 
-```python
+~~~ python
 from . import math_functions
 math_functions.py:
 
@@ -80,19 +80,18 @@ def fibonacci(n):
     if not isinstance(n, int) or n < 0:
         raise ValueError("n is not integral or is negative")
     return 0 if n == 0 else 1 if n == 1 else fibonacci(n-1) + fibonacci(n-2)
-```
+~~~
 
 Any implementation can import the module and use its functions. For example:
 
-```python
-
+~~~ python
 from utility_module import math_functions
 from utility_module.math_functions import fibonacci
 
 if __name__ == '__main__':
     print "7! = ", math_functions.factorial(7)
     print "fibonacci(8) = ", fibonacci(8)
-```
+~~~
 
 You can find more information about Python modules and packages in [Python tutorials][5]
 

@@ -14,7 +14,7 @@ En este post **no voy a explicar como usar la API de autenticación en Twitter, 
 Todo el código esta incluido en [Android-Examples][2] en el modulo [login][3].
 
 ##Abstract class SignInActivity
-</br>
+* * *
 Es una *actividad abstracta* de la que habrá que **extender en nuestra actividad de login**, esta actividad es la encargada de inicializar los proveedores que se va a usar y la que los va a manejar. Resumiendo, lo que viene a ser todo el código que usa las API de cada proveedor y que luego no vas a ver en tu actividad de login.
 
 De esta forma tu actividad de Login con los botones, etc… solo se preocupe de los componentes de la vista, mostrar ocultar cosas, etc…
@@ -22,22 +22,22 @@ De esta forma tu actividad de Login con los botones, etc… solo se preocupe de 
 Esto lo aprendí de [JorgeCastilloPrz][1] un repositorio que tenía llamado Mirage.
 
 ##SignInManager
-</br>
+* * *
 **Es el encargado de manejar las preferencias del teléfono**, la que manejara si ya se han logeado anteriormente en el móvil, **y con qué proveedor se han logueado** para luego poder manejarlo. *Es una instancia estática* que podrá ser usada en cualquier momento y que deberá haber sido inicializada siempre al comienzo de la aplicación, de esta forma, ya podrá ser usada en el resto de la aplicación.
 
 ##Providers
-</br>
+* * *
 **Son clases que usan la API de cada proveedor**, es la que conecta y desconecta, donde se devuelve el usuario de cada uno.
 *Estos proveedores están fuertemente ligados a SignInActivity*, esto es una desventaja ya que deberían de ser independientes uno de otros, pero por tema de tiempo aun no los he desacoplado (se haría con una interfaz), en mi [código de ejemplo][2]. **Sería interesante que hicierais un pull request a el repositorio ;)**
 
 La ventaja de crear clases *Providers* es que si quieres añadir un nuevo provider en tu login, por ejemplo *instagram provider*, tan solo sería crear una clase que usa la API de instagram, **implementar la interfaz Provider** y integrarla en *SignInActivity y SignInManager*.
 
 ##SignInView
-</br>
+* * *
 **Es la interfaz que implementa SignInActivity**, estos metodos en un principio estaban abstractos dentro de dicha *SignInActivity*, pero para poder desacoplarla entre los providers y la actividad, como he comentado anteriormente, he creado la interfaz *SignInView* **que no utiliza de momento los providers** pero que ahí esta la idea de separar la actividad de las clase *Providers*.
 
 ##UserProfile
-</br>
+* * *
 **Es el modelo de usuario que voy a usar en mi aplicación**, con mis necesidades, *si necesitas más información de un usuario habría que cambiar el modelo y donde lo use*. Lo ideal sería crear un modelo de usuario para el login, común para todos los proveedores con la máxima información que podría interesar y luego transformarlo a nuestro usuario, de forma que no haya que cambiar el usuario que se obtiene en el login.
 
 *¡¡Queda más claro si le echas un vistazo al codigo de ejemplo!!*
