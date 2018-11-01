@@ -7,7 +7,7 @@ tags: android design calculanotas
 image: /assets/article_images/2016-09-28-calcula-notas-cumple-3-anyos/header.jpg
 ---
 
-Cuando presenté la segunda versión de [Calcula Notas][1] añadí un apartado mejoras en las que mencionaba las mejoras que se podrían añadir, y eso es lo nuevo en la 3º versión. También prometí para la versión 3 que se iban a poder compartir asignaturas entre las personas, pero de momento no pudo ser, a demás también hablé sobre una versión web que no verá la luz de momento al menos, pero sí que hay una sorpresa...
+Cuando presenté la segunda versión de [Calcula Notas][1] añadí un apartado de mejoras en las que mencionaba las mejoras que se podrían añadir, y eso es lo nuevo en la 3º versión. También prometí para la versión 3 que se iban a poder compartir asignaturas entre las personas, pero de momento no pudo ser, a demás también hablé sobre una versión web que no verá la luz de momento al menos, pero sí que hay una sorpresa...
 
 Entre la versión 2 y la versión 3 añadí una nueva funcionalidad para poder loguearte y tener las asignaturas siempre contigo en la nube y aunque cambies de móvil poder disponer de tus asignaturas.
 
