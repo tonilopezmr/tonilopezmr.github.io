@@ -43,8 +43,7 @@ El HTML con un poco de javascript para que el cliente haga todo el trabajo y se 
 
 Aquí el código mágico:
 
-~~~
-
+~~~ java
     // Code for collect facebooks in a file
     public static void main(String[] args) throws IOException {
         int cont = 0;
@@ -73,7 +72,6 @@ Aquí el código mágico:
         }
 
 ~~~
-{: .language-java}
 
 #No pulses la palabra OR
 

@@ -15,13 +15,13 @@ En esta versión **he quitado *DrawerLayout*(la barra lateral que se desliza) y 
 
 En el post de la versión 2 de [Calcula Notas][1] también dije que quitar el *DrawerLayout* mejoraba la UX y he hecho [una encuesta][3] para ver si él [Calcula Notas][1] de la versión 2 era mejor que el de la nueva versión, yo esperando que la gente votará la nueva versión de repente a todo el mundo le encanta el *DrawerLayout*, sin embargo dada su funcionalidad y la forma de usarse, con el nuevo diseño, todo está más claro y fácil de usar con un dedo.
 
-###Perfil
+### Perfil
 * * *
 <img src="/assets/article_images/2016-09-28-calcula-notas-cumple-3-anyos/profile.png" width="384" height="640">
 
 La pantalla de perfil es la misma pantalla que te aparece cuando deslizabas el *DrawerLayout*, te aparece tu lista de asignaturas y la información de tu cuenta.
 
-###Asignatura
+### Asignatura
 * * *
 <img src="/assets/article_images/2016-09-28-calcula-notas-cumple-3-anyos/subject.png" width="384" height="640">
 

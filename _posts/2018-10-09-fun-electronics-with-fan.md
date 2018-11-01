@@ -9,12 +9,12 @@ image: /assets/article_images/2018-10-09-fun-electronics-with-fan/tony_stark_fir
 
 I have started a new adventure learning electronics, and I found a good problem to solve with electronics, **control my fan remotely**. The purpose was to learn electronics more deeply instead of using a simple Arduino board.
 
-###The problem
+### The problem
 * * *
 
 I had an old fan 10 years old, it is **Cata fan with model DP40**. I wanted to turn on/off and control the fan speed. **My fan has four states: off, velocity 1, 2 and 3. I wanted to control my fan remotely and manually at the same time**, for example, you put the speed two manually because you were standing, but after some minutes you want to turn off or change to the velocity one with the remote control.
 
-###How my fan works
+### How my fan works
 * * *
 
 Before start coding or doing something else, I needed to know how my fan worked because I don't know how usually fan works or how my fan changes the speed.
@@ -27,7 +27,7 @@ When I saw the switch with three channels, etc... I suppose how it worked but **
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/fan_head.jpg">
 
-###First version using relays
+### First version using relays
 * * *
 
 After knowing how my fan works, **I knew how to solve the problem using relays to simulate the three channel switch by remote control**. I had experience controlling relays in Arduino with small projects then I knew how to use relays in Arduino and it is effortless, activate or deactivate by an Arduino pin.
@@ -46,7 +46,7 @@ And this is how my fan looked like:
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/first_version_relay.jpg">
 
-###Don't use relays use Transistors!
+### Don't use relays use Transistors!
 * * *
 
 **I didn't like relays because make noise**, they are huge and I need three relays for the different states. After looking for a solution which replaces a relay without sound and I found the word **"Transistor"**, wow! *I learned a lot about transistors at the University!* **Everything has been made with transistors**, microcontrollers, computers, your coffee machine, everything has one!
@@ -61,7 +61,7 @@ Then I made a small example replacing the relays by Transistors and I used leds 
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/replace_relay_by_Transistors.jpeg">
 
-###Remote and manual control
+### Remote and manual control
 * * *
 
 Okay, I can control my fan with the remote control but **what about to use it with remote control and the three channel switch as manual?**.
@@ -98,7 +98,7 @@ This is the result of combine remote control and manual.
 
 [Here is the code of the fan][5]
 
-###Real world
+### Real world
 * * *
 
 It seems I finished to design my circuit and I was able to try it with my fan instead of the small leds. **I needed to buy a transistor which could support high voltages and current, at least 220 volts and 16 A**.
@@ -109,7 +109,7 @@ I bought a [MJE18008 NPN Transistor][3] which **support 1000v** !! it should be 
 
 Why? *It supports 1000v !!* after reading a lot about it I found the answer, **A transistor it is unidirectional, not bidirectional, It doesn't work with Alternating current!** oh god. After broken two transistors, I learned the difference between *DC* and *AC*.
 
-###Triac
+### Triac
 * * *
 
 Triacs are the answer to my question, *"which one is the relay substitute?"*, the Triac!
@@ -118,7 +118,7 @@ A triac is two transistors in parallel in different directions to give it the bi
 
 I bought a [BTA16-600B Triac][4] and I did the same experiment as the transistors and It didn't exploit!. If you want to know more about Triacs, [I wrote about it here][6].
 
-###Control high voltages with Triac and Arduino
+### Control high voltages with Triac and Arduino
 * * *
 
 I had a Triac which didn't exploit, I had an Arduino with the program, then **I only needed to connect to the 220v**, yeah! Finally!
@@ -129,7 +129,7 @@ I was going to connect to the **220v** and I read about how to connect all and *
 
 I didn't want to burn my circuit and Arduino or something like that and I started to read more about how to connect high voltages with low voltages and I found **the optocoupler**.
 
-###Optocoupler
+### Optocoupler
 * * *
 
 You need an optocoupler when you want to control high voltages with small voltages like a microcontroller, **the optocoupler will isolate the high voltages (hot side) from the low voltages(cold side).**
@@ -151,7 +151,7 @@ To test if it is working, I did a small circuit which uses *9v* as input with a 
 
 If you want to know more about optocouplers, [I wrote it about it here][7].
 
-###Designing the circuit 
+### Designing the circuit 
 * * *
 
 At this point, it seems I can connect my circuit with `220v` loads. Before to connect the circuit in real life I wanted to do some test with any kind of emulator to know if I could burn my circuit or if something it is wrong.
@@ -180,7 +180,7 @@ This is the 3d visualization of the PCBs.
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/3d_pcb.png">
 
-###Connecting the design
+### Connecting the design
 * * *
 
 After design, simulate my circuit and be sure my circuit will work, I created a test circuit with the breadboard and used bulbs instead of the fan for the fist time.
@@ -204,7 +204,7 @@ And this is how it works:
 
 
 
-###Soldering my circuit
+### Soldering my circuit
 * * *
 
 I could order a PCB with my design but it would cost too much just for one PCB and I preferred to learn how to solder for future projects.
@@ -225,7 +225,7 @@ Back side.
 
 For the hot load, I have used wires in the front instead of solder in the back for more safety for the *220v* Line AC.
 
-###It didn't work after solder it
+### It didn't work after solder it
 * * *
 
 After solder it, it didn't work! :( **Thanks to the multimeter, I can test it using the diode mode to know if some tracks are bad solder or something like that**.
@@ -236,7 +236,7 @@ I did some tests with the multimeter and fixed some things I was wrong, but when
 
 Finally, I found the error, **it was related with the two capacitors the crystal oscillator of 16MHz needs to work, I connected the input of the capacitor with the output of the same capacitor directly**, then the capacitors don't work and the oscillator neither.
 
-###Protect your circuit
+### Protect your circuit
 * * *
 
 **I was worried about how near the tracks of the hot side of my circuit are**, thinking about possible short-circuit. I found a [Protective Layer polyurethane insulation][15] to isolate the circuit tracks.
@@ -247,7 +247,7 @@ You just need to spray it on the tracks.
 
 Sorry for the bad quality :(
 
-###Design the circuit enclosure
+### Design the circuit enclosure
 * * *
 
 **I wanted to create an enclosure to my circuit because it is very dangerous to connect that circuit without protection**, then I decided to install [Fusion 360][16] and start to design my enclosure.
@@ -276,7 +276,7 @@ and here is closed, note that there is space for the wires.
 
 I have learned a lot about modeling in 3D in fusion, I have made another enclosure after this one for other projects that I will show you here :D.
 
-###Enclosure printing
+### Enclosure printing
 * * *
 
 Well, It was time to print the enclosure, I didn't know how to use a 3d printer (I bought [Ender 3 printer][18] for print the enclosure, and of course for future projects...) but after spending some time printing examples to not waste too much filament,
@@ -300,7 +300,7 @@ After 8 hours, this was the result.
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/enclosure.jpg">
 
-###Assemble
+### Assemble
 * * *
 
 I have the circuit and enclosure, then I can start to assemble it to the fan. **I assemble the three channel switch with a connector to the circuit.**
@@ -336,7 +336,7 @@ I finished assembling the enclosure and I just need to attach it to my fan.
 
 **Right now the microcontroller needs a 9v battery to work, I have planned to add an AC-DC converter**, I have already one, but I prefer to use in the second version of my fan.
 
-###Conclusions
+### Conclusions
 * * *
 
 **I learned a lot from my first version to the last one.** It was an excellent experience from zero knowledge to being able of doing something like this and I will continue working on this kind of projects to more fun.

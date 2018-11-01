@@ -11,7 +11,7 @@ Hace poco menos de un año, después de los primeros exámenes de la universidad
 
 La idea surgió de que cada vez que quería ver como iba con las notas, sacaba la calculadora miraba como funcionaba la asignatura y las calculaba, como lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.
 
-#Primeros pasos
+### Primeros pasos
 * * *
 
 La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura, como podía ser la nota de los exámenes y la nota de cada grupo de evaluación (Teoría, Prácticas, etc...), y todo ello poder verlo con un pequeño vistazo.
@@ -25,7 +25,7 @@ Finalmente tenía:
 	* Lista de grupos de evaluación que son desplegables con exámenes
 	* Diálogo para crear/modificar una asignatura, grupos de evaluación y exámenes.
 
-####Sketching
+#### Sketching
 * * *
 
 ![Primer sketch de Calcula Notas](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/sketch1.jpg)
@@ -47,7 +47,7 @@ Ahora quitaría los horribles desplegables por simples cards y mostraría siempr
 
 La nota se ve claramente de la asignatura los grupos y los 2 primeros exámenes de cada grupo, si se desea ver más sobre un grupo pinchando sobre el grupo va hacía su detalle.
 
-####Detalle por cada entidad
+#### Detalle por cada entidad
 * * *
 
 ![Detalles de grupo y examen](/assets/article_images/2015-11-01-nueva-version-de-calcula-notas-nueva-interfaz/detail_activity.jpg)
@@ -56,7 +56,7 @@ Al tener cada entidad con su detalle las opciones que puedes hacer sobre cada un
 
 Ahora al tener cada detalle de cada entidad, la edición y creación para rellenar datos se hará en ese mismo detalle enseñándote una pantalla entera para poder rellenar sus datos verificarlos y guardarlos.
 
-####Flujo de la aplicación
+#### Flujo de la aplicación
 * * *
 Como ya he dicho en la primera versión solo había una pantalla donde lo tenías todo, y para poder interactuar con los elementos había que mantenerlos pulsados durante unos segundos.
 

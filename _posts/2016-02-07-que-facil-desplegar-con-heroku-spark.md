@@ -18,11 +18,11 @@ Antes de leer el post, si no conoces los siguientes productos consultarlos antes
 
 Después de un intento fallido de desplegar el [API REST][5] hecho con [Spark Java Framework][6] de *[Calcula Notas][4]* en [Openshift][2], **he conseguido hacerlo con [Heroku][7] mucho más fácil**.
 
-##¿Por qué Spark Java?
+## ¿Por qué Spark Java?
 
 Muy sencillo, porque [Spark Java][6] es un [framework][8] muy ligero para hacer aplicaciones web muy **facilmente y rapido con [Java 8][10]**, ya que por temas de universidad y que quería centrarme en añadir una nueva funcionalidad en *[Calcula Notas][4]*, lo he hecho con Java, porque es el lenguaje que ya conozco y en el que podía hacer una aplicación chula con acceso a la base de datos, etc... Es lo que he estado haciendo en el grado superior una y otra vez.
 
-##Openshift
+## Openshift
 
 **Esta muy bien**, pero no era la mejor solución para lo que yo tenía creado, ya que tenía que hacer funcionar un [Jetty Java Web Server][9] y el [tutorial de Openshift estaba más que desfasado][3].
 
@@ -32,24 +32,24 @@ Muy sencillo, porque [Spark Java][6] es un [framework][8] muy ligero para hacer 
 
 Resumiendo, perdí demasiado tiempo y me pase a probar [Heroku][7].
 
-##Heroku
+## Heroku
 
 Para mi gusto, **mucho mejor documentado**. Esta solución ya la conocía de entrada, porque en los tutoriales que existen en la página oficial de spark ya te dicen [como desplegar en heroku][14].
 
-###¡¡Comencemos!!
+### ¡¡Comencemos!!
 
 Primero seguí el [tutorial de Heroku][15] mientras miraba el otro [tutorial de Spark con Heroku][14], este último no lo recomiendo para nada, porque lo único que hizo fue confundirme.
 
 Si sigues el tutorial paso a paso, todo debería ir bien, **PERO** de todas formas por si no funciona, como me pasó a mí, voy a explicar los pequeños cambios que hice para que funcionara bien.
 
-###Instalar heroku
+### Instalar heroku
 
 Al instalar [Heroku][7] y [Maven][16] me daba fallo de que no encontraba el jdk de java8, así que puse lo siguiente:
 
 
 	export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_{mi-version-java}.jdk/Contents/Home
 
-###Procfile y MVN files
+### Procfile y MVN files
 
 Añadir al proyecto los siguiente ficheros tal cual:
 
@@ -58,9 +58,9 @@ Añadir al proyecto los siguiente ficheros tal cual:
 - [mvnw][18]
 - [mvnw.cmd][19]
 
-###Actulazar Maven a 3.3
+### Actulazar Maven a 3.3
 
-~~~
+~~~ xml
 	<!-- Maven build -->
 	<build>
         <plugins>
@@ -90,7 +90,6 @@ Añadir al proyecto los siguiente ficheros tal cual:
         </plugins>
     </build>
 ~~~
-{: .language-xml}
 
 **Cambiar la versión Maven build en el fichero [POM.xml][21] que nos dan en el [código de ejemplo de Heroku][23] por 3.3.**
 

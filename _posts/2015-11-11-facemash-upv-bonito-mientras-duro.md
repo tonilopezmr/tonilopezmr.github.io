@@ -10,11 +10,11 @@ image: /assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/backgr
 
 Bueno después de habernoslo pasado muy bien viendo las fotos de la universidad en [Facemash UPV][4], **las imágenes las han hecho privadas**, es decir, han quitado permisos y nos devuelven la 'default', que es la famosa imagen gris :(
 
-#####¿Tiene solución? ¿Podría seguir funcionando facemash?
+##### ¿Tiene solución? ¿Podría seguir funcionando facemash?
 
  - <del>No</del> Sí
 
-#####Pero, ¿sería legal?
+##### Pero, ¿sería legal?
 
 - <del>Sí</del> ni idea la verdad, supongo que no.
 
@@ -34,7 +34,7 @@ Publiqué [Facemash UPV][4] domingo día 8 de noviembre, recibió más de **1030
 
 El día cumbre fue el lunes 9 de noviembre con **1876 usuarios**, cuando las personas que lo vieron el domingo lo compartieron en clase con sus compañeros.
 
-##Informes, 2 días y medio
+## Informes, 2 días y medio
 * * *
 ![Visión general hasta el momento.](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/total_est.png)
 
@@ -44,32 +44,32 @@ Finalmente **19546 páginas vistas** y **3930 usuarios**, lo que me sorprende es
 
 De estas 19546 páginas vistas **2353** fueron a parar a la página de [Calcula Notas][5].
 
-##Países y ciudades
+## Países y ciudades
 * * *
 ![Izquierda países, derecha Ciudades](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/country.jpg)
 
 La página ha sido vista en **29 países**, los más destacados de la Unión Europea, pero también de Vietnam, Brasil, Argentina, etc... Gente de erasmus o que ha estado por aquí supongo.
 
-##Sexo y edad
+## Sexo y edad
 * * *
 ![Sexo y edad](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/ages.png)
 
 Se metieron [más hombres][6] con un 61% que mujeres con 39%. El 65% entre **18-24 años** como era de esperar, y los nuevos usuarios rondaban más entre 25-54 años. Aunque los datos no son exactos ya que viene de una muestra del 23% del total de sesiones.
 
 
-##Dispositivo
+## Dispositivo
 * * *
 ![Dispositivos](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/devices.png)
 
 Poco que decir de que clase de dispositivos han accedido a [Facemash UPV][4], la mayoría de visitas eran desde la universidad.
 
-##Sistemas operativos moviles
+## Sistemas operativos moviles
 * * *
 ![Dispositivos](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/mobile_so.png)
 
 Algo que me interesa mucho es conocer que sistemas operativos móviles veían la página ya que [Calcula Notas][5] de momento solo está en [Android][7] pero que **pronto estará para** [IOS][8].
 
-##SEO
+## SEO
 * * *
 Cuando hice [Facemash UPV][4] lo hice **lo más repelente que podía**, me refiero a repelente a que si descargas el código fuente HTML da repelus, tablas HTML con CSS en el mismo HTML en cada etiqueta y el código javaScript a la vista de como cogía las imagenes, aunque de todas formas [PageSpeed Insights][9] no me ponía muy mala puntuación.
 
