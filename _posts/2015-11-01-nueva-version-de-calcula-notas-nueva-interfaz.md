@@ -14,7 +14,7 @@ La idea surgió de que cada vez que quería ver como iba con las notas, sacaba l
 ### Primeros pasos
 * * *
 
-La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura, como podía ser la nota de los exámenes y la nota de cada grupo de evaluación (Teoría, Prácticas, etc...), y todo ello poder verlo con un pequeño vistazo.
+La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura, como podía ser la nota de los exámenes y la nota de cada grupo de evaluación (Teoría, Prácticas, etc. ), y todo ello poder verlo con un pequeño vistazo.
 
 Por lo que se me ocurrió mostrar una asignatura en una pantalla con todo su contenido mediante desplegables, insertar la información mediante diálogos y editar manteniendo pulsado lo que se quería editar, de esta manera lo tenía todo a la vista.
 

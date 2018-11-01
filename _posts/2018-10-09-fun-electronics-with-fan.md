@@ -23,7 +23,7 @@ Before start coding or doing something else, I needed to know how my fan worked 
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/fan_switch.jpeg">
 
-When I saw the switch with three channels, etc... I suppose how it worked but **I needed to try it connecting the AC line wire to one of the speed wires to confirm that it worked**, this is how it looked like:
+When I saw the switch with three channels, etc. I suppose how it worked but **I needed to try it connecting the AC line wire to one of the speed wires to confirm that it worked**, this is how it looked like:
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/fan_head.jpg">
 
@@ -51,7 +51,7 @@ And this is how my fan looked like:
 
 **I didn't like relays because make noise**, they are huge and I need three relays for the different states. After looking for a solution which replaces a relay without sound and I found the word **"Transistor"**, wow! *I learned a lot about transistors at the University!* **Everything has been made with transistors**, microcontrollers, computers, your coffee machine, everything has one!
 
-Then I started to read a lot about it, *there are many transistor categories NPN, PNP, BJT, Mosfet, SCR, etc...* I learned about *BJT* and Mosfet at the university. After read about it I needed a *BJT* Transistor but **which one *PNP* or *NPN*?**.
+Then I started to read a lot about it, *there are many transistor categories NPN, PNP, BJT, Mosfet, SCR, etc.* I learned about *BJT* and Mosfet at the university. After read about it I needed a *BJT* Transistor but **which one *PNP* or *NPN*?**.
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/transistor_schematic.png">
 
@@ -281,7 +281,7 @@ I have learned a lot about modeling in 3D in fusion, I have made another enclosu
 
 Well, It was time to print the enclosure, I didn't know how to use a 3d printer (I bought [Ender 3 printer][18] for print the enclosure, and of course for future projects...) but after spending some time printing examples to not waste too much filament,
 
-**I send the 3d design from Fusion 360 to [Cura][17]** which is the software to configure the 3d models to 3d printer commands like hot the nozzle 200º, start in the point x and y, etc... you can sort the components to the bed printer as well, change the position 90º or anything else.
+**I send the 3d design from Fusion 360 to [Cura][17]** which is the software to configure the 3d models to 3d printer commands like hot the nozzle 200º, start in the point x and y, etc. You can sort the components to the bed printer as well, change the position 90º or anything else.
 
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/cura_enclosure.png">
 

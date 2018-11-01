@@ -20,7 +20,7 @@ Después de un intento fallido de desplegar el [API REST][5] hecho con [Spark Ja
 
 ## ¿Por qué Spark Java?
 
-Muy sencillo, porque [Spark Java][6] es un [framework][8] muy ligero para hacer aplicaciones web muy **facilmente y rapido con [Java 8][10]**, ya que por temas de universidad y que quería centrarme en añadir una nueva funcionalidad en *[Calcula Notas][4]*, lo he hecho con Java, porque es el lenguaje que ya conozco y en el que podía hacer una aplicación chula con acceso a la base de datos, etc... Es lo que he estado haciendo en el grado superior una y otra vez.
+Muy sencillo, porque [Spark Java][6] es un [framework][8] muy ligero para hacer aplicaciones web muy **facilmente y rapido con [Java 8][10]**, ya que por temas de universidad y que quería centrarme en añadir una nueva funcionalidad en *[Calcula Notas][4]*, lo he hecho con Java, porque es el lenguaje que ya conozco y en el que podía hacer una aplicación chula con acceso a la base de datos, etc.  Es lo que he estado haciendo en el grado superior una y otra vez.
 
 ## Openshift
 

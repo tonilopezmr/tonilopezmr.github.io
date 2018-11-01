@@ -7,10 +7,10 @@ tags: facemash-upv
 image: http://cdn.collider.com/wp-content/uploads/the_social_network_movie_image_andrew_garfield_01.jpg
 ---
 
-######Lo acabo de publicar y se que no a todo el mundo le sentará bien pero no es ilegal, es culpa de la uni que todo el mundo lo pueda ver.
+> Lo acabo de publicar y se que no a todo el mundo le sentará bien pero no es ilegal, es culpa de la uni que todo el mundo lo pueda ver.
 
 
-##¿Por qué?
+## ¿Por qué?
 
 - <del>Porque puedo</del>.
 
@@ -22,7 +22,7 @@ Quería hacerlo lo más parecido al de la peli de [La red social][2] que tanto p
 
 [![FACEMASH UPV](/assets/article_images/about/facemash-image.png)](https://tonilopezmr.github.io/facemash)
 
-##¿Como?
+## ¿Como?
 
 Bueno pues fue **muy fácil** ya sabía que se podían ver todas las fotos de la universidad en el **primer año** cuando entré pero ha sido en este segundo curso cuando le vi utilidad.
 
@@ -30,9 +30,9 @@ Bueno si quieres un resumen de **como lo hice** aquí puedes ver la versión div
 
 [![](http://img.youtube.com/vi/f8AuB5hPiCk/0.jpg)](https://www.youtube.com/watch?v=f8AuB5hPiCk)
 
-Ahora en **serio**, pues coges tu foto de perfil miras que la URL es [http://intranet.upv...../numeritos.gif][3] y vas cambiando los números y **¡EUREKA!**, __las imágenes en la upv las puede ver cualquiera__ y **no pasa nada** porque puedes ver la de tus compañeros de clase en la intranet (orlas) etc...
+Ahora en **serio**, pues coges tu foto de perfil miras que la URL es [http://intranet.upv...../numeritos.gif][3] y vas cambiando los números y **¡EUREKA!**, __las imágenes en la upv las puede ver cualquiera__ y **no pasa nada** porque puedes ver la de tus compañeros de clase en la intranet (orlas) etc. 
 
-Ahora solo hay que **automatizarlo** y hacer una página html que vaya cambiando las URL's, para hacerlo lo más sencillo posible y que la página sea muy rápida en cargar las fotos como solo hay que cambiar los numeritos, **desarrollé** un programa que vaya aumentando los números y los guarde en un **fichero**, y no tener que encontrar una imagen cada vez que quiera cambiarla, etc...
+Ahora solo hay que **automatizarlo** y hacer una página html que vaya cambiando las URL's, para hacerlo lo más sencillo posible y que la página sea muy rápida en cargar las fotos como solo hay que cambiar los numeritos, **desarrollé** un programa que vaya aumentando los números y los guarde en un **fichero**, y no tener que encontrar una imagen cada vez que quiera cambiarla, etc. 
 
 El problema es que el número es muuuuy **grande** y en la mayoría de combinaciones **no hay imagen** y te sale una gris fea :(.
 **Problema solucionado**, cuando no encuentra una imagen de perfil aparece una imagen que siempre es la misma y encima más pequeña con lo que siempre pesa lo mismo (bytes) que más concretamente eran **5372 bytes**, todas las imágenes que fueran distintas de la imagen sin cara pues no lo añado al fichero y ya está.
@@ -73,7 +73,7 @@ Aquí el código mágico:
 
 ~~~
 
-#No pulses la palabra OR
+> No pulses la palabra OR
 
 
 [1]: https://en.wikipedia.org/wiki/Mark_Zuckerberg
