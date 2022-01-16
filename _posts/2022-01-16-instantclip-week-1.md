@@ -9,7 +9,7 @@ image: /assets/article_images/2022-01-16-instantclip-week-1/instantclip_horizont
 
 I'd like to share a summary of the week building instantclip here as a retrospective, I'm going to use my tweets as a reference for the summary, my blog is going to be in English, but my tweets can be in Spanish or English, I didn't decide yet what to do with the language of my tweets :D.
 
-Instantclip is an application to create videos easily without the need of editing using templates, those templates are uploaded by creators that can add a price for using the template.
+Instantclip is an application to create videos easily without the need of editing using templates, those templates are uploaded by creators that can add a price for using the template. You can visit the webpage [instantclip.app][1].
 
 <div>
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Bueno después de muchos años inactivo en twitter, ahora voy a empezar a dar la brasa casi todos los días.</p>&mdash; Antonio López (@tonilopezmr) <a href="https://twitter.com/tonilopezmr/status/1479063819150413828?ref_src=twsrc%5Etfw">January 6, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -19,7 +19,7 @@ I have done many projects, and I have always been thinking to share those projec
 
 What I have done this week:
 
-* Decide the final name, at the moment Instant Clip
+* Decide the final name, at the moment Instant Clip, [instantclip.app][1].
 * Buy the domain and email provider.
 * I paid a designer to design the logo.
 * Create a landing page.
@@ -34,3 +34,5 @@ It seems a lot but I didn't work too much, or at least I didn't work frequently,
 <div>
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Estos días he estado pensando en la estrategia para desarrollar el proyecto.<br><br>La gran pregunta de ¿cómo empezar?, lo realmente importante es sacar una primera versión lo antes posible, ¿cómo se consigue?<br><br>* ¿trabajando más?<br>* ¿haciendo más horas hasta que está como en tu cabeza?</p>&mdash; Antonio López (@tonilopezmr) <a href="https://twitter.com/tonilopezmr/status/1481979138047201282?ref_src=twsrc%5Etfw">January 14, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+
+[1]: https://instantclip.app
