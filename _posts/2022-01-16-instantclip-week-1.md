@@ -4,7 +4,7 @@ title:  "Fun electronics with Fan"
 date:   2018-10-09 11:12:25
 categories: electronics
 tags: arduino triac fan domotise
-image: /assets/article_images/2018-10-09-fun-electronics-with-fan/tony_stark_first_version.jpeg
+image: /assets/article_images/2022-01-16-instantclip-week-1/instantclip_horizontal.png
 ---
 
 I have started a new adventure learning electronics, and I found a good problem to solve with electronics, **control my fan remotely**. The purpose was to learn electronics more deeply instead of using a simple Arduino board.
