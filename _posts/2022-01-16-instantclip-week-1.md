@@ -2,8 +2,8 @@
 layout: post
 title:  "First week of instantclip"
 date:   2022-01-16 11:12:25
-categories: product instantclip
-tags: startup ios 
+categories: product instantclip ios startups
+tags: instantclip product 
 image: /assets/article_images/2022-01-16-instantclip-week-1/instantclip_horizontal.png
 ---
 

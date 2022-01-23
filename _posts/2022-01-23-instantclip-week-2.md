@@ -1,13 +1,11 @@
 ---
 layout: post
 title:  "Starting the MVP"
-date:   2022-01-16 11:12:25
-categories: product instantclip
-tags: startup ios 
+date:   2022-01-23 11:12:25
+categories: product instantclip ios startups
+tags: instantclip product 
 image: /assets/article_images/2022-01-16-instantclip-week-1/instantclip_horizontal.png
 ---
-
-Weeks since I start instantclip, 2.
 
 During this week I started the iOS application, and this is the roadmap for finish the MVP.
 
@@ -19,24 +17,27 @@ During this week I started the iOS application, and this is the roadmap for fini
 
 I have been able to do from 1 to 3/2, I was a little bit stuck on the trimming view, becuase I need to do it using a ViewController without using SwiftUI and integrate it in SwiftUI. I can do screens using SwiftUI but I wasn't familiar with UIKit.
 
-### List of templates 
+### List of templates 
 
 <div>
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Finalizada la primera pantalla de selección de templates, también he creado la estructura en JSON de cómo se visualizan los templates. 🌴🌴<br><br>Espero tener algo funcionando esta semana. Hay que ir poniéndose deadlines. ☠️ <a href="https://t.co/fFXomOCjMP">pic.twitter.com/fFXomOCjMP</a></p>&mdash; Antonio López (@tonilopezmr) <a href="https://twitter.com/tonilopezmr/status/1483560309013024773?ref_src=twsrc%5Etfw">January 18, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-### Play template and Video selection
+### Play template and Video selection
 
 <div>
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Ya falta menos para terminar el MVP.<br><br>* Visualización de templates<br>* Selección de template<br>* Selección de videos <br><br>Falta que por cada video recortes los segundos que quieres que aparezcan, y falta la magia interna de unión de videos y listo para compartir! <a href="https://t.co/zn1SjMToE6">pic.twitter.com/zn1SjMToE6</a></p>&mdash; Antonio López (@tonilopezmr) <a href="https://twitter.com/tonilopezmr/status/1483939051497570304?ref_src=twsrc%5Etfw">January 19, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-### Video trimming
+### Video trimming
 
 <div>
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr">Esta es la idea principal, tener que ir video por video recortando los segundos que quieres que aparezcan. <br>Una vez recortados, se mostraría el resultado. <a href="https://t.co/g66BYexH6d">https://t.co/g66BYexH6d</a> <a href="https://t.co/wdGDlEVKRn">pic.twitter.com/wdGDlEVKRn</a></p>&mdash; Antonio López (@tonilopezmr) <a href="https://twitter.com/tonilopezmr/status/1484495543636267011?ref_src=twsrc%5Etfw">January 21, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
+***
+
+Weeks since I start instantclip, 2.
 
 > I'd like to share a summary of the week building instantclip here as a retrospective, I'm going to use my tweets as a reference for the summary, my blog is going to be in English, but my tweets can be in Spanish or English, I didn't decide yet what to do with the language of my tweets :D.
 
