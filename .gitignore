@@ -4,3 +4,5 @@ _site
 .DS_Store
 **.DS_Store
 bourbon
+node_modules
+.next
