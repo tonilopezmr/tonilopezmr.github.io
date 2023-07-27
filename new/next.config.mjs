@@ -9,6 +9,7 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
+  transpilePackages: ['react-tweet']
 }
 
 const withMDX = nextMDX({
