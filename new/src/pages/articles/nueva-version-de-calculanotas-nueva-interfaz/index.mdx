@@ -1,0 +1,134 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import detailActivity from './assets/detail_activity.jpg'
+import examAnimation from './assets/exam_animation.gif'
+import flujoApp from './assets/flujo_app.jpg'
+import groupAnimation from './assets/group_animation.gif'
+import sketchExam from './assets/skecth_exam_item.jpg'
+import sketchDialog from './assets/sketch_dialog.jpg'
+import sketchNote from './assets/sketch_note.jpg'
+import sketch1 from './assets/sketch1.jpg'
+import v1_app from './assets/v1_app.jpg'
+import v1vsv2 from './assets/v1-vs-v2.jpg'
+import v1 from './assets/v1.jpg'
+import v2_app from './assets/v2_app.jpg'
+
+
+
+export const meta = {
+  author: 'Toni López',
+  date: '2015-11-01',
+  title: 'Nueva versión de calcula notas, nueva interfaz',
+	cover: v1,
+  description:
+    'Nueva versión de calcula notas, nueva interfaz.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Hace poco menos de un año, después de los primeros exámenes de la universidad, cree [Calcula Notas][1]. Es una aplicación que calcula la nota de las asignaturas de la universidad poniéndoles el sistema de evaluación que sigue cada una y añadiendo exámenes.
+
+La idea surgió de que cada vez que quería ver como iba con las notas, sacaba la calculadora miraba como funcionaba la asignatura y las calculaba, como lo hacía con cada una de las asignaturas pues se me ocurrió hacer una aplicación y poder aprender nuevos conceptos de programación en android y probar un poco los nuevos componentes de la interfaz android.
+
+## Primeros pasos
+
+La aplicación tendría que mostrarme las notas de las diferentes partes de una asignatura, como podía ser la nota de los exámenes y la nota de cada grupo de evaluación (Teoría, Prácticas, etc. ), y todo ello poder verlo con un pequeño vistazo.
+
+Por lo que se me ocurrió mostrar una asignatura en una pantalla con todo su contenido mediante desplegables, insertar la información mediante diálogos y editar manteniendo pulsado lo que se quería editar, de esta manera lo tenía todo a la vista.
+
+Finalmente tenía:
+
+	* Solo una pantalla principal
+	* Lista de exámenes con la barra lateral
+	* Lista de grupos de evaluación que son desplegables con exámenes
+	* Diálogo para crear/modificar una asignatura, grupos de evaluación y exámenes.
+
+## Sketching
+
+<Image src={sketch1} alt="Primer sketch de Calcula Notas" />
+
+El primer sketch que hice, que se vea bien la nota de la asignatura, los grupos y los exámenes dentro de ellos, también el NavigationView con todas las asignaturas.
+
+<Image src={v1_app} alt="Primer sketch de Calcula Notas" />
+
+En la primera versión, cuando te metias por primera vez, aparecía un tutorial que te explicaba como iba la aplicación porque puede que, cuando entras sin explicación no sabías hacer casi nada y esto me decía que el diseño no era bueno. También usaba dialogs para rellenar la información. Por estas cosas me hicieron pensar una mejor interfaz para una nueva versión al poco de crear la aplicación, hace un año.
+
+<blockquote className="twitter-tweet" lang="en"><p lang="es" dir="ltr">Pensando ya en la v2.0.0 de <a href="https://twitter.com/hashtag/CalculaNotas?src=hash">#CalculaNotas</a> más intuitiva. Para el año que viene ya. <a href="http://t.co/ga4kqglefO">pic.twitter.com/ga4kqglefO</a></p>&mdash; Antonio López Marín (@tonilopezmr) <a href="https://twitter.com/tonilopezmr/status/590631903499268097">April 21, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charSet="utf-8"></script>
+
+La nueva interfaz debería de ser parecida pero sin realizar un cambio demasiado brusco de repente, que la nota se viera bien en grande, que pudieras verlo todo igual de un vistazo, y que el comportamiento sea muy parecido, vamos lo que viene siendo que te metas en la aplicación y sigas sabiendo que es calcula notas pero molón.
+
+Ahora quitaría los horribles desplegables por simples cards y mostraría siempre los exámenes (aun mejor visualización), también quitaría los diálogos para rellenar los datos y añadiría detalles de cada entidad, esto es que, por cada grupo o examen al pulsarlos vieras sus detalles completos (se fuera a otra pantalla a enseñarte el grupo entero o examen).
+
+<Image src={v2_app} alt="Segunda versión Calcula Notas" />
+
+La nota se ve claramente de la asignatura los grupos y los 2 primeros exámenes de cada grupo, si se desea ver más sobre un grupo pinchando sobre el grupo va hacía su detalle.
+
+## Detalle por cada entidad
+
+<Image src={detailActivity} alt="Detalles de grupo y examen" />
+
+Al tener cada entidad con su detalle las opciones que puedes hacer sobre cada una están en ese mismo detalle, es decir, en la primera versión si querías modificar o borrar un examen tenías que mantenerlo pulsado y aparecían las opciones que puedes hacer sobre él, ahora las opciones no tienen que aparecer cuando lo tienes pulsado sino que aparecen cuando pinchas sobre un examen y se va a su detalle enseñándote toda la información y opciones que puedes hacer sobre el.
+
+Ahora al tener cada detalle de cada entidad, la edición y creación para rellenar datos se hará en ese mismo detalle enseñándote una pantalla entera para poder rellenar sus datos verificarlos y guardarlos.
+
+## Flujo de la aplicación
+
+Como ya he dicho en la primera versión solo había una pantalla donde lo tenías todo, y para poder interactuar con los elementos había que mantenerlos pulsados durante unos segundos.
+
+Ahora hay un flujo entre las diferentes tres pantallas que existen; pantalla principal (main), pantalla del detalle de grupo y otra para el detalle de examen.
+
+El flujo es el siguiente:
+
+<Image src={flujoApp} alt="Flujo de la Calcula Notas" />
+
+ 	1. Creas una asignatura, esta asignatura te sugiere que crees un grupo.
+ 	2. Creas un grupo, este grupo te sugiere que crees exámenes.
+ 	3. Creas un examen y este te invita a que rellenes su información.
+ 	4. Vuelves a el grupo, y este te sugiere que crees otro examen si tienes más exámenes en ese grupo.
+ 	5. Vuelves a la asignatura, esta te sugiere que crees otro grupo.
+
+Si del paso 2 no pasas al paso 3, sino que vuelves a la asignatura, no importa porque desde la asignatura aparecerá el grupo y dentro de este grupo te sugerirá que crees un examen, todo mucho más lógico y sencillo sin tener que mantener pulsados elementos ni tener que adivinar como funcionan las cosas.
+
+## Icono
+
+<Image src={v1vsv2} alt="V1 vs V2" />
+
+El cambio en el logotipo también ha sido importante, ya que pase del primer logo creado con un amigo, a hacerlo totalmente material siguiendo las [Icons guidelines][3], en principio iba a seguir siendo cuadrado, pero un amigo me sugirió hacerlo redondo a mi no me convencía pero cuando lo cree redondo y pase esta encuesta:
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<div className="g-post" data-href="https://plus.google.com/+AntonioLopezMarin/posts/dS2JRxX7Mj9"></div>
+
+Ganó brutalmente y decidí poner la redonda.
+
+## Animaciones
+
+Las animaciones que hacen que se vea una aplicación tan chula, en la versión 2 se dejan ver un poco, sobre todo transiciones con animación, podría haber añadido más pero por falta de tiempo y ganas puse solo animaciones al crear las entidades.
+
+### Añadir Grupo
+<Image src={groupAnimation} alt="Transición al crear un grupo" />
+
+### Añadir Nota
+
+<Image src={examAnimation} alt="V1 vs V2" />
+
+
+## Mejoras
+
+Aún podrían haberse mejorado más cosas como cuando muestra el mensaje de que has borrado una asignatura puedas hacer rollback diciendo que deseche el cambio y se restablezca todo como estaba, también se podría haber quitado el NavigationView (la barra lateral que se desliza) por pestañas (Tabslayout) ya que muchos diseñadores nombran a las 3 barras verticales del NavigationView, menú hamburguesa y a los menús de la derecha con 3 puntos verticales, menú kebab:
+
+<blockquote className="twitter-tweet" lang="en"><p lang="en" dir="ltr">Don&#39;t ever say you don&#39;t have choices on mobile. <a href="http://t.co/Atu3Ogi58j">pic.twitter.com/Atu3Ogi58j</a></p>&mdash; Luke Wroblewski (@lukew) <a href="https://twitter.com/lukew/status/591296890030915585">April 23, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charSet="utf-8"></script>
+
+* * *
+## Un futuro no muy lejano
+* * *
+En una versión intermedia voy a permitir identificarse en la aplicación para que las asignaturas se puedan quedar guardadas en la nube y no perderlas si cambias de movil, y también para poder hacer una versión web para aprender a hacer aplicaciones web.00
+
+Para la versión 3 haré que se puedan compartir las asignaturas con los porcentajes de los grupos y asignaturas, es decir poder pasar las estructura que sigue cada asignatura a tus amigos y no tener que ir mano a mano creando grupos que toda una clase tiene igual o incluso un curso entero.
+
+Puedes descargarte el [calcula notas][1] y me cuentas.
+
+[1]: http://tonilopezmr.com/calculanotas
+[2]: http://developer.android.com/intl/es/training/material/lists-cards.html
+[3]: https://www.google.com/design/spec/style/icons.html#icons-product-icons

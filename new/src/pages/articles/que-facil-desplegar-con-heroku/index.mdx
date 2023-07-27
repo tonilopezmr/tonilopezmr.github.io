@@ -1,0 +1,130 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+
+export const meta = {
+  author: 'Toni López',
+  date: '2016-02-07',
+  title: '¡Qué fácil desplegar con Heroku y Spark!',
+  description:
+    'Explicación de cómo desplegar Spartk usando Heroku.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Antes de leer el post, si no conoces los siguientes productos consultarlos antes:
+
+- [Heroku][7]
+- [Spark Java Framework][6]
+- [Openshift][2]
+- *[Calcula Notas][4]*
+
+----------------
+
+Después de un intento fallido de desplegar el [API REST][5] hecho con [Spark Java Framework][6] de *[Calcula Notas][4]* en [Openshift][2], **he conseguido hacerlo con [Heroku][7] mucho más fácil**.
+
+## ¿Por qué Spark Java?
+
+Muy sencillo, porque [Spark Java][6] es un [framework][8] muy ligero para hacer aplicaciones web muy **facilmente y rapido con [Java 8][10]**, ya que por temas de universidad y que quería centrarme en añadir una nueva funcionalidad en *[Calcula Notas][4]*, lo he hecho con Java, porque es el lenguaje que ya conozco y en el que podía hacer una aplicación chula con acceso a la base de datos, etc.  Es lo que he estado haciendo en el grado superior una y otra vez.
+
+## Openshift
+
+**Esta muy bien**, pero no era la mejor solución para lo que yo tenía creado, ya que tenía que hacer funcionar un [Jetty Java Web Server][9] y el [tutorial de Openshift estaba más que desfasado][3].
+
+1. El link de descarga del servidor jetty de un fichero de configuración ya no existía.
+2. No conseguí cambiar la versión de java7 del servidor a java8.
+3. Probé con [múltiples fork][13] del [código de ejemplo original][12].
+
+Resumiendo, perdí demasiado tiempo y me pase a probar [Heroku][7].
+
+## Heroku
+
+Para mi gusto, **mucho mejor documentado**. Esta solución ya la conocía de entrada, porque en los tutoriales que existen en la página oficial de spark ya te dicen [como desplegar en heroku][14].
+
+### ¡¡Comencemos!!
+
+Primero seguí el [tutorial de Heroku][15] mientras miraba el otro [tutorial de Spark con Heroku][14], este último no lo recomiendo para nada, porque lo único que hizo fue confundirme.
+
+Si sigues el tutorial paso a paso, todo debería ir bien, **PERO** de todas formas por si no funciona, como me pasó a mí, voy a explicar los pequeños cambios que hice para que funcionara bien.
+
+### Instalar heroku
+
+Al instalar [Heroku][7] y [Maven][16] me daba fallo de que no encontraba el jdk de java8, así que puse lo siguiente:
+
+```shell
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_{mi-version-java}.jdk/Contents/Home
+```
+
+### Procfile y MVN files
+
+Añadir al proyecto los siguiente ficheros tal cual:
+
+- [Procfile][17]
+- [system.properties][20]
+- [mvnw][18]
+- [mvnw.cmd][19]
+
+### Actulazar Maven a 3.3
+
+~~~ xml
+	<!-- Maven build -->
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <optimize>true</optimize>
+                    <debug>true</debug>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals><goal>copy-dependencies</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+~~~
+
+**Cambiar la versión Maven build en el fichero [POM.xml][21] que nos dan en el [código de ejemplo de Heroku][23] por 3.3.**
+
+----------------
+
+Y eso es todo, después añadí un addon como dice en el tutorial para postgresql gratis y [puse el jdbc en mi proyecto][22].
+Todos los comandos heroku para desplegar, hacer push al server, ver los datos de postgresql y ver los logs del servidor esta muy bien comentado en su [tutorial][14].
+
+----------------
+
+[1]: http://www.kinisoftware.com/spark-java-framework-y-heroku-la-pareja-perfecta/
+[2]: https://www.openshift.com/?sc_cid=70160000000UJArAAO&gclid=CNqIxb2R5soCFVIYGwod6BgFkg
+[3]: https://blog.openshift.com/jetty-on-openshift-lightweight-java-web-serving-for-the-cloud/
+[4]: http://tonilopezmr.com/calculanotas
+[5]: https://es.wikipedia.org/wiki/Representational_State_Transfer
+[6]: http://sparkjava.com/
+[7]: https://heroku.com/
+[8]: https://es.wikipedia.org/wiki/Framework
+[9]: http://www.eclipse.org/jetty/
+[10]: https://www.java.com/es/download/faq/java8.
+[11]: https://github.com/pkolmykov/jetty-openshift-java8
+[12]: https://github.com/openshift-quickstart/jetty-openshift-quickstart
+[13]: https://github.com/openshift-quickstart/jetty-openshift-quickstart/network
+[14]: https://sparktutorials.github.io/2015/08/24/spark-heroku.html
+[15]: https://devcenter.heroku.com/articles/getting-started-with-java#introduction
+[16]: https://maven.apache.org/
+[17]: https://github.com/heroku/java-getting-started/blob/master/Procfile
+[18]: https://github.com/heroku/java-getting-started/blob/master/mvnw
+[19]: https://github.com/heroku/java-getting-started/blob/master/mvnw.cmd
+[20]: https://github.com/heroku/java-getting-started/blob/master/system.properties
+[21]: https://github.com/heroku/java-getting-started/blob/master/pom.xml
+[22]: https://devcenter.heroku.com/articles/heroku-postgresql#connecting-in-java
+[23]: https://github.com/heroku/java-getting-started/
