@@ -271,29 +271,23 @@ export default function Home({ articles }) {
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
+              href="https://twitter.com/tonilopezmr"
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
-            />
+            />            
             <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
+              href="https://github.com/tonilopezmr"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/tonilopezmr"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
           </div>
         </div>
-      </Container>
-      <Photos />
+      </Container>      
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">

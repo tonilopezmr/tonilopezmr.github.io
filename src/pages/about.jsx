@@ -17,9 +17,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-[#FEDE00]/90"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-[#FEDE00]/90" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -66,12 +66,11 @@ export default function About() {
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
                 I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+                wrote my first program when I was 12 years old, just two weeks
+                after arriving my first PC.
               </p>
               <p>
-                The only thing I loved more than computers as a kid was space.
+                The only thing I loved more than computers as a kid was Basketball.
                 When I was 8, I climbed the 40-foot oak tree at the back of our
                 yard while wearing my older sister’s motorcycle helmet, counted
                 down from three, and jumped — hoping the tree was tall enough
@@ -94,25 +93,15 @@ export default function About() {
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="#" icon={TwitterIcon}>
+              <SocialLink href="https://twitter.com/tonilopezmr" icon={TwitterIcon}>
                 Follow on Twitter
-              </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-                Follow on Instagram
-              </SocialLink>
-              <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+              </SocialLink>              
+              <SocialLink href="https://github.com/tonilopezmr" icon={GitHubIcon} className="mt-4">
                 Follow on GitHub
               </SocialLink>
-              <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+              <SocialLink href="https://linkedin.com/in/tonilopezmr" icon={LinkedInIcon} className="mt-4">
                 Follow on LinkedIn
-              </SocialLink>
-              <SocialLink
-                href="mailto:spencer@planetaria.tech"
-                icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
-              >
-                spencer@planetaria.tech
-              </SocialLink>
+              </SocialLink>              
             </ul>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
 import { formatDate } from '@/lib/formatDate'
+import Image from 'next/image'
 
 function ArrowLeftIcon(props) {
   return (
@@ -20,7 +21,7 @@ function ArrowLeftIcon(props) {
 
 export function ArticleLayout({
   children,
-  meta,
+  meta,  
   isRssFeed = false,
   previousPathname,
 }) {
@@ -51,6 +52,7 @@ export function ArticleLayout({
             )}
             <article>
               <header className="flex flex-col">
+                {meta.cover !== undefined ? <Image className="mt-10" src={meta.cover} /> : null}                
                 <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
                   {meta.title}
                 </h1>
