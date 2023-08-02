@@ -12,10 +12,14 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import come from '@/images/logos/come.jpeg'
+import foundernest from '@/images/logos/foundernest.jpeg'
+import ibmResearch from '@/images/logos/ibm_reserach.jpeg'
+import karumi from '@/images/logos/karumi.jpeg'
+import meetizer from '@/images/logos/meetizer.jpeg'
+import pleasound from '@/images/logos/pleasound.jpeg'
+import sparta from '@/images/logos/sparta.jpeg'
+import seaplane from '@/images/logos/seaplane.jpeg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -139,35 +143,63 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'Seaplane',
+      title: 'Developer Experience Engineer',
+      logo: seaplane,
+      start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: 'FounderNest',
+      title: 'Staff Software Engineer',
+      logo: foundernest,
+      start: '2021',
+      end: '2022',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      company: 'Sparta Commodities',
+      title: 'Founding Engineer - Technical Lead',
+      logo: sparta,
+      start: '2020',
+      end: '2021',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'IBM Research',
+      title: 'Senior Software Engineer',
+      logo: ibmResearch,
+      start: '2018',
+      end: '2020',
+    },
+    {
+      company: 'Karumi',
+      title: 'Senior Software Engineer',
+      logo: karumi,
+      start: '2018',
+      end: '2020',
+    },
+    {
+      company: 'Pleasound',
+      title: 'Founding Engineer',
+      logo: pleasound,
+      start: '2016',
+      end: '2018',
+    },
+    {
+      company: 'Comeat',
+      title: 'CTO and Co-founder',
+      logo: come,
+      start: '2016',
+      end: '2017',
+    },
+    {
+      company: 'Meetizer',
+      title: 'Android Software Engineer',
+      logo: meetizer,
+      start: '2015',
+      end: '2016',
     },
   ]
 
@@ -211,7 +243,7 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button href="https://tonilopezmr.com/resume.pdf" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -251,23 +283,23 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Toni López - Software designer, founder, and amateur astronaut
+          Toni López - Product, Maker and Software engineer
         </title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in Valencia City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I’m Toni, a software designer and product maker based in Valencia City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
         />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Product, Maker and Software engineer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in Valencia
-            City. I’m the founder and CEO of Planetaria, where we develop
+            I’m Toni, a software designer and entrepreneur based in Valencia City. I'm a product builder with a passion for creating innovative solutions that cater to the needs of users and businesses alike. With a strong background in software engineering, I thrive on transforming ideas into reality through robust and user-friendly products.
+            {/* I’m the founder and CTO of Cactus, where we develop
             technologies that empower regular people to explore space on their
-            own terms.
+            own terms. */}
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -296,7 +328,7 @@ export default function Home({ articles }) {
             ))}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            {/* <Newsletter /> */}
             <Resume />
           </div>
         </div>

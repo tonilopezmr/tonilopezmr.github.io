@@ -3,47 +3,71 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import chirinex from '@/images/logos/chirinex.png'
+import gradescalculator from '@/images/logos/grades_calculator.png'
+import smartexam from '@/images/logos/smartexam.jpg'
+import bacota from '@/images/logos/bacota.png'
+import videomemes from '@/images/logos/videomemes.png'
+import artificialprofile from '@/images/logos/artificialprofile.jpg'
+import instantclip from '@/images/logos/1024.png'
+import facemash from '@/images/logos/facemash.png'
 
-const projects = [
+const projects = [  
   {
-    name: 'Planetaria',
+    name: 'Artificial Profile',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Bla.',
+    link: { href: 'http://artificialprofile.com/', label: 'artificialprofile.com' },
+    logo: { l: artificialprofile, shape: "square"},
   },
   {
-    name: 'Animaginary',
+    name: 'Bacota',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'I was making small hardware devices using IOT and creating Web and Mobile applications, pivoted many times during 3 years until I created the Open Garage device. I really enjoyed and loved Hardware and Software convination <3.',
+    link: { href: 'https://bacota.es/', label: 'bacota.es' },    
+    logo: { l: bacota, shape: "rounded-full"},
   },
   {
-    name: 'HelioStream',
+    name: 'InstantClip',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'The sucessor of VideoMemes, an iOS application for creating video trends without editing using teamplates. I created it before Instagram added this feature.',
+    link: { href: 'https://instantclip.app/', label: 'bacota.es' },
+    logo: { l: instantclip, shape: "square"},    
   },
   {
-    name: 'cosmOS',
+    name: 'VideoMemes',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+      'Android Application that automatically generates Video memes using templates of most common video memes.',
+    link: { href: 'https://tonilopezmr.com/videomemes/', label: 'videomemes.xyz' },    
+    logo: { l: videomemes, shape: "rounded-full"},
   },
   {
-    name: 'OpenShuttle',
+    name: 'Grades Calculator',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'User-friendly Android app for calculating average university grades and the next minimum required grade, utilizing Clean Architecture.',
+    link: { href: 'https://tonilopezmr.com/calculanotas/', label: 'gradescalculator.com' },    
+    logo: { l: gradescalculator, shape: "rounded-full"},
+  },
+  {
+    name: 'FACEMASH UPV',
+    description:
+      'I created the FACEMASH website for UPV University, I collected all images of the Uni. I created it to promote Grades Calculator. More than 10000 unique visitors in 3 days, 5m avg screen.',
+    link: { href: '/articles/facemash-upv', label: 'facemash.com' },        
+    image: facemash
+  },
+  {
+    name: 'Cheat SmartExam',
+    description:
+      'It was a Sony SmartWatch 2 app for cheating in exams, It generated $350 rev.',
+    link: { href: 'https://play.google.com/store/apps/details?id=com.tonilopezmr.sonymobile.smartextension.smartexam', label: '' },
+    logo: { l: smartexam, shape: "square"},    
+  },
+  {
+    name: 'ChirinEx',
+    description:
+      'Parcel service and logistics management system that optimizes deliveries and enhances customer experience with real-time updates.',
+    link: { href: 'https://tonilopezmr.com/chirinex/', label: 'chirinex.com' },
+    image: chirinex,
   },
 ]
 
@@ -70,7 +94,7 @@ export default function Projects() {
       </Head>
       <SimpleLayout
         title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of."
       >
         <ul
           role="list"
@@ -78,14 +102,20 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              {project.logo  && (<div className={"relative z-10 flex h-12 w-12 items-center justify-center bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 " + project.logo.shape}>
                 <Image
-                  src={project.logo}
+                  src={project.logo.l}
                   alt=""
                   className="h-8 w-8"
                   unoptimized
                 />
-              </div>
+              </div>)}
+              {project.image && (<div className="relative z-10 flex h-12">
+                <Image
+                  src={project.image}                             
+                  unoptimized
+                />
+              </div>)}
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
