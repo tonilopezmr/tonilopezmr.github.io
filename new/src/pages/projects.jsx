@@ -31,7 +31,7 @@ const projects = [
     name: 'InstantClip',
     description:
       'The sucessor of VideoMemes, an iOS application for creating video trends without editing using teamplates. I created it before Instagram added this feature.',
-    link: { href: 'https://instantclip.app/', label: 'bacota.es' },
+    link: { href: 'https://instantclip.app/', label: 'instantclip.app' },
     logo: { l: instantclip, shape: "square"},    
   },
   {
