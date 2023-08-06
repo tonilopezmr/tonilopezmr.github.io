@@ -10,13 +10,21 @@ import bacota from '@/images/logos/bacota.png'
 import videomemes from '@/images/logos/videomemes.png'
 import artificialprofile from '@/images/logos/artificialprofile.jpg'
 import instantclip from '@/images/logos/1024.png'
+import bodia from '@/images/logos/logo_bodia.png'
 import facemash from '@/images/logos/facemash.png'
 
 const projects = [  
   {
+    name: 'Bodia',
+    description:
+      'I wanted to bring all AI Avatar knowledge with Stable Diffusion into an API easy to use with different Use Cases oriented. Build AI Products with Stable Diffusion.',
+    link: { href: 'https://bodia.ai/', label: 'bodia.ai' },
+    logo: { l: bodia, shape: "rounded-full"},
+  },
+  {
     name: 'Artificial Profile',
     description:
-      'Bla.',
+      'The first iOS AI Avatar app in the App Store, with more than 4000 customers and 500k avatar generations.',
     link: { href: 'http://artificialprofile.com/', label: 'artificialprofile.com' },
     logo: { l: artificialprofile, shape: "square"},
   },
