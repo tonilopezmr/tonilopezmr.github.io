@@ -103,7 +103,7 @@ Todos los comandos heroku para desplegar, hacer push al server, ver los datos de
 [1]: http://www.kinisoftware.com/spark-java-framework-y-heroku-la-pareja-perfecta/
 [2]: https://www.openshift.com/?sc_cid=70160000000UJArAAO&gclid=CNqIxb2R5soCFVIYGwod6BgFkg
 [3]: https://blog.openshift.com/jetty-on-openshift-lightweight-java-web-serving-for-the-cloud/
-[4]: http://tonilopezmr.com/calculanotas
+[4]: http://tonilopezmr.github.io/calculanotas
 [5]: https://es.wikipedia.org/wiki/Representational_State_Transfer
 [6]: http://sparkjava.com/
 [7]: https://heroku.com/
