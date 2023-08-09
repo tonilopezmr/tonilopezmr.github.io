@@ -10,9 +10,9 @@ export const meta = {
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-Three months ago I won [Generative AI Hackathon in Valencia][1] with an AI Applications builder with a Python SDK.
+Three months ago, I won the [Generative AI Hackathon in Valencia][1], showcasing an AI Applications builder with a Python SDK.
 
-In the same direction as [Bodia AI][2], I wanted to create an easier way to create AI Applications than Lagnchain and be able to deploy them with a single command.
+In a similar vein as [Bodia AI][2], my aim was to establish a more user-friendly approach for crafting AI Applications compared to Lagnchain, while also enabling effortless deployment through a single command.
 
 I began to develop the AI Framework officially for [Seaplane][5] after pivoting into AI.
 
@@ -21,39 +21,33 @@ I began to develop the AI Framework officially for [Seaplane][5] after pivoting 
 Machine Learning Flows determine which steps are included in a machine learning project.
 They help you managing the end-to-end ML lifecycles solving [MLOps][3] usually building [DAGs][4].
 
-There are many players that solve this problem but Generative AI.
+Numerous solutions are available for tackling this issue, but Generative AI takes center stage.
 
-The idea is to build an ML Flow accessible throught HTTP API Calls, Queues or Cron Jobs.
-An ML Flow consist on the Entry Point (`@app`) and different Steps or `@tasks` that scales individually.
+The concept involves constructing an ML Flow that can be accessed via HTTP API Calls, Queues, or Cron Jobs. An ML Flow consists of the Entry Point (`@app`), alongside distinct Steps or `@tasks` that can be independently scaled.
 
 ```python
 @task()
 def hello_world_task(data):
     return f"hello world {data['_request_id']}"
 
-
 @app(id="hello-world-app", path="/hello")
 def hello_world_app(data):
     return hello_world_task(data)
 ```
 
-`@app(id="hello-world-app", path="/hello")`: Is the Entry Point will create an endpoint with Path `/hello`
-the DAG is defined in the `@app` body.
+Here, `@app(id="hello-world-app", path="/hello")` serves as the Entry Point, generating an endpoint with the path `/hello`. The structure of the DAG is defined within the body of `@app`.
 
-`@task()`: Is a single Task that executes a given job, like calling a Generative AI model or Storing anything.
+On the other hand, `@task()` represents an individual task responsible for executing a designated job, such as invoking a Generative AI model or storing data.
 
 ## Smart Pipes AI Framework
 
-Smart Pipes provide many features ready to use in real word AI Applications, like calling Text-to-Text models, 
-files as a vectors to embed the text into any Gen AI Model, etc.
+The Smart Pipes framework presents an array of pre-built features tailored for real-world AI Applications. This encompasses actions like utilizing Text-to-Text models, converting files into vectors for embedding text into various Gen AI Models, and more.
 
-The Framework pretend to be the NextJS of Vercel, so you can easily write Web apps and deploy them with a single click.
+The framework's aspiration is akin to that of NextJS for Vercel, offering the ability to effortlessly craft web applications and promptly deploy them with a single click.
 
-For example, if you want to load a bunch of files and then create a ChatBot that talks with those files easily:
-
+For instance, if the objective is to load a batch of files and subsequently create a ChatBot that interacts with these files seamlessly:
 
 ```python
-
 @app(path="/load_pdfs", id="load_pdfs")
 def load_pdfs_app(input):    
     file = save_pdfs(input)    
@@ -70,40 +64,40 @@ def save_pdfs(input, store):
 @task(type="sql")
 def store_loaded_file(input, sql):
 
-    sql.insert("files_table", input["id], input["filename"])
+    sql.insert("files_table", input["id"], input["filename"])
 
 @task(type="vectordb", vector_name="my_company_docs")
 def chat_with_pdfs(input, store):    
 
-    return store.chat(input["query"]) # Returns the answer and the chat history
+    return store.chat(input["query"])  # Returns the answer and chat history
 
 @app(path="/chatbot", id="files_chatbot")
 def save_files(input):
     return chat_with_pdfs(input)
-
 ```
 
-With this simple Snippet you have ChatBot that talks with Files, by default It uses `GPT-3.5`, you require to set the OpenAI API Key.
+With this concise snippet, a functional ChatBot capable of engaging with files is established. By default, it utilizes `GPT-3.5`, requiring the configuration of the OpenAI API Key.
 
-## Trivial deploy
+## Effortless Deployment
 
-`seaplane deploy` is all you need to deploy your chat bot.
+The process of deploying your chatbot is remarkably straightforward with the command `seaplane deploy`:
 
 ```shell
+> seaplane deploy
+
 [Seaplane]
 
-	Seaplane Apps version 0.3.89b2
+    Seaplane Apps version 0.3.89
 
 [Seaplane] Deployed Endpoints:
 
 [Seaplane] 🚀 load_pdfs Endpoint: POST /apps/load_pdfs/latest/load_pdfs
 [Seaplane] 🚀 files_chatbot Endpoint: POST /apps/files_chatbot/latest/chatbot
 
-
 [Seaplane] 🚀 Deployment complete
 ```
 
-I'll write more about this AI journey, if you are interested on it please let me know on [X @tonilopezmr][6]
+I plan to delve further into my AI journey. If you are interested on it, please let me know in [@tonilopezmr][6]
 
 
 [1]: https://www.eventbrite.es/e/generative-ai-hackathon-tickets-619584342447
