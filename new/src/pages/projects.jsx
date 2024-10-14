@@ -16,6 +16,13 @@ import cactus from '@/images/logos/cactus.png'
 
 const projects = [
   {
+    name: 'Bodia AI',
+    description:
+      'Bodia AI is a cutting-edge AI agency specializing in generative AI and Large Language Models (LLMs). We develop custom AI solutions, chatbots, and content generation tools to help businesses harness the power of artificial intelligence for improved efficiency and innovation.',
+    link: { href: 'https://bodia.ai/', label: 'bodia.ai' },
+    logo: { l: bodia, shape: "rounded-full"}
+  },
+  {
     name: 'Cactus AI',
     description:
       'AI-powered financial technology tools for commercial real estate investors. Cactus offers an AI underwriter, portfolio manager, debt manager, and quick analysis tools to streamline and modernize CRE investing.',
@@ -23,10 +30,10 @@ const projects = [
     logo: { l: cactus, shape: "rounded-full", className: "invert dark:invert-0"},
   },
   {
-    name: 'Bodia',
+    name: 'Bodia for Stable Diffusion API',
     description:
       'I wanted to bring all AI Avatar knowledge with Stable Diffusion into an API easy to use with different Use Cases oriented. Build AI Products with Stable Diffusion.',
-    link: { href: 'https://bodia.ai/', label: 'bodia.ai' },
+    link: { href: 'https://bodia-ai-website-3kiw293i2-bodia-ai.vercel.app', label: 'bodia.ai' },
     logo: { l: bodia, shape: "rounded-full"},
   },
   {
