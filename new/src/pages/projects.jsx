@@ -12,8 +12,16 @@ import artificialprofile from '@/images/logos/artificialprofile.jpg'
 import instantclip from '@/images/logos/1024.png'
 import bodia from '@/images/logos/logo_bodia.png'
 import facemash from '@/images/logos/facemash.png'
+import cactus from '@/images/logos/cactus.png'
 
-const projects = [  
+const projects = [
+  {
+    name: 'Cactus AI',
+    description:
+      'AI-powered financial technology tools for commercial real estate investors. Cactus offers an AI underwriter, portfolio manager, debt manager, and quick analysis tools to streamline and modernize CRE investing.',
+    link: { href: 'https://www.trycactus.com/', label: 'trycactus.com' },
+    logo: { l: cactus, shape: "rounded-full", className: "invert dark:invert-0"},
+  },
   {
     name: 'Bodia',
     description:
@@ -114,7 +122,7 @@ export default function Projects() {
                 <Image
                   src={project.logo.l}
                   alt=""
-                  className="h-8 w-8"
+                  className={"h-8 w-8 " + project.logo.className}
                   unoptimized
                 />
               </div>)}
