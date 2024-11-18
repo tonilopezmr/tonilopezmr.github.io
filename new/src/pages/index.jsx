@@ -25,6 +25,9 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
+import cactus from '@/images/logos/cactus.png'
+import stackai from '@/images/logos/stack-white.png'
+
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
@@ -143,61 +146,75 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Seaplane',
-      title: 'Developer Experience Engineer',
-      logo: seaplane,
-      start: '2022',
+      company: 'Stack AI',
+      title: 'Founding Engineer', 
+      logo: { l: stackai, shape: "rounded-full", className: "invert dark:invert-0" },
+      start: '2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
+      company: 'Cactus AI',
+      title: 'Co-Founder',
+      logo: { l: cactus, shape: "rounded-full", className: "invert dark:invert-0" },
+      start: '2023',
+      end: '2024',
+    },
+    {
+      company: 'Seaplane',
+      title: 'Developer Experience Engineer',
+      logo: { l: seaplane, shape: "rounded-full" },
+      start: '2022',
+      end: '2023',
+    },
+    {
       company: 'FounderNest',
       title: 'Staff Software Engineer',
-      logo: foundernest,
+      logo: { l: foundernest, shape: "rounded-full" },
       start: '2021',
       end: '2022',
     },
     {
       company: 'Sparta Commodities',
       title: 'Founding Engineer - Technical Lead',
-      logo: sparta,
+      logo: { l: sparta, shape: "rounded-full" },
       start: '2020',
       end: '2021',
     },
     {
       company: 'IBM Research',
       title: 'Senior Software Engineer',
-      logo: ibmResearch,
+      logo: { l: ibmResearch, shape: "rounded-full" },
       start: '2018',
       end: '2020',
     },
     {
       company: 'Karumi',
       title: 'Senior Software Engineer',
-      logo: karumi,
+      logo: { l: karumi, shape: "rounded-full" },
       start: '2018',
       end: '2020',
     },
     {
       company: 'Pleasound',
       title: 'Founding Engineer',
-      logo: pleasound,
+      logo: { l: pleasound, shape: "rounded-full" },
       start: '2016',
       end: '2018',
     },
     {
       company: 'Comeat',
       title: 'CTO and Co-founder',
-      logo: come,
+      logo: { l: come, shape: "rounded-full" },
       start: '2016',
       end: '2017',
     },
     {
       company: 'Meetizer',
       title: 'Android Software Engineer',
-      logo: meetizer,
+      logo: { l: meetizer, shape: "rounded-full" },
       start: '2015',
       end: '2016',
     },
@@ -212,8 +229,8 @@ function Resume() {
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center bg-white rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <Image src={role.logo.l} alt="" className={"h-7 w-7 " + role.logo.className} unoptimized />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
