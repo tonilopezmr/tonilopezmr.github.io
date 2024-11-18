@@ -1,0 +1,50 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Toni López',
+  date: '2024-11-17',
+  title: 'Grades Calculator retrospective',
+  description:
+    'A retrospective on building a grades calculator app that helped university students determine their needed exam scores, reaching thousands of users before being sunset after 3 years.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+[website][4]
+
+## Short Story
+Every exam period at the university, I had to calculate the grades I needed to get to pass. For this, I had to look at the structure of each subject and calculate the grade counting practicals, assignments and exams.
+
+Something like, 60% exam, 30% practicals, 10% assignments.
+Then the practicals had different percentages, practical 1: 10%, practical 2: 9%, practical 3: 11%.
+
+I spent too much time and preferred to have an easier way to do it... So I created calculators where you can specify the structure of each subject, add your grades and see what minimum grade you needed to get to pass.
+
+I shared it with all my friends and people used it.
+
+## Promotion
+A year later after the success of [Facemash UPV][1], I used Facemash success to promote calcula notas.
+
+This gave me large exposure to thousands of students around the world.
+
+## Why I Built This
+I wanted to solve a problem I had, and learn Advanced Architecture development in Android.
+
+So as soon as I didn't need the application myself, and I had learned advanced architecture development, I stopped maintaining it.
+
+Lifespan: 3 years.
+
+Related blog post: 
+* [First year of Grades Calculator, new UI interface.][2]
+* [Three years birthday][3]
+
+## Learnings
+1. Publication process in the App Store
+2. Material design
+3. If it doesn't generate money, it won't be maintained.
+4. Work on support emails and continuous changes, through years.
+
+[1]: https://www.tonilopezmr.com/articles/facemash-upv
+[2]: https://www.tonilopezmr.com/articles/nueva-version-de-calculanotas-nueva-interfaz
+[3]: https://www.tonilopezmr.com/articles/calcula-notas-cumple-3-anyos
+[4]: https://old.tonilopezmr.com/calculanotas/
