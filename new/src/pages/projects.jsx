@@ -15,13 +15,13 @@ import facemash from '@/images/logos/facemash.png'
 import cactus from '@/images/logos/cactus.png'
 
 const projects = [
-  {
+  /*{
     name: 'Bodia AI Studio',
     description:
       'Bodia AI is a cutting-edge AI agency specializing in generative AI and Large Language Models (LLMs). We develop custom AI solutions, chatbots, and content generation tools to help businesses harness the power of artificial intelligence for improved efficiency and innovation.',
     link: { href: 'https://bodia.ai/', label: 'bodia.ai' },
     logo: { l: bodia, shape: "rounded-full"}
-  },
+  },*/
   {
     name: 'Cactus AI',
     description:
