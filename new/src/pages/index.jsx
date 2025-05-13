@@ -279,7 +279,7 @@ export default function Home({ articles }) {
         </title>
         <meta
           name="description"
-          content="I’m Toni, a software designer and product maker based in Valencia City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I’m Toni, a software designer and product maker based in San Francisco 🌁, originally from Valencia ☀️. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
         />
       </Head>
       <Container className="mt-9">
@@ -288,7 +288,7 @@ export default function Home({ articles }) {
             Product, Maker and Software engineer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Toni, a software designer and entrepreneur based in Valencia City. I'm a product builder with a passion for creating innovative solutions that cater to the needs of users and businesses alike. With a strong background in software engineering, I thrive on transforming ideas into reality through robust and user-friendly products.
+            I’m Toni, a software designer and entrepreneur based in San Francisco 🌁, originally from Valencia ☀️. I'm a product builder with a passion for creating innovative solutions that cater to the needs of users and businesses alike. With a strong background in software engineering, I thrive on transforming ideas into reality through robust and user-friendly products.
             {/* I’m the founder and CTO of Cactus, where we develop
             technologies that empower regular people to explore space on their
             own terms. */}

@@ -15,15 +15,15 @@ export const meta = {
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-> Lo acabo de publicar y se que no a todo el mundo le sentará bien pero no es ilegal, es culpa de la uni que todo el mundo lo pueda ver.
+> I just published it and I know not everyone will like it but it's not illegal, it's the university's fault that everyone can see it.
 
-He obtenido tódas las imagenes de perfiles de la UPV desde su fundación y he creado [Facemash UPV](https://tonilopezmr.github.io/facemash).
+I obtained all the profile images from UPV since its foundation and created [Facemash UPV](https://tonilopezmr.github.io/facemash).
 
-## ¿Por qué?
+## Why?
 
-Ya que estoy en **segundo curso de informática**, <del>[y quería promocionar la aplicación de Calcula Notas](https://tonilopezmr.github.io/calculanotas)</del> , me pareció divertido hacerle un pequeño homenaje al colega [Mark][1] que hizo lo mismo pero con imágenes robadas de perfiles privados, **yo no hice eso luego lo explicare**.
+Since I'm in my **second year of computer science**, <del>[and I wanted to promote the Grade Calculator app](https://tonilopezmr.github.io/calculanotas)</del>, I thought it would be fun to pay a small tribute to my friend [Mark][1] who did the same thing but with stolen images from private profiles, **I didn't do that, I'll explain later**.
 
-Quería hacerlo lo más parecido al de la peli de [La red social][2] que tanto ponen en las jornadas de acogida:
+I wanted to make it as similar as possible to the one from [The Social Network][2] movie that they show so much during the welcome days:
 
 <Image src={facemashMovie} />
 
@@ -31,26 +31,26 @@ vs
 
 <Image src={facemashUPV} />
 
-## ¿Como?
+## How?
 
-Bueno pues fue **muy fácil** ya sabía que se podían ver todas las fotos de la universidad en el **primer año** cuando entré pero ha sido en este segundo curso cuando le vi utilidad.
+Well, it was **very easy**. I knew you could see all the university photos in my **first year** when I entered, but it was in this second year when I found a use for it.
 
-Bueno si quieres un resumen de **como lo hice** aquí puedes ver la versión divertida:
+Well, if you want a summary of **how I did it**, here you can see the fun version:
 
 [![](http://img.youtube.com/vi/f8AuB5hPiCk/0.jpg)](https://www.youtube.com/watch?v=f8AuB5hPiCk)
 
-Ahora en **serio**, pues coges tu foto de perfil miras que la URL es [http://intranet.upv...../numeritos.gif][3] y vas cambiando los números y **¡EUREKA!**, __las imágenes en la upv las puede ver cualquiera__ y **no pasa nada** porque puedes ver la de tus compañeros de clase en la intranet (orlas) etc. 
+Now **seriously**, you take your profile picture and notice that the URL is [http://intranet.upv...../numbers.gif][3] and you keep changing the numbers and **EUREKA!**, __anyone can see the images in UPV__ and **it's not a problem** because you can see your classmates' photos in the intranet (class photos) etc.
 
-Ahora solo hay que **automatizarlo** y hacer una página html que vaya cambiando las URL's, para hacerlo lo más sencillo posible y que la página sea muy rápida en cargar las fotos como solo hay que cambiar los numeritos, **desarrollé** un programa que vaya aumentando los números y los guarde en un **fichero**, y no tener que encontrar una imagen cada vez que quiera cambiarla, etc. 
+Now we just need to **automate it** and create an HTML page that changes the URLs. To make it as simple as possible and make the page very fast at loading photos since we only need to change the numbers, I **developed** a program that increases the numbers and saves them in a **file**, so I don't have to find an image every time I want to change it, etc.
 
-El problema es que el número es muuuuy **grande** y en la mayoría de combinaciones **no hay imagen** y te sale una gris fea :(.
-**Problema solucionado**, cuando no encuentra una imagen de perfil aparece una imagen que siempre es la misma y encima más pequeña con lo que siempre pesa lo mismo (bytes) que más concretamente eran **5372 bytes**, todas las imágenes que fueran distintas de la imagen sin cara pues no lo añado al fichero y ya está.
+The problem is that the number is veeeery **large** and in most combinations **there is no image** and you get an ugly gray one :(.
+**Problem solved**, when it doesn't find a profile image, it shows an image that is always the same and even smaller, so it always weighs the same (bytes), specifically **5372 bytes**. Any images that were different from the faceless image, I just don't add them to the file and that's it.
 
-Total que lo deje un ratito y cuando tenía **<del>9840</del>14185 números diferentes** lo deje porque sino hay demasiadas caras y la gente no se encuentra!
+So I left it running for a while and when I had **<del>9840</del>14185 different numbers** I stopped because otherwise there are too many faces and people can't find themselves!
 
-El HTML con un poco de javascript para que el cliente haga todo el trabajo y se muestre sin cargas, muy rápido.
+The HTML with a bit of javascript so the client does all the work and it displays without loading, very fast.
 
-Aquí el código mágico:
+Here's the magic code:
 
 ~~~ java
     // Code for collect facebooks in a file
@@ -82,7 +82,7 @@ Aquí el código mágico:
 
 ~~~
 
-> No pulses la palabra OR
+> Don't press the word OR
 
 
 [1]: https://en.wikipedia.org/wiki/Mark_Zuckerberg

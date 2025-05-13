@@ -72,13 +72,13 @@ export default function About() {
                 When I was 13 years old, my parents gifted me my first PC.
               </p>
               <p>
-                The only thing I loved more than computers as a kid was basketball. When I was 14, I began to play Counter-Strike Source and became a professional a few years later. One day, I discovered programming. I went to the DroidCon Android Community Meetup in Madrid, and I met interesting people and learned about many important development aspects.
+                Growing up, basketball was my biggest passion besides computers. At 14, I discovered Counter-Strike Source and eventually became a professional player. But everything changed when I found programming. Attending the DroidCon Android Community Meetup in Madrid opened my eyes - I met incredible developers and learned invaluable lessons about software development that would shape my career.
               </p>
               <p>
-                After being at DroidCon, I noticed two main things: everyone knew English and only MacBook. I sold everything and bought my first and last MacBook 15". No more Android Studio getting stuck with more than 6 projects open at the same time.
+                After attending DroidCon, I noticed two main things: everyone spoke English and used MacBooks. I sold everything and bought my first MacBook Pro 15". No more Android Studio getting stuck when having more than 6 projects open at the same time.
               </p>
               <p>
-                After more than 10 years, I've created many personal projects and worked for many different companies. I've grown to a level I wouldn't have expected, being able to code in almost any language and use any platform from web to mobile, and any service.
+                After more than 10 years, I've created <Link href="/projects" className="text-teal-500 dark:text-[#FEDE00]/100">many personal projects</Link> and worked for many different companies. I've grown to a level I wouldn't have expected, being able to code in almost any language and use any platform from web to mobile, and any service.
               </p>
             </div>
           </div>

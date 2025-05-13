@@ -1,0 +1,104 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import activeUsers from './assets/active_users_23.16.21.png'
+import ages from './assets/ages.png'
+import country from './assets/country.jpg'
+import devices from './assets/devices.png'
+import faces from './assets/faces.png'
+import googleFacemash from './assets/google_facemash_upv.png'
+import mobileSo from './assets/mobile_so.png'
+import totalEst from './assets/total_est.png'
+
+
+export const meta = {
+  author: 'Toni López',
+  date: '2015-11-11',
+  title: 'Facemash UPV was nice while it lasted',
+  description:
+    'Facemash website for UPV University.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+Well, after having a lot of fun looking at university photos on [Facemash UPV][4], **the images have been made private**, meaning they removed permissions and now return the 'default' gray image :(
+
+## Is there a solution? Could facemash keep working?
+
+- <del>No</del> Yes
+
+## But would it be legal?
+
+- <del>Yes</del> honestly I'm not sure, probably not.
+
+The quickest solution would be to do something similar to what our friend [Mark][1] did, download all the university images and host them with my own links.
+
+<Image src={faces} alt="Private images downloaded from UPV" />
+
+**There are other ways**, but I don't want trouble with the university <del>and besides I already managed to promote [Grade Calculator][5]</del>.
+
+The thing is that after it was published on the [Facebook informer][2] that Facemash existed, there was a flood of requests to the website, nowhere near what happened with the [original Facemash][3] but still quite a lot.
+
+Now that it's all over, I thought it would be a good idea to share the statistical results.
+
+I published [Facemash UPV][4] on Sunday November 8th, it received more than **1030 sessions** which is not the same as __1030 users__ or __1030 page views__, each user can generate multiple sessions, so naturally there were fewer users, specifically **981 users**.
+
+<Image src={activeUsers} alt="October 8th at 23:16:21" />
+
+The peak day was Monday November 9th with **1876 users**, when people who saw it on Sunday shared it with their classmates.
+
+## Reports, 2 and a half days
+* * *
+<Image src={totalEst} alt="General overview up to now." />
+
+This screenshot is from right now on the 11th although the data is always from a few hours later, it's still receiving visits now.
+
+Finally **19546 page views** and **3930 users**, what surprises me is the amount of time people spent looking at photos, with an average session duration of **00:04:01**.
+
+Of these 19546 page views, **2353** went to the [Grade Calculator][5] page.
+
+## Countries and cities
+* * *
+<Image src={country} alt="Left countries, right Cities." />
+
+The page has been viewed in **29 countries**, most notably from the European Union, but also from Vietnam, Brazil, Argentina, etc. Probably Erasmus students or people who have been here.
+
+## Gender and age
+* * *
+<Image src={ages} alt="Gender and age." />
+
+[More men][6] visited with 61% compared to women at 39%. 65% were between **18-24 years old** as expected, and new users were more in the 25-54 range. Although the data isn't exact since it comes from a 23% sample of total sessions.
+
+## Device
+* * *
+<Image src={devices} alt="Devices." />
+
+Not much to say about what kind of devices accessed [Facemash UPV][4], most visits were from the university.
+
+## Mobile operating systems
+* * *
+<Image src={mobileSo} alt="Mobile Devices." />
+
+Something I'm very interested in is knowing which mobile operating systems viewed the page since [Grade Calculator][5] is currently only on [Android][7] but will **soon be available for** [IOS][8].
+
+## SEO
+* * *
+When I made [Facemash UPV][4] I made it **as messy as possible**, I mean messy in that if you download the HTML source code it's awful, HTML tables with CSS inline in each tag and JavaScript code visible showing how it got the images, although [PageSpeed Insights][9] didn't give me too bad a score.
+
+All this to see if with visits, even with a ****** page, Google would rank it among the first results.
+
+<a href="https://www.google.es/#q=facemash+upv"><Image src={googleFacemash} alt="Google search for Facemash UPV." /></a>
+
+At first, it only showed in **1st position** the post with better content without directly showing the [tonilopezmr.github.io/facemash](https://tonilopezmr.github.io/facemash) URL, but now if you search it appears in 2nd position since Google **rewards visits and duration much more**.
+
+I thought it would never put me so high up, **the important thing is that [tonilopezmr.github.io](https://tonilopezmr.github.io) now appears 1st** and [Grade Calculator][5] is now in the **top positions** on [Google Play][10].
+
+[1]: https://en.wikipedia.org/wiki/Mark_Zuckerberg
+[2]: https://www.facebook.com/El-informer-UPV-195757263903995/timeline
+[3]: https://en.wikipedia.org/wiki/History_of_Facebook#Facemash
+[4]: http://tonilopezmr.github.io/facemash/
+[5]: http://tonilopezmr.github.io/calculanotas/
+[6]: http://www.reactiongifs.us/wp-content/uploads/2013/11/brent_rambo_approves.gif
+[7]: https://www.android.com/intl/es_es/
+[8]: http://www.apple.com/es/ios/
+[9]: https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Ftonilopezmr.github.io%2Ffacemash
+[10]: https://play.google.com/store/search?q=calcula%20notas&c=apps&docType=1&sp=CAFiDwoNY2FsY3VsYSBub3Rhc3oFGADAAQKKAQIIAQ%3D%3D%3AS%3AANO1ljL8bhE&hl=es

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+import Link from 'next/link'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import chirinex from '@/images/logos/chirinex.png'
@@ -30,7 +31,7 @@ const projects = [
     logo: { l: cactus, shape: "rounded-full", className: "invert dark:invert-0"},
   },
   {
-    name: 'Bodia for Stable Diffusion API',
+    name: 'Bodia',
     description:
       'I wanted to bring all AI Avatar knowledge with Stable Diffusion into an API easy to use with different Use Cases oriented. Build AI Products with Stable Diffusion.',
     link: { href: 'https://bodia-ai-website-3kiw293i2-bodia-ai.vercel.app', label: 'bodia.ai' },
@@ -69,7 +70,9 @@ const projects = [
     description:
       'User-friendly Android app for calculating average university grades and the next minimum required grade, utilizing Clean Architecture.',
     link: { href: 'https://tonilopezmr.github.io/calculanotas/', label: 'gradescalculator.com' },    
-    retrospective: "https://tonilopezmr.com/articles/calculanotas-retrospective",
+    additionalLinks: [
+      { href: '/articles/calcula-notas-cumple-3-anyos', label: 'Read Retrospective' }
+    ],
     logo: { l: gradescalculator, shape: "rounded-full"},
   },
   {
@@ -77,7 +80,11 @@ const projects = [
     description:
       'I created the FACEMASH website for UPV University, I collected all images of the Uni. I created it to promote Grades Calculator. More than 10000 unique visitors in 3 days, 5m avg screen.',
     link: { href: '/articles/facemash-upv', label: 'facemash.com' },        
-    image: facemash
+    image: facemash,
+    additionalLinks: [
+      { href: '/articles/facemash-upv', label: 'Read the Story Behind It' },
+      { href: '/articles/facemash-was-nice-while-it-lasted', label: 'Read What Happened After' }
+    ],
   },
   {
     name: 'Cheat SmartExam',
@@ -113,52 +120,63 @@ export default function Projects() {
         <title>Projects - Toni López</title>
         <meta
           name="description"
-          content="Things I’ve made trying to put my dent in the universe."
+          content="Things I've made trying to put my dent in the universe."
         />
       </Head>
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of."
+        title="Things I've made trying to put my dent in the universe."
+        intro="I've worked on tons of little projects over the years but these are the ones that I'm most proud of."
       >
         <ul
           role="list"
           className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project) => (
-            <Card as="li" key={project.name}>
-              {project.logo  && (<div className={"relative z-10 flex h-12 w-12 items-center justify-center bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 " + project.logo.shape}>
-                <Image
-                  src={project.logo.l}
-                  alt=""
-                  className={"h-8 w-8 " + project.logo.className}
-                  unoptimized
-                />
-              </div>)}
-              {project.image && (<div className="relative z-10 flex h-12">
-                <Image
-                  src={project.image}                             
-                  unoptimized
-                />
-              </div>)}
-              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
-              </h2>
-              <Card.Description>{project.description}</Card.Description>
-              <div className="flex flex-col gap-2">
-                {project.retrospective && (
-                  <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:group-hover:text-[#FEDE00]/100 dark:text-zinc-200">
-                    <LinkIcon className="h-6 w-6 flex-none" />
-                    <span className="ml-2">
-                      <a href={project.retrospective}>Read Retrospective</a>
-                    </span>
-                  </p>
-                )}
+            <div key={project.name} className="group relative flex flex-col">
+              <Card as="li">
+                {project.logo && (<div className={"relative z-10 flex h-12 w-12 items-center justify-center bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 " + project.logo.shape}>
+                  <Image
+                    src={project.logo.l}
+                    alt=""
+                    className={"h-8 w-8 " + project.logo.className}
+                    unoptimized
+                  />
+                </div>)}
+                {project.image && (<div className="relative z-10 flex h-12">
+                  <Image
+                    src={project.image}                             
+                    unoptimized
+                  />
+                </div>)}
+                <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                  <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                </h2>
+                <Card.Description>{project.description}</Card.Description>
                 <p className="relative z-10 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:group-hover:text-[#FEDE00]/100 dark:text-zinc-200">
                   <LinkIcon className="h-6 w-6 flex-none" />
                   <span className="ml-2">{project.link.label}</span>
                 </p>
-              </div>
-            </Card>
+                
+                <div className="mt-4">              
+                {project.additionalLinks && project.additionalLinks.map((link, index) => (
+                  <div 
+                    key={link.href}
+                    className="relative z-[9999] mt-2 w-full translate-y-0 transition-all duration-300 ease-in-out group-hover:translate-y-[-0.5rem] hover:translate-y-[0.5rem] hover:delay-300"
+                    style={{transitionDelay: `${index * 100}ms`}}
+                  >
+                    <a href={link.href}>
+                      <div className="rounded-2xl bg-zinc-100 p-2 dark:bg-zinc-800/50">
+                        <div className="flex items-center text-sm font-medium text-zinc-500 hover:text-teal-500 dark:text-zinc-200 dark:hover:text-[#FEDE00]/100">
+                          <LinkIcon className="h-5 w-5 flex-none" />
+                          <span className="ml-2">{link.label}</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+                </div>
+              </Card>                            
+            </div>
           ))}
         </ul>
       </SimpleLayout>

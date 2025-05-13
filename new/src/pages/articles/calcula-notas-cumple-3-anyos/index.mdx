@@ -6,38 +6,38 @@ import subject from './assets/subject.png'
 
 export const meta = {  
   date: '2016-09-28',
-  title: 'Calcula notas cumple 3 años',
+  title: 'Grade Calculator turns 3 years old',
   description:
-    'Calcula notas cumple 3 años.',
+    'Grade Calculator turns 3 years old.',
   cover: header,
   author: 'Toni López',
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-Cuando presenté la segunda versión de [Calcula Notas][1] añadí un apartado de mejoras en las que mencionaba las mejoras que se podrían añadir, y eso es lo nuevo en la 3º versión. También prometí para la versión 3 que se iban a poder compartir asignaturas entre las personas, pero de momento no pudo ser, a demás también hablé sobre una versión web que no verá la luz de momento al menos, pero sí que hay una sorpresa...
+When I presented the second version of [Grade Calculator][1], I added a section of improvements mentioning features that could be added, and that's what's new in the 3rd version. I also promised for version 3 that people would be able to share subjects between them, but that hasn't been possible yet. I also talked about a web version that won't see the light for now at least, but there is a surprise...
 
-Entre la versión 2 y la versión 3 añadí una nueva funcionalidad para poder loguearte y tener las asignaturas siempre contigo en la nube y aunque cambies de móvil poder disponer de tus asignaturas.
+Between version 2 and version 3, I added a new functionality to be able to log in and have your subjects always with you in the cloud, so even if you change phones you can access your subjects.
 
-En esta versión **he quitado *DrawerLayout*(la barra lateral que se desliza) y añadido Bottom Bar**, al estilo [Spaces][2] porque se adecua perfectamente a las funcionalidades de [Calcula Notas][1], en el que necesitas añadir asignaturas y grupos de evaluación, y además ya estaba el botón anteriormente en el centro, de lujo tú.
+In this version, **I removed the *DrawerLayout* (the sliding side bar) and added a Bottom Bar**, similar to [Spaces][2] because it perfectly suits the functionalities of [Grade Calculator][1], where you need to add subjects and evaluation groups, and besides, the button was already in the center before, which is great.
 
-En el post de la versión 2 de [Calcula Notas][1] también dije que quitar el *DrawerLayout* mejoraba la UX y he hecho [una encuesta][3] para ver si él [Calcula Notas][1] de la versión 2 era mejor que el de la nueva versión, yo esperando que la gente votará la nueva versión de repente a todo el mundo le encanta el *DrawerLayout*, sin embargo dada su funcionalidad y la forma de usarse, con el nuevo diseño, todo está más claro y fácil de usar con un dedo.
+In the post about version 2 of [Grade Calculator][1], I also said that removing the *DrawerLayout* improved the UX and I made [a survey][3] to see if [Grade Calculator][1] version 2 was better than the new version. While I was expecting people to vote for the new version, suddenly everyone loves the *DrawerLayout*. However, given its functionality and how it's used, with the new design, everything is clearer and easier to use with one finger.
 
-## Perfil
+## Profile
 <Image src={profile} />
 
-La pantalla de perfil es la misma pantalla que te aparece cuando deslizabas el *DrawerLayout*, te aparece tu lista de asignaturas y la información de tu cuenta.
+The profile screen is the same screen that appears when you slid the *DrawerLayout*, showing your list of subjects and account information.
 
-## Asignatura
+## Subject
 <Image src={subject} />
 
-Esta es la misma pantalla con la que se mostraba una asignatura con su lista de grupos de evaluación.
+This is the same screen that showed a subject with its list of evaluation groups.
 
-El cambio de asignatura ahora es más rápido y más fácil de usar, teniéndolo todo a mano.
+Changing subjects is now faster and easier to use, with everything at hand.
 
-Sigue quedando para el futuro que se puedan compartir asignaturas ya que estaría muy bien que alguien pueda crear una signatura con sus reglas y compartirlo a una clase entera, pero de momento hay que conformarse con pensar que tienes la funcionalidad VIP si vas a mi curso en Ingeniería informática de la UPV ;)
+It's still pending for the future to be able to share subjects since it would be great if someone could create a subject with their rules and share it with an entire class, but for now we have to settle for thinking that you have VIP functionality if you're in my Computer Engineering course at UPV ;)
 
-Puedes descargarte [Calcula Notas][1] y me cuentas.
+You can download [Grade Calculator][1] and let me know what you think.
 
 [1]: http://tonilopezmr.github.io/calculanotas
 [2]: https://play.google.com/store/apps/details?id=com.google.android.apps.social.spaces&referrer=utm_source%3Dlandingpage
