@@ -50,6 +50,9 @@ const projects = [
       'I was making small hardware devices using IOT and creating Web and Mobile applications, pivoted many times during 3 years until I created the Open Garage device. I really enjoyed and loved Hardware and Software convination <3.',
     link: { href: 'https://bacota.es/', label: 'bacota.es' },    
     logo: { l: bacota, shape: "rounded-full"},
+    additionalLinks: [
+      { href: '/articles/my-most-personal-project', label: 'Read Retrospective' }
+    ],
   },
   {
     name: 'InstantClip',
