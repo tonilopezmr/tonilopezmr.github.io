@@ -74,7 +74,7 @@ const projects = [
       'User-friendly Android app for calculating average university grades and the next minimum required grade, utilizing Clean Architecture.',
     link: { href: 'https://tonilopezmr.github.io/calculanotas/', label: 'gradescalculator.com' },    
     additionalLinks: [
-      { href: '/articles/calcula-notas-cumple-3-anyos', label: 'Read Retrospective' }
+      { href: '/articles/calculanotas-retrospective', label: 'Read Retrospective' }
     ],
     logo: { l: gradescalculator, shape: "rounded-full"},
   },
