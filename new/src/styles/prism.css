@@ -45,3 +45,21 @@ pre[class*='language-'] {
 .token.combinator {
   color: theme('colors.indigo.400');
 }
+
+::selection {
+  background: #000000;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+:is(.dark) ::selection {
+  background: #ffffff;
+  color: #000000;
+}
+:is(.dark) ::-moz-selection {
+  background: #ffffff;
+  color: #000000;
+}

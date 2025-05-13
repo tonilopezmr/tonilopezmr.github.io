@@ -318,6 +318,12 @@ export default function Home({ articles }) {
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
+          <div className="flex">
+            <Link href="/articles" className="group w-full flex items-center justify-center gap-2 rounded-md bg-zinc-50 px-3 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-100 dark:bg-zinc-800/50 dark:text-[#FEDE00]/100 ">
+              Read all articles
+              <ArrowDownIcon className="h-4 w-4 transition dark:text-[#FEDE00]/100" />
+            </Link>
+          </div>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             {/* <Newsletter /> */}

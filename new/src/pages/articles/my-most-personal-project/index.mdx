@@ -10,6 +10,39 @@ export const meta = {
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
+import Image from 'next/image'
+import old_bacota from '@/images/logos/old_bacota.jpeg'
+import bacota from '@/images/logos/bacota.png'
+
+<div className="mt-6 mx-16">
+  <div className="flex justify-between items-center">
+    <div className="flex-1">
+      <Image
+        src={old_bacota}
+        alt="Old Bacota Hardware"
+        className="rounded-lg"
+        width={96}
+        height={96}
+      />
+    </div>
+    <div className="flex-none px-8">
+      <div className="text-2xl">→</div>
+    </div>
+    <div className="flex-1 flex justify-end">
+      <Image 
+        src={bacota} 
+        alt="Bacota Logo"
+        width={76}
+        height={76}
+      />
+    </div>
+  </div>
+  <div className="flex justify-between mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    <div>1999-2018</div>
+    <div>2018-2021</div>
+  </div>
+</div>
+
 ## Long Story Short
 
 My journey into hardware started with IoT home automation. Frustrated with existing smart home solutions, I began building my own devices, starting with simple fan and light controls.
