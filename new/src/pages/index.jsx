@@ -149,7 +149,7 @@ function Resume() {
       company: 'Stack AI',
       title: 'Founding Engineer', 
       logo: { l: stackai, shape: "rounded-full", className: "invert dark:invert-0" },
-      start: '2023',
+      start: '2024',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
@@ -159,22 +159,8 @@ function Resume() {
       company: 'Cactus AI',
       title: 'Co-Founder',
       logo: { l: cactus, shape: "rounded-full", className: "invert dark:invert-0" },
-      start: '2023',
-      end: '2024',
-    },
-    {
-      company: 'Seaplane',
-      title: 'Developer Experience Engineer',
-      logo: { l: seaplane, shape: "rounded-full" },
-      start: '2022',
-      end: '2023',
-    },
-    {
-      company: 'FounderNest',
-      title: 'Staff Software Engineer',
-      logo: { l: foundernest, shape: "rounded-full" },
       start: '2021',
-      end: '2022',
+      end: '2024',
     },
     {
       company: 'Sparta Commodities',
@@ -189,14 +175,7 @@ function Resume() {
       logo: { l: ibmResearch, shape: "rounded-full" },
       start: '2018',
       end: '2020',
-    },
-    {
-      company: 'Karumi',
-      title: 'Senior Software Engineer',
-      logo: { l: karumi, shape: "rounded-full" },
-      start: '2018',
-      end: '2020',
-    },
+    },    
     {
       company: 'Pleasound',
       title: 'Founding Engineer',
@@ -208,15 +187,15 @@ function Resume() {
       company: 'Comeat',
       title: 'CTO and Co-founder',
       logo: { l: come, shape: "rounded-full" },
-      start: '2016',
-      end: '2017',
+      start: '2014',
+      end: '2016',
     },
     {
       company: 'Meetizer',
       title: 'Android Software Engineer',
       logo: { l: meetizer, shape: "rounded-full" },
-      start: '2015',
-      end: '2016',
+      start: '2013',
+      end: '2014',
     },
   ]
 
@@ -259,11 +238,7 @@ function Resume() {
             </dl>
           </li>
         ))}
-      </ol>
-      <Button href="https://tonilopezmr.github.io/resume.pdf" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+      </ol>      
     </div>
   )
 }
