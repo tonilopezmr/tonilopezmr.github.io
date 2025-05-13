@@ -86,7 +86,7 @@ const projects = [
     image: facemash,
     additionalLinks: [
       { href: '/articles/facemash-upv', label: 'Read the Story Behind It' },
-      { href: '/articles/facemash-was-nice-while-it-lasted', label: 'Read What Happened After' }
+      { href: '/articles/facemash-was-nice', label: 'Read What Happened After' }
     ],
   },
   {
