@@ -112,13 +112,18 @@ I started learning Arduino development to honor my friend's memory. What began a
 import finalImage from '@/images/photos/bacota/final_bacota.png'
 
 <div className="mt-16 sm:mt-20">
-  <div className="aspect-[2/1] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
-    <Image
-      src={finalImage}
-      alt=""
-      className="h-full w-full object-cover"
-      sizes="(min-width: 1024px) 100vw, 100vw"
-      priority
-    />
-  </div>
+  <figure>
+    <div className="aspect-[2/1] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+      <Image
+        src={finalImage}
+        alt="Endless hours late night in the office"
+        className="h-full w-full object-cover"
+        sizes="(min-width: 1024px) 100vw, 100vw"
+        priority
+      />
+    </div>
+    <figcaption className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+      Endless hours late night in the office
+    </figcaption>
+  </figure>
 </div>
