@@ -50,4 +50,4 @@ La ventaja de crear clases *Providers* es que si quieres añadir un nuevo provid
 [1]: https://github.com/JorgeCastilloPrz
 [2]: https://github.com/tonilopezmr/Android-Examples
 [3]: https://github.com/tonilopezmr/Android-Examples/tree/master/login
-[4]: http://tonilopezmr.github.io/calculanotas
+[4]: http://bacota.com/calculanotas

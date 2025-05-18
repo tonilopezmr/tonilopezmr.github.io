@@ -77,17 +77,17 @@ Todo esto para ver si con visitas aunque sea una ****** de página google la pos
 
 [![Busqueda en google de Facemash UPV](/assets/article_images/2015-11-11-facemas-upv-bonito-mientras-duro/google_facemash_upv.png)](https://www.google.es/#q=facemash+upv)
 
-Al principio, solo ponía en **1º posición** el post que tiene mejor contenido sin aparecer directamente la url de tonilopezmr.github.io/facemash, pero ahora si buscas ya te sale en 2º posición ya que google **premia mucho más las visitas y la duración que están en ella**.
+Al principio, solo ponía en **1º posición** el post que tiene mejor contenido sin aparecer directamente la url de bacota.com/facemash, pero ahora si buscas ya te sale en 2º posición ya que google **premia mucho más las visitas y la duración que están en ella**.
 
-Yo pensaba que nunca me lo pondría tan arriba, **lo importante es que tonilopezmr.github.io ya aparece 1º** y [Calcula Notas][5] ahora en [Google Play][10] está de las **primeras posiciones**.
+Yo pensaba que nunca me lo pondría tan arriba, **lo importante es que bacota.com ya aparece 1º** y [Calcula Notas][5] ahora en [Google Play][10] está de las **primeras posiciones**.
 
 [1]: https://en.wikipedia.org/wiki/Mark_Zuckerberg
 [2]: https://www.facebook.com/El-informer-UPV-195757263903995/timeline
 [3]: https://en.wikipedia.org/wiki/History_of_Facebook#Facemash
-[4]: http://tonilopezmr.github.io/facemash/
-[5]: http://tonilopezmr.github.io/calculanotas/
+[4]: http://bacota.com/facemash/
+[5]: http://bacota.com/calculanotas/
 [6]: http://www.reactiongifs.us/wp-content/uploads/2013/11/brent_rambo_approves.gif
 [7]: https://www.android.com/intl/es_es/
 [8]: http://www.apple.com/es/ios/
-[9]: https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Ftonilopezmr.github.io%2Ffacemash
+[9]: https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fbacota.com%2Ffacemash
 [10]: https://play.google.com/store/search?q=calcula%20notas&c=apps&docType=1&sp=CAFiDwoNY2FsY3VsYSBub3Rhc3oFGADAAQKKAQIIAQ%3D%3D%3AS%3AANO1ljL8bhE&hl=es

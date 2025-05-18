@@ -65,14 +65,14 @@ const projects = [
     name: 'VideoMemes',
     description:
       'Android Application that automatically generates Video memes using templates of most common video memes.',
-    link: { href: 'https://tonilopezmr.github.io/videomemes/', label: 'videomemes.xyz' },    
+    link: { href: 'https://bacota.com/videomemes/', label: 'videomemes.xyz' },    
     logo: { l: videomemes, shape: "rounded-full"},
   },
   {
     name: 'Grades Calculator',
     description:
       'User-friendly Android app for calculating average university grades and the next minimum required grade, utilizing Clean Architecture.',
-    link: { href: 'https://tonilopezmr.github.io/calculanotas/', label: 'gradescalculator.com' },    
+    link: { href: 'https://bacota.com/calculanotas/', label: 'gradescalculator.com' },    
     additionalLinks: [
       { href: '/articles/calculanotas-retrospective', label: 'Read Retrospective' }
     ],
@@ -100,7 +100,7 @@ const projects = [
     name: 'ChirinEx',
     description:
       'Parcel service and logistics management system that optimizes deliveries and enhances customer experience with real-time updates.',
-    link: { href: 'https://tonilopezmr.github.io/chirinex/', label: 'chirinex.com' },
+    link: { href: 'https://bacota.com/chirinex/', label: 'chirinex.com' },
     image: chirinex,
   },
 ]

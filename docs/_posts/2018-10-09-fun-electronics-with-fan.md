@@ -349,20 +349,20 @@ First version
 <img src="/assets/article_images/2018-10-09-fun-electronics-with-fan/second_version.jpeg">
 Second version
 
-[1]: https://github.com/tonilopezmr/tonilopezmr.github.io/issues/26
-[2]: https://github.com/tonilopezmr/tonilopezmr.github.io/issues/27
+[1]: https://github.com/tonilopezmr/bacota.com/issues/26
+[2]: https://github.com/tonilopezmr/bacota.com/issues/27
 [3]: http://www.onsemi.com/pub/Collateral/MJE18008-D.PDF
 [4]: http://www.haopin.com/pdf/bta16-600b.pdf
 [5]: https://github.com/tonilopezmr/Fun-with-Fan/blob/master/fan.cpp
-[6]: https://github.com/tonilopezmr/tonilopezmr.github.io/issues/30
-[7]: https://github.com/tonilopezmr/tonilopezmr.github.io/issues/29
+[6]: https://github.com/tonilopezmr/bacota.com/issues/30
+[7]: https://github.com/tonilopezmr/bacota.com/issues/29
 [8]: http://www.farnell.com/datasheets/97984.pdf
 [9]: http://fritzing.org/home/
 [10]: http://kicad-pcb.org/
 [11]: https://www.labcenter.com/
 [12]: https://www.youtube.com/watch?v=m3S4aQQSnf8
 [13]: http://wineskin.urgesoftware.com/tiki-index.php
-[14]: https://github.com/tonilopezmr/tonilopezmr.github.io/issues/32
+[14]: https://github.com/tonilopezmr/bacota.com/issues/32
 [15]: https://electronicagimeno.com/aislarco-2-barniz-de-uretano-pcb-250ml
 [16]: https://www.autodesk.com/products/fusion-360/overview
 [17]: https://ultimaker.com/en/products/ultimaker-cura-software

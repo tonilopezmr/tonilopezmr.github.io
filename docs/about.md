@@ -52,9 +52,9 @@ Internally use [Clean Architecture][7].
 
 [1]: https://github.com/tonilopezmr
 [2]: http://goo.gl/oghSQg
-[3]: http://tonilopezmr.github.io/chirinex/
-[4]: http://tonilopezmr.github.io/calculanotas/
-[5]: http://tonilopezmr.github.io/facemash/
+[3]: http://bacota.com/chirinex/
+[4]: http://bacota.com/calculanotas/
+[5]: http://bacota.com/facemash/
 [6]: https://play.google.com/store/apps/details?id=com.tonilopezmr.sonymobile.smartextension.smartexam
 [7]: https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html
 [8]: https://en.wikipedia.org/wiki/History_of_Facebook#Facemash

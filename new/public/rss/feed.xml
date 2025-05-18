@@ -250,8 +250,8 @@ They help you managing the end-to-end ML lifecycles solving <a href="https://en.
 <h2>First version using relays</h2>
 <hr/>
 <p>After knowing how my fan works, <strong>I knew how to solve the problem using relays to simulate the three channel switch by remote control</strong>. I had experience controlling relays in Arduino with small projects then I knew how to use relays in Arduino and it is effortless, activate or deactivate by an Arduino pin.</p>
-<p>I wrote a simple program to switch the relays depending on the infrared input, <a href="https://github.com/tonilopezmr/tonilopezmr.github.io/issues/26">here you can see how the infrared sensor works</a>.</p>
-<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://tonilopezmr.github.io/assets/article_images/2018-10-09-fun-electronics-with-fan/fan_with_relays.mp4" type="video/mp4"/></video></div>
+<p>I wrote a simple program to switch the relays depending on the infrared input, <a href="https://github.com/tonilopezmr/bacota.com/issues/26">here you can see how the infrared sensor works</a>.</p>
+<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://bacota.com/assets/article_images/2018-10-09-fun-electronics-with-fan/fan_with_relays.mp4" type="video/mp4"/></video></div>
 <p>And this is how my fan looked like:</p>
 <img loading="lazy" width="960" height="1280" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffirst_version_relay.b4e70e0a.jpg&amp;w=1080&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffirst_version_relay.b4e70e0a.jpg&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffirst_version_relay.b4e70e0a.jpg&amp;w=1920&amp;q=75"/>
 <h2>Don&#x27;t use relays use Transistors!</h2>
@@ -259,7 +259,7 @@ They help you managing the end-to-end ML lifecycles solving <a href="https://en.
 <p><strong>I didn&#x27;t like relays because make noise</strong>, they are huge and I need three relays for the different states. After looking for a solution which replaces a relay without sound and I found the word <strong>&quot;Transistor&quot;</strong>, wow! <em>I learned a lot about transistors at the University!</em> <strong>Everything has been made with transistors</strong>, microcontrollers, computers, your coffee machine, everything has one!</p>
 <p>Then I started to read a lot about it, <em>there are many transistor categories NPN, PNP, BJT, Mosfet, SCR, etc.</em> I learned about <em>BJT</em> and Mosfet at the university. After read about it I needed a <em>BJT</em> Transistor but <strong>which one <em>PNP</em> or <em>NPN</em>?</strong>.</p>
 <img loading="lazy" width="658" height="362" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftransistor_schematic.df19638d.png&amp;w=750&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftransistor_schematic.df19638d.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftransistor_schematic.df19638d.png&amp;w=1920&amp;q=75"/>
-<p>To replace a relay I needed to give <strong>+5v</strong> as an input and switch on the relay/transistor and let the current-voltage flow between <em>Collector</em> and <em>Emitter</em>, for that case <strong>I need <em>NPN</em> because with a small pulse I can open or close the switch transistor, but with <em>PNP</em> I need to apply a negative voltage to close the transistor</strong>, <a href="https://github.com/tonilopezmr/tonilopezmr.github.io/issues/27">I wrote about BJT transistors here</a></p>
+<p>To replace a relay I needed to give <strong>+5v</strong> as an input and switch on the relay/transistor and let the current-voltage flow between <em>Collector</em> and <em>Emitter</em>, for that case <strong>I need <em>NPN</em> because with a small pulse I can open or close the switch transistor, but with <em>PNP</em> I need to apply a negative voltage to close the transistor</strong>, <a href="https://github.com/tonilopezmr/bacota.com/issues/27">I wrote about BJT transistors here</a></p>
 <p>Then I made a small example replacing the relays by Transistors and I used leds to emulate the three different speeds.</p>
 <img loading="lazy" width="1600" height="1200" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Freplace_relay_by_Transistors.fc933cba.jpeg&amp;w=1920&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Freplace_relay_by_Transistors.fc933cba.jpeg&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Freplace_relay_by_Transistors.fc933cba.jpeg&amp;w=3840&amp;q=75"/>
 <h2>Remote and manual control</h2>
@@ -279,7 +279,7 @@ The reason was the switch isn&#x27;t designed to work with low voltages then som
 </code></pre>
 <p>With this method, I calculate the average of the voltage to know if it is a <strong>HIGH</strong> (5v) or <strong>LOW</strong> (less than 3.5v) depending on the quality measurement, with this calculation if the channel isn&#x27;t selected I get <em>4.5</em> or <em>3.5</em> which means it is <em>LOW</em> and when the channel is selected I get <strong>5v</strong> all the time.</p>
 <p>This is the result of combine remote control and manual.</p>
-<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://tonilopezmr.github.io/assets/article_images/2018-10-09-fun-electronics-with-fan/remote_and_manual_control.mp4" type="video/mp4"/></video></div>
+<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://bacota.com/assets/article_images/2018-10-09-fun-electronics-with-fan/remote_and_manual_control.mp4" type="video/mp4"/></video></div>
 <p><a href="https://github.com/tonilopezmr/Fun-with-Fan/blob/master/fan.cpp">Here is the code of the fan</a></p>
 <h2>Real world</h2>
 <hr/>
@@ -291,7 +291,7 @@ The reason was the switch isn&#x27;t designed to work with low voltages then som
 <hr/>
 <p>Triacs are the answer to my question, <em>&quot;which one is the relay substitute?&quot;</em>, the Triac!</p>
 <p>A triac is two transistors in parallel in different directions to give it the bidirectional feature. <strong>The triac has the same functionality as a typical transistor but works with AC loads</strong> and there isn&#x27;t a difference between &quot;Collector&quot; and &quot;Emitter&quot;, it just calls &quot;T1&quot; and &quot;T2&quot;.</p>
-<p>I bought a <a href="http://www.haopin.com/pdf/bta16-600b.pdf">BTA16-600B Triac</a> and I did the same experiment as the transistors and It didn&#x27;t exploit!. If you want to know more about Triacs, <a href="https://github.com/tonilopezmr/tonilopezmr.github.io/issues/30">I wrote about it here</a>.</p>
+<p>I bought a <a href="http://www.haopin.com/pdf/bta16-600b.pdf">BTA16-600B Triac</a> and I did the same experiment as the transistors and It didn&#x27;t exploit!. If you want to know more about Triacs, <a href="https://github.com/tonilopezmr/bacota.com/issues/30">I wrote about it here</a>.</p>
 <h2>Control high voltages with Triac and Arduino</h2>
 <hr/>
 <p>I had a Triac which didn&#x27;t exploit, I had an Arduino with the program, then <strong>I only needed to connect to the 220v</strong>, yeah! Finally!</p>
@@ -304,8 +304,8 @@ The reason was the switch isn&#x27;t designed to work with low voltages then som
 <p>Then I can use it to control the fan speed using triacs in the hot side with the microcontroller pulse in the cold side, this is an example of switching on a bulb or fan with only one speed.</p>
 <img loading="lazy" width="640" height="284" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftraic_with_optocoupler.884e9e7c.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftraic_with_optocoupler.884e9e7c.png&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftraic_with_optocoupler.884e9e7c.png&amp;w=1920&amp;q=75"/>
 <p>To test if it is working, I did a small circuit which uses <em>9v</em> as input with a limiter to <em>5v</em> and added a <a href="http://www.farnell.com/datasheets/97984.pdf">MOC3021 optocoupler</a> to try if I can turn on/off a bulb with the optocoupler. It worked well, then I decided to replace the bulb for my fan, and It worked too!</p>
-<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://tonilopezmr.github.io/assets/article_images/2018-10-09-fun-electronics-with-fan/fan_using_triac_first_time.mp4" type="video/mp4"/></video></div>
-<p>If you want to know more about optocouplers, <a href="https://github.com/tonilopezmr/tonilopezmr.github.io/issues/29">I wrote it about it here</a>.</p>
+<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://bacota.com/assets/article_images/2018-10-09-fun-electronics-with-fan/fan_using_triac_first_time.mp4" type="video/mp4"/></video></div>
+<p>If you want to know more about optocouplers, <a href="https://github.com/tonilopezmr/bacota.com/issues/29">I wrote it about it here</a>.</p>
 <h2>Designing the circuit</h2>
 <hr/>
 <p>At this point, it seems I can connect my circuit with <code>220v</code> loads. Before to connect the circuit in real life I wanted to do some test with any kind of emulator to know if I could burn my circuit or if something it is wrong.</p>
@@ -324,11 +324,11 @@ The reason was the switch isn&#x27;t designed to work with low voltages then som
 <h2>Connecting the design</h2>
 <hr/>
 <p>After design, simulate my circuit and be sure my circuit will work, I created a test circuit with the breadboard and used bulbs instead of the fan for the fist time.</p>
-<p>First, I needed to create my own Arduino board only with the atmega328 microcontroller, <a href="https://github.com/tonilopezmr/tonilopezmr.github.io/issues/32">I wrote about how to use the microcontroller and how to install it the bootloader for install any application into it</a>. I used atmega328 because it is easily to me using something I already know using the Arduino board to program the app and load it to the microcontroller. I have a plan to use another smaller microcontrollers to simplify the circuit.</p>
+<p>First, I needed to create my own Arduino board only with the atmega328 microcontroller, <a href="https://github.com/tonilopezmr/bacota.com/issues/32">I wrote about how to use the microcontroller and how to install it the bootloader for install any application into it</a>. I used atmega328 because it is easily to me using something I already know using the Arduino board to program the app and load it to the microcontroller. I have a plan to use another smaller microcontrollers to simplify the circuit.</p>
 <p>This is how my circuit looks like:</p>
 <img loading="lazy" width="1200" height="1600" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmy_circuit_breadboard.7fed586e.jpeg&amp;w=1200&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmy_circuit_breadboard.7fed586e.jpeg&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmy_circuit_breadboard.7fed586e.jpeg&amp;w=3840&amp;q=75"/>
 <p>And this is how it works:</p>
-<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://tonilopezmr.github.io/assets/article_images/2018-10-09-fun-electronics-with-fan/circuit_with_220v.mp4" type="video/mp4"/></video></div>
+<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://bacota.com/assets/article_images/2018-10-09-fun-electronics-with-fan/circuit_with_220v.mp4" type="video/mp4"/></video></div>
 <h2>Soldering my circuit</h2>
 <hr/>
 <p>I could order a PCB with my design but it would cost too much just for one PCB and I preferred to learn how to solder for future projects.</p>
@@ -374,7 +374,7 @@ The reason was the switch isn&#x27;t designed to work with low voltages then som
 <p><strong>I send the 3d design from Fusion 360 to <a href="https://ultimaker.com/en/products/ultimaker-cura-software">Cura</a></strong> which is the software to configure the 3d models to 3d printer commands like hot the nozzle 200º, start in the point x and y, etc. You can sort the components to the bed printer as well, change the position 90º or anything else.</p>
 <img loading="lazy" width="1522" height="1622" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcura_enclosure.4e904251.png&amp;w=1920&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcura_enclosure.4e904251.png&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcura_enclosure.4e904251.png&amp;w=3840&amp;q=75"/>
 <p>I send the file to my printer and wait for the result.</p>
-<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://tonilopezmr.github.io/assets/article_images/2018-10-09-fun-electronics-with-fan/printing_enclosure.mp4" type="video/mp4"/></video></div>
+<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://bacota.com/assets/article_images/2018-10-09-fun-electronics-with-fan/printing_enclosure.mp4" type="video/mp4"/></video></div>
 <p>After 8 hours, this was the result.</p>
 <img loading="lazy" width="3096" height="4128" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fenclosure.fb8151e4.jpg&amp;w=3840&amp;q=75 1x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fenclosure.fb8151e4.jpg&amp;w=3840&amp;q=75"/>
 <h2>Assemble</h2>
@@ -386,7 +386,7 @@ The reason was the switch isn&#x27;t designed to work with low voltages then som
 <p>Connect the fan wires, connect the infrared receiver, and connect two wires to the 9v power supply (In this example a battery).</p>
 <img loading="lazy" width="1600" height="1200" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbase_with_wires.3f9e3dcc.jpeg&amp;w=1920&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbase_with_wires.3f9e3dcc.jpeg&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbase_with_wires.3f9e3dcc.jpeg&amp;w=3840&amp;q=75"/>
 <p>Then after screw-down, I tried that all it is working correctly.</p>
-<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://tonilopezmr.github.io/assets/article_images/2018-10-09-fun-electronics-with-fan/circuit_and_fan.mp4" type="video/mp4"/></video></div>
+<div><video style="display:block;width:100%;height:auto" controls=""><source src="http://bacota.com/assets/article_images/2018-10-09-fun-electronics-with-fan/circuit_and_fan.mp4" type="video/mp4"/></video></div>
 <p>I finished assembling the enclosure and I just need to attach it to my fan.</p>
 <img loading="lazy" width="1200" height="1600" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fscrew-down_enclosure.49c95131.jpeg&amp;w=1200&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fscrew-down_enclosure.49c95131.jpeg&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fscrew-down_enclosure.49c95131.jpeg&amp;w=3840&amp;q=75"/>
 <p><strong>This is the final result</strong>, I have put the Infrared receiver behind the fan then when you are looking at the front of it you don&#x27;t see the sensor. I have attached the enclosure with adhesive because <strong>it is not to be the final enclosure for the next summer then I just add adhesive</strong>.</p>
@@ -408,10 +408,10 @@ The reason was the switch isn&#x27;t designed to work with low voltages then som
             <guid>undefined/articles/calcula-notas-cumple-3-anyos</guid>
             <pubDate>Wed, 28 Sep 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[Grade Calculator turns 3 years old.]]></description>
-            <content:encoded><![CDATA[<p>When I presented the second version of <a href="http://tonilopezmr.github.io/calculanotas">Grade Calculator</a>, I added a section of improvements mentioning features that could be added, and that&#x27;s what&#x27;s new in the 3rd version. I also promised for version 3 that people would be able to share subjects between them, but that hasn&#x27;t been possible yet. I also talked about a web version that won&#x27;t see the light for now at least, but there is a surprise...</p>
+            <content:encoded><![CDATA[<p>When I presented the second version of <a href="http://bacota.com/calculanotas">Grade Calculator</a>, I added a section of improvements mentioning features that could be added, and that&#x27;s what&#x27;s new in the 3rd version. I also promised for version 3 that people would be able to share subjects between them, but that hasn&#x27;t been possible yet. I also talked about a web version that won&#x27;t see the light for now at least, but there is a surprise...</p>
 <p>Between version 2 and version 3, I added a new functionality to be able to log in and have your subjects always with you in the cloud, so even if you change phones you can access your subjects.</p>
-<p>In this version, <strong>I removed the <em>DrawerLayout</em> (the sliding side bar) and added a Bottom Bar</strong>, similar to <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.social.spaces&amp;referrer=utm_source%3Dlandingpage">Spaces</a> because it perfectly suits the functionalities of <a href="http://tonilopezmr.github.io/calculanotas">Grade Calculator</a>, where you need to add subjects and evaluation groups, and besides, the button was already in the center before, which is great.</p>
-<p>In the post about version 2 of <a href="http://tonilopezmr.github.io/calculanotas">Grade Calculator</a>, I also said that removing the <em>DrawerLayout</em> improved the UX and I made <a href="https://plus.google.com/+antoniolopezmarin/posts/5vDGjb7f6Pw">a survey</a> to see if <a href="http://tonilopezmr.github.io/calculanotas">Grade Calculator</a> version 2 was better than the new version. While I was expecting people to vote for the new version, suddenly everyone loves the <em>DrawerLayout</em>. However, given its functionality and how it&#x27;s used, with the new design, everything is clearer and easier to use with one finger.</p>
+<p>In this version, <strong>I removed the <em>DrawerLayout</em> (the sliding side bar) and added a Bottom Bar</strong>, similar to <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.social.spaces&amp;referrer=utm_source%3Dlandingpage">Spaces</a> because it perfectly suits the functionalities of <a href="http://bacota.com/calculanotas">Grade Calculator</a>, where you need to add subjects and evaluation groups, and besides, the button was already in the center before, which is great.</p>
+<p>In the post about version 2 of <a href="http://bacota.com/calculanotas">Grade Calculator</a>, I also said that removing the <em>DrawerLayout</em> improved the UX and I made <a href="https://plus.google.com/+antoniolopezmarin/posts/5vDGjb7f6Pw">a survey</a> to see if <a href="http://bacota.com/calculanotas">Grade Calculator</a> version 2 was better than the new version. While I was expecting people to vote for the new version, suddenly everyone loves the <em>DrawerLayout</em>. However, given its functionality and how it&#x27;s used, with the new design, everything is clearer and easier to use with one finger.</p>
 <h2>Profile</h2>
 <img loading="lazy" width="480" height="800" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile.aa4835d1.png&amp;w=640&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile.aa4835d1.png&amp;w=1080&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile.aa4835d1.png&amp;w=1080&amp;q=75"/>
 <p>The profile screen is the same screen that appears when you slid the <em>DrawerLayout</em>, showing your list of subjects and account information.</p>
@@ -420,7 +420,7 @@ The reason was the switch isn&#x27;t designed to work with low voltages then som
 <p>This is the same screen that showed a subject with its list of evaluation groups.</p>
 <p>Changing subjects is now faster and easier to use, with everything at hand.</p>
 <p>It&#x27;s still pending for the future to be able to share subjects since it would be great if someone could create a subject with their rules and share it with an entire class, but for now we have to settle for thinking that you have VIP functionality if you&#x27;re in my Computer Engineering course at UPV ;)</p>
-<p>You can download <a href="http://tonilopezmr.github.io/calculanotas">Grade Calculator</a> and let me know what you think.</p>]]></content:encoded>
+<p>You can download <a href="http://bacota.com/calculanotas">Grade Calculator</a> and let me know what you think.</p>]]></content:encoded>
             <author>no-email@email.com (Toni López)</author>
         </item>
         <item>
@@ -521,12 +521,12 @@ math_functions<span class="token punctuation">.</span>py<span class="token punct
 <li><a href="https://heroku.com/">Heroku</a></li>
 <li><a href="http://sparkjava.com/">Spark Java Framework</a></li>
 <li><a href="https://www.openshift.com/?sc_cid=70160000000UJArAAO&amp;gclid=CNqIxb2R5soCFVIYGwod6BgFkg">Openshift</a></li>
-<li><em><a href="http://tonilopezmr.github.io/calculanotas">Calcula Notas</a></em></li>
+<li><em><a href="http://bacota.com/calculanotas">Calcula Notas</a></em></li>
 </ul>
 <hr/>
-<p>Después de un intento fallido de desplegar el <a href="https://es.wikipedia.org/wiki/Representational_State_Transfer">API REST</a> hecho con <a href="http://sparkjava.com/">Spark Java Framework</a> de <em><a href="http://tonilopezmr.github.io/calculanotas">Calcula Notas</a></em> en <a href="https://www.openshift.com/?sc_cid=70160000000UJArAAO&amp;gclid=CNqIxb2R5soCFVIYGwod6BgFkg">Openshift</a>, <strong>he conseguido hacerlo con <a href="https://heroku.com/">Heroku</a> mucho más fácil</strong>.</p>
+<p>Después de un intento fallido de desplegar el <a href="https://es.wikipedia.org/wiki/Representational_State_Transfer">API REST</a> hecho con <a href="http://sparkjava.com/">Spark Java Framework</a> de <em><a href="http://bacota.com/calculanotas">Calcula Notas</a></em> en <a href="https://www.openshift.com/?sc_cid=70160000000UJArAAO&amp;gclid=CNqIxb2R5soCFVIYGwod6BgFkg">Openshift</a>, <strong>he conseguido hacerlo con <a href="https://heroku.com/">Heroku</a> mucho más fácil</strong>.</p>
 <h2>¿Por qué Spark Java?</h2>
-<p>Muy sencillo, porque <a href="http://sparkjava.com/">Spark Java</a> es un <a href="https://es.wikipedia.org/wiki/Framework">framework</a> muy ligero para hacer aplicaciones web muy <strong>facilmente y rapido con <a href="https://www.java.com/es/download/faq/java8.">Java 8</a></strong>, ya que por temas de universidad y que quería centrarme en añadir una nueva funcionalidad en <em><a href="http://tonilopezmr.github.io/calculanotas">Calcula Notas</a></em>, lo he hecho con Java, porque es el lenguaje que ya conozco y en el que podía hacer una aplicación chula con acceso a la base de datos, etc.  Es lo que he estado haciendo en el grado superior una y otra vez.</p>
+<p>Muy sencillo, porque <a href="http://sparkjava.com/">Spark Java</a> es un <a href="https://es.wikipedia.org/wiki/Framework">framework</a> muy ligero para hacer aplicaciones web muy <strong>facilmente y rapido con <a href="https://www.java.com/es/download/faq/java8.">Java 8</a></strong>, ya que por temas de universidad y que quería centrarme en añadir una nueva funcionalidad en <em><a href="http://bacota.com/calculanotas">Calcula Notas</a></em>, lo he hecho con Java, porque es el lenguaje que ya conozco y en el que podía hacer una aplicación chula con acceso a la base de datos, etc.  Es lo que he estado haciendo en el grado superior una y otra vez.</p>
 <h2>Openshift</h2>
 <p><strong>Esta muy bien</strong>, pero no era la mejor solución para lo que yo tenía creado, ya que tenía que hacer funcionar un <a href="http://www.eclipse.org/jetty/">Jetty Java Web Server</a> y el <a href="https://blog.openshift.com/jetty-on-openshift-lightweight-java-web-serving-for-the-cloud/">tutorial de Openshift estaba más que desfasado</a>.</p>
 <ol>
@@ -595,7 +595,7 @@ Todos los comandos heroku para desplegar, hacer push al server, ver los datos de
             <guid>undefined/articles/login-en-android</guid>
             <pubDate>Wed, 03 Feb 2016 00:00:00 GMT</pubDate>
             <description><![CDATA[Explicaión de cómo implementar Login en Android.]]></description>
-            <content:encoded><![CDATA[<p>Ahora que estoy implementando el Login en <a href="http://tonilopezmr.github.io/calculanotas">Calcula Notas</a>, voy a explicar cómo lo hago de forma que sea fácil de implementar en otras aplicaciones futuras, <strong>no es una librería</strong> pero sí una forma de hacerlo para que <em>“funcione solo”</em> más o menos.</p>
+            <content:encoded><![CDATA[<p>Ahora que estoy implementando el Login en <a href="http://bacota.com/calculanotas">Calcula Notas</a>, voy a explicar cómo lo hago de forma que sea fácil de implementar en otras aplicaciones futuras, <strong>no es una librería</strong> pero sí una forma de hacerlo para que <em>“funcione solo”</em> más o menos.</p>
 <p>En este post <strong>no voy a explicar como usar la API de autenticación en Twitter, Facebook o Google</strong>, sino que voy a explicar como yo los uso.</p>
 <p>Todo el código esta incluido en <a href="https://github.com/tonilopezmr/Android-Examples">Android-Examples</a> en el modulo <a href="https://github.com/tonilopezmr/Android-Examples/tree/master/login">login</a>.</p>
 <h2>Abstract class SignInActivity</h2>
@@ -628,7 +628,7 @@ Todos los comandos heroku para desplegar, hacer push al server, ver los datos de
             <guid>undefined/articles/facemash-was-nice</guid>
             <pubDate>Wed, 11 Nov 2015 00:00:00 GMT</pubDate>
             <description><![CDATA[Facemash website for UPV University.]]></description>
-            <content:encoded><![CDATA[<p>Well, after having a lot of fun looking at university photos on <a href="http://tonilopezmr.github.io/facemash/">Facemash UPV</a>, <strong>the images have been made private</strong>, meaning they removed permissions and now return the &#x27;default&#x27; gray image :(</p>
+            <content:encoded><![CDATA[<p>Well, after having a lot of fun looking at university photos on <a href="http://bacota.com/facemash/">Facemash UPV</a>, <strong>the images have been made private</strong>, meaning they removed permissions and now return the &#x27;default&#x27; gray image :(</p>
 <h2>Is there a solution? Could facemash keep working?</h2>
 <ul>
 <li><del>No</del> Yes</li>
@@ -639,10 +639,10 @@ Todos los comandos heroku para desplegar, hacer push al server, ver los datos de
 </ul>
 <p>The quickest solution would be to do something similar to what our friend <a href="https://en.wikipedia.org/wiki/Mark_Zuckerberg">Mark</a> did, download all the university images and host them with my own links.</p>
 <img alt="Private images downloaded from UPV" loading="lazy" width="1332" height="700" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffaces.43dbbd3a.png&amp;w=1920&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffaces.43dbbd3a.png&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffaces.43dbbd3a.png&amp;w=3840&amp;q=75"/>
-<p><strong>There are other ways</strong>, but I don&#x27;t want trouble with the university <del>and besides I already managed to promote <a href="http://tonilopezmr.github.io/calculanotas/">Grade Calculator</a></del>.</p>
+<p><strong>There are other ways</strong>, but I don&#x27;t want trouble with the university <del>and besides I already managed to promote <a href="http://bacota.com/calculanotas/">Grade Calculator</a></del>.</p>
 <p>The thing is that after it was published on the <a href="https://www.facebook.com/El-informer-UPV-195757263903995/timeline">Facebook informer</a> that Facemash existed, there was a flood of requests to the website, nowhere near what happened with the <a href="https://en.wikipedia.org/wiki/History_of_Facebook#Facemash">original Facemash</a> but still quite a lot.</p>
 <p>Now that it&#x27;s all over, I thought it would be a good idea to share the statistical results.</p>
-<p>I published <a href="http://tonilopezmr.github.io/facemash/">Facemash UPV</a> on Sunday November 8th, it received more than <strong>1030 sessions</strong> which is not the same as <strong>1030 users</strong> or <strong>1030 page views</strong>, each user can generate multiple sessions, so naturally there were fewer users, specifically <strong>981 users</strong>.</p>
+<p>I published <a href="http://bacota.com/facemash/">Facemash UPV</a> on Sunday November 8th, it received more than <strong>1030 sessions</strong> which is not the same as <strong>1030 users</strong> or <strong>1030 page views</strong>, each user can generate multiple sessions, so naturally there were fewer users, specifically <strong>981 users</strong>.</p>
 <img alt="October 8th at 23:16:21" loading="lazy" width="1155" height="714" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Factive_users_23.16.21.ca9d4cc9.png&amp;w=1200&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Factive_users_23.16.21.ca9d4cc9.png&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Factive_users_23.16.21.ca9d4cc9.png&amp;w=3840&amp;q=75"/>
 <p>The peak day was Monday November 9th with <strong>1876 users</strong>, when people who saw it on Sunday shared it with their classmates.</p>
 <h2>Reports, 2 and a half days</h2>
@@ -650,7 +650,7 @@ Todos los comandos heroku para desplegar, hacer push al server, ver los datos de
 <img alt="General overview up to now." loading="lazy" width="1169" height="246" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftotal_est.ab7cdbd2.png&amp;w=1200&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftotal_est.ab7cdbd2.png&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftotal_est.ab7cdbd2.png&amp;w=3840&amp;q=75"/>
 <p>This screenshot is from right now on the 11th although the data is always from a few hours later, it&#x27;s still receiving visits now.</p>
 <p>Finally <strong>19546 page views</strong> and <strong>3930 users</strong>, what surprises me is the amount of time people spent looking at photos, with an average session duration of <strong>00:04:01</strong>.</p>
-<p>Of these 19546 page views, <strong>2353</strong> went to the <a href="http://tonilopezmr.github.io/calculanotas/">Grade Calculator</a> page.</p>
+<p>Of these 19546 page views, <strong>2353</strong> went to the <a href="http://bacota.com/calculanotas/">Grade Calculator</a> page.</p>
 <h2>Countries and cities</h2>
 <hr/>
 <img alt="Left countries, right Cities." loading="lazy" width="813" height="290" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcountry.f8794646.jpg&amp;w=828&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcountry.f8794646.jpg&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcountry.f8794646.jpg&amp;w=1920&amp;q=75"/>
@@ -662,18 +662,18 @@ Todos los comandos heroku para desplegar, hacer push al server, ver los datos de
 <h2>Device</h2>
 <hr/>
 <img alt="Devices." loading="lazy" width="1001" height="331" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdevices.19338f37.png&amp;w=1080&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdevices.19338f37.png&amp;w=2048&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdevices.19338f37.png&amp;w=2048&amp;q=75"/>
-<p>Not much to say about what kind of devices accessed <a href="http://tonilopezmr.github.io/facemash/">Facemash UPV</a>, most visits were from the university.</p>
+<p>Not much to say about what kind of devices accessed <a href="http://bacota.com/facemash/">Facemash UPV</a>, most visits were from the university.</p>
 <h2>Mobile operating systems</h2>
 <hr/>
 <img alt="Mobile Devices." loading="lazy" width="1004" height="324" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmobile_so.31efca55.png&amp;w=1080&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmobile_so.31efca55.png&amp;w=2048&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmobile_so.31efca55.png&amp;w=2048&amp;q=75"/>
-<p>Something I&#x27;m very interested in is knowing which mobile operating systems viewed the page since <a href="http://tonilopezmr.github.io/calculanotas/">Grade Calculator</a> is currently only on <a href="https://www.android.com/intl/es_es/">Android</a> but will <strong>soon be available for</strong> <a href="http://www.apple.com/es/ios/">IOS</a>.</p>
+<p>Something I&#x27;m very interested in is knowing which mobile operating systems viewed the page since <a href="http://bacota.com/calculanotas/">Grade Calculator</a> is currently only on <a href="https://www.android.com/intl/es_es/">Android</a> but will <strong>soon be available for</strong> <a href="http://www.apple.com/es/ios/">IOS</a>.</p>
 <h2>SEO</h2>
 <hr/>
-<p>When I made <a href="http://tonilopezmr.github.io/facemash/">Facemash UPV</a> I made it <strong>as messy as possible</strong>, I mean messy in that if you download the HTML source code it&#x27;s awful, HTML tables with CSS inline in each tag and JavaScript code visible showing how it got the images, although <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Ftonilopezmr.github.io%2Ffacemash">PageSpeed Insights</a> didn&#x27;t give me too bad a score.</p>
+<p>When I made <a href="http://bacota.com/facemash/">Facemash UPV</a> I made it <strong>as messy as possible</strong>, I mean messy in that if you download the HTML source code it&#x27;s awful, HTML tables with CSS inline in each tag and JavaScript code visible showing how it got the images, although <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fbacota.com%2Ffacemash">PageSpeed Insights</a> didn&#x27;t give me too bad a score.</p>
 <p>All this to see if with visits, even with a ****** page, Google would rank it among the first results.</p>
 <a href="https://www.google.es/#q=facemash+upv"><img alt="Google search for Facemash UPV." loading="lazy" width="1536" height="930" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgoogle_facemash_upv.eeed5ee3.png&amp;w=1920&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgoogle_facemash_upv.eeed5ee3.png&amp;w=3840&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgoogle_facemash_upv.eeed5ee3.png&amp;w=3840&amp;q=75"/></a>
-<p>At first, it only showed in <strong>1st position</strong> the post with better content without directly showing the <a href="https://tonilopezmr.github.io/facemash">tonilopezmr.github.io/facemash</a> URL, but now if you search it appears in 2nd position since Google <strong>rewards visits and duration much more</strong>.</p>
-<p>I thought it would never put me so high up, <strong>the important thing is that <a href="https://tonilopezmr.github.io">tonilopezmr.github.io</a> now appears 1st</strong> and <a href="http://tonilopezmr.github.io/calculanotas/">Grade Calculator</a> is now in the <strong>top positions</strong> on <a href="https://play.google.com/store/search?q=calcula%20notas&amp;c=apps&amp;docType=1&amp;sp=CAFiDwoNY2FsY3VsYSBub3Rhc3oFGADAAQKKAQIIAQ%3D%3D%3AS%3AANO1ljL8bhE&amp;hl=es">Google Play</a>.</p>]]></content:encoded>
+<p>At first, it only showed in <strong>1st position</strong> the post with better content without directly showing the <a href="https://bacota.com/facemash">bacota.com/facemash</a> URL, but now if you search it appears in 2nd position since Google <strong>rewards visits and duration much more</strong>.</p>
+<p>I thought it would never put me so high up, <strong>the important thing is that <a href="https://bacota.com">bacota.com</a> now appears 1st</strong> and <a href="http://bacota.com/calculanotas/">Grade Calculator</a> is now in the <strong>top positions</strong> on <a href="https://play.google.com/store/search?q=calcula%20notas&amp;c=apps&amp;docType=1&amp;sp=CAFiDwoNY2FsY3VsYSBub3Rhc3oFGADAAQKKAQIIAQ%3D%3D%3AS%3AANO1ljL8bhE&amp;hl=es">Google Play</a>.</p>]]></content:encoded>
             <author>no-email@email.com (Toni López)</author>
         </item>
         <item>
@@ -685,9 +685,9 @@ Todos los comandos heroku para desplegar, hacer push al server, ver los datos de
             <content:encoded><![CDATA[<blockquote>
 <p>I just published it and I know not everyone will like it but it&#x27;s not illegal, it&#x27;s the university&#x27;s fault that everyone can see it.</p>
 </blockquote>
-<p>I obtained all the profile images from UPV since its foundation and created <a href="https://tonilopezmr.github.io/facemash">Facemash UPV</a>.</p>
+<p>I obtained all the profile images from UPV since its foundation and created <a href="https://bacota.com/facemash">Facemash UPV</a>.</p>
 <h2>Why?</h2>
-<p>Since I&#x27;m in my <strong>second year of computer science</strong>, <del><a href="https://tonilopezmr.github.io/calculanotas">and I wanted to promote the Grade Calculator app</a></del>, I thought it would be fun to pay a small tribute to my friend <a href="https://en.wikipedia.org/wiki/Mark_Zuckerberg">Mark</a> who did the same thing but with stolen images from private profiles, <strong>I didn&#x27;t do that, I&#x27;ll explain later</strong>.</p>
+<p>Since I&#x27;m in my <strong>second year of computer science</strong>, <del><a href="https://bacota.com/calculanotas">and I wanted to promote the Grade Calculator app</a></del>, I thought it would be fun to pay a small tribute to my friend <a href="https://en.wikipedia.org/wiki/Mark_Zuckerberg">Mark</a> who did the same thing but with stolen images from private profiles, <strong>I didn&#x27;t do that, I&#x27;ll explain later</strong>.</p>
 <p>I wanted to make it as similar as possible to the one from <a href="http://www.filmaffinity.com/en/film577699.html">The Social Network</a> movie that they show so much during the welcome days:</p>
 <img loading="lazy" width="960" height="399" decoding="async" data-nimg="1" style="color:transparent" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffacemash_movie.58ac9643.jpg&amp;w=1080&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffacemash_movie.58ac9643.jpg&amp;w=1920&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffacemash_movie.58ac9643.jpg&amp;w=1920&amp;q=75"/>
 <p>vs</p>
@@ -742,7 +742,7 @@ Todos los comandos heroku para desplegar, hacer push al server, ver los datos de
             <guid>undefined/articles/new-version-of-grade-calculator-new-interface</guid>
             <pubDate>Sun, 01 Nov 2015 00:00:00 GMT</pubDate>
             <description><![CDATA[New version of Grade Calculator, new interface.]]></description>
-            <content:encoded><![CDATA[<p>A little less than a year ago, after my first university exams, I created <a href="http://tonilopezmr.github.io/calculanotas">Grade Calculator</a>. It&#x27;s an application that calculates university course grades by setting up the evaluation system that each course follows and adding exams.</p>
+            <content:encoded><![CDATA[<p>A little less than a year ago, after my first university exams, I created <a href="http://bacota.com/calculanotas">Grade Calculator</a>. It&#x27;s an application that calculates university course grades by setting up the evaluation system that each course follows and adding exams.</p>
 <p>The idea came from the fact that every time I wanted to check how I was doing with grades, I would take out my calculator, look at how the course worked and calculate them. Since I was doing this with each course, I thought of making an application and being able to learn new Android programming concepts and try out some new interface components.</p>
 <h2>First Steps</h2>
 <p>The application needed to show me the grades for different parts of a course, such as exam grades and the grade for each evaluation group (Theory, Practice, etc.), and be able to see all of this at a glance.</p>
@@ -803,7 +803,7 @@ Todos los comandos heroku para desplegar, hacer push al server, ver los datos de
 <hr/>
 <p>In an intermediate version I&#x27;m going to allow logging into the application so that courses can be saved in the cloud and not lost if you change phones, and also to be able to make a web version to learn how to make web applications.</p>
 <p>For version 3 I will make it possible to share courses with the percentages of groups and courses, meaning being able to pass the structure that each course follows to your friends and not having to manually create groups that an entire class has the same or even an entire year.</p>
-<p>You can download <a href="http://tonilopezmr.github.io/calculanotas">Grade Calculator</a> and let me know what you think.</p>]]></content:encoded>
+<p>You can download <a href="http://bacota.com/calculanotas">Grade Calculator</a> and let me know what you think.</p>]]></content:encoded>
             <author>no-email@email.com (Toni López)</author>
         </item>
         <item>
