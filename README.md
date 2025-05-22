@@ -1,8 +1,10 @@
 ### Hi, I'm Toni 👋
 
 🏗️ Founding Eng. @ Stack AI (YC W23)  
+
 👨🏼‍💼 [LinkedIn](https://www.linkedin.com/in/tonilopezmr)  
-💬 [Twitter](https://github.com/tonilopezmr)
+💬 [Twitter](https://github.com/tonilopezmr)   
+🖥️ [tonilopezmr.com](https://www.tonilopezmr.com/)
 
 Background
 
@@ -13,5 +15,3 @@ Background
 👨🏼‍💻 Senior Software Eng.    @ Karumi <3  
 👨🏼‍💻 Founding Eng.           @ Pleasound  
 👨🏼‍💻 Co-founder & CTO        @ COME - Redefining the restaurant experience
-
-🖥️ [tonilopezmr.com](https://www.tonilopezmr.com/)
