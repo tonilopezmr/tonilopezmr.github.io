@@ -1,4 +1,4 @@
-Hi, I'm Toni 👋
+### Hi, I'm Toni 👋
 
 🏗️ Founding Eng. @ Stack AI (YC W23)  
 👨🏼‍💼 [LinkedIn](https://www.linkedin.com/in/tonilopezmr)  
